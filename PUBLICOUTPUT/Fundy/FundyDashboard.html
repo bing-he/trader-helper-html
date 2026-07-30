@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fundy Dashboard - Run 2026-07-28 13:20:58</title>
+  <style>
+    :root {
+      --bg: #f3f5f9;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --muted: #4b6380;
+      --line: #d3dbe7;
+      --brand: #163356;
+      --accent-soft: #dbeafe;
+    }
+    body {
+      margin: 0;
+      padding: 18px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    h1, h2, h3, h4 { margin: 0; }
+    h1 { font-size: 34px; color: var(--brand); }
+    h2 { font-size: 22px; color: var(--brand); }
+    h3 { font-size: 17px; margin-bottom: 8px; }
+    h4 { margin: 12px 0 6px 0; }
+    .subtitle { color: var(--muted); margin: 0 0 18px 0; font-size: 12px; }
+    .section { margin-top: 20px; }
+    .section-head {
+      font-size: 44px;
+      letter-spacing: 0.4px;
+      color: var(--brand);
+      font-weight: 700;
+      border-bottom: 3px solid var(--brand);
+      margin: 22px 0 10px 0;
+      padding-bottom: 4px;
+    }
+    .grid-integrated {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      align-items: start;
+    }
+    @media (max-width: 1500px) {
+      .grid-integrated { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 1180px) {
+      .grid-integrated { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .grid-integrated { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    }
+    .card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      margin-top: 6px;
+      background: #f7f9fc;
+    }
+    .llm-card {
+      margin-top: 14px;
+    }
+    .table-card {
+      margin-top: 12px;
+    }
+    .tbl {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+    .tbl th {
+      text-align: left;
+      background: var(--accent-soft);
+      border-bottom: 1px solid var(--line);
+      padding: 6px;
+      color: var(--brand);
+    }
+    .tbl td {
+      border-bottom: 1px solid var(--line);
+      padding: 6px;
+    }
+    .muted { color: var(--muted); font-size: 12px; }
+    ul { margin: 6px 0 0 18px; padding: 0; }
+    li { margin-bottom: 4px; }
+    .mono {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 12px;
+      white-space: pre-wrap;
+      background: #f1f5f9;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .llm-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .llm-block-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+    @media (max-width: 980px) {
+      .llm-block-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+    .llm-block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 8px 10px;
+    }
+    .llm-block h4 {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+      color: var(--brand);
+    }
+    .llm-list {
+      margin: 0 0 0 16px;
+      padding: 0;
+      font-size: 13px;
+    }
+    .llm-list li {
+      margin-bottom: 4px;
+    }
+    .bias-pill {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .bias-bull {
+      background: #e8f7ef;
+      color: #0a6830;
+      border-color: #86d6ad;
+    }
+    .bias-bear {
+      background: #fdecec;
+      color: #8a1f1f;
+      border-color: #f2b9b9;
+    }
+    .bias-neutral {
+      background: #eef2f7;
+      color: #34465f;
+      border-color: #c7d2e2;
+    }
+    details {
+      margin-top: 8px;
+    }
+    summary {
+      cursor: pointer;
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fundy Dashboard</h1>
+    <p class="subtitle">Run: 2026-07-28 13:20:58 | As-of 2026-07-26 | Inputs: fundy: Fundy.csv (2026-07-27T02:40:10.648051262), fundy_forecast: FundyForecast.csv (2026-07-27T02:40:11.638472557), platts: PlattsCONUSFundamentalsHIST.csv (2026-07-27T02:59:11.690168381), prices: PRICES.csv (2026-07-28T14:25:20.947996378) | Core scope: Fundy/FundyForecast/Platts + PRICES(Henry only). Storage Path Forecasting (before EIA) excluded by design. | Chart 8 source: EIAtotals Lower48 weekly stock, forward-filled to daily.</p>
+  </header>
+
+  <section class="section">
+    <div class="section-head">INTEGRATED FUNDAMENTALS</div>
+    <div class="grid-integrated">
+      <article class='card'><h3>5. Platts: Supply (Line) vs Demand Stack</h3><img src='images/integrated_5_stack.png' alt='5. Platts: Supply (Line) vs Demand Stack' /></article><article class='card'><h3>6. Platts: Net Balance</h3><img src='images/integrated_6_platts_balance.png' alt='6. Platts: Net Balance' /></article><article class='card'><h3>7. Crit: Storage Fcst</h3><img src='images/integrated_7_criterion_storage.png' alt='7. Crit: Storage Fcst' /></article><article class='card'><h3>8. EIA Storage (Monthly View)</h3><img src='images/integrated_8_storage.png' alt='8. EIA Storage (Monthly View)' /></article><article class='card'><h3>9. Crit: Power Load</h3><img src='images/integrated_9_power.png' alt='9. Crit: Power Load' /></article><article class='card'><h3>10. Crit: ResComm Fcst</h3><img src='images/integrated_10_rescom.png' alt='10. Crit: ResComm Fcst' /></article><article class='card'><h3>11. Crit: LNGexp</h3><img src='images/integrated_11_lngexp.png' alt='11. Crit: LNGexp' /></article><article class='card'><h3>12. Production Drawdown</h3><img src='images/integrated_12_prod.png' alt='12. Production Drawdown' /></article>
+    </div>
+    <div class="card table-card">
+      <h3>Platts Weekly Net Supply Table</h3>
+      <table class="dataframe tbl">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Week</th>
+      <th>Net Supply</th>
+      <th>5yr Avg (Same Week)</th>
+      <th>PlattEIAEst</th>
+      <th>CritConus Est</th>
+      <th>EIA Actual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-06-26</td>
+      <td>13,161.7</td>
+      <td>7,011.2</td>
+      <td>87.6</td>
+      <td>86.3</td>
+      <td>87.0</td>
+    </tr>
+    <tr>
+      <td>2026-07-03</td>
+      <td>8,459.5</td>
+      <td>6,723.9</td>
+      <td>61.8</td>
+      <td>61.4</td>
+      <td>61.0</td>
+    </tr>
+    <tr>
+      <td>2026-07-10</td>
+      <td>6,104.8</td>
+      <td>4,993.0</td>
+      <td>40.7</td>
+      <td>40.5</td>
+      <td>41.0</td>
+    </tr>
+    <tr>
+      <td>2026-07-17</td>
+      <td>5,211.2</td>
+      <td>3,280.1</td>
+      <td>31.0</td>
+      <td>38.6</td>
+      <td>32.0</td>
+    </tr>
+    <tr>
+      <td>2026-07-24</td>
+      <td>5,159.9</td>
+      <td>4,464.9</td>
+      <td>24.3</td>
+      <td>36.4</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{
+  "target_date": "2026-07-28",
+  "mode": "production",
+  "run_status": "UNGATED",
+  "quality_gate_enabled": false,
+  "emit_trader_outputs": true,
+  "total_edges": 355,
+  "flags": {
+    "Imputed_P": 110,
+    "Full": 95,
+    "Imputed_WP": 93,
+    "Missing_N": 41,
+    "Imputed_W": 16
+  },
+  "dropped_edge_reasons": {
+    "not_in_core_states": 2559,
+    "missing_component": 1535,
+    "same_component": 448,
+    "component_not_in_prices": 0,
+    "insufficient_history": 79
+  },
+  "gate_results": {},
+  "backtest_metrics": [],
+  "top_high_risk_edges_h1": [
+    {
+      "GEOID_A": "OK|BECKHAM",
+      "GEOID_B": "OK|ROGER MILLS",
+      "Comp_A": "EGT-West",
+      "Comp_B": "ANR-SW",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|CUSTER",
+      "GEOID_B": "OK|WASHITA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|COMANCHE",
+      "GEOID_B": "OK|KIOWA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|CADDO",
+      "GEOID_B": "OK|GRADY",
+      "Comp_A": "NGPL-Midcont Pool",
+      "Comp_B": "EGT-West",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|JACKSON",
+      "GEOID_B": "OK|KIOWA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|CADDO",
+      "GEOID_B": "OK|CUSTER",
+      "Comp_A": "NGPL-Midcont Pool",
+      "Comp_B": "EGT-West",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|CADDO",
+      "GEOID_B": "OK|COMANCHE",
+      "Comp_A": "NGPL-Midcont Pool",
+      "Comp_B": "EGT-West",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|BLAINE",
+      "GEOID_B": "OK|CADDO",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|BECKHAM",
+      "GEOID_B": "OK|WASHITA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    },
+    {
+      "GEOID_A": "OK|GREER",
+      "GEOID_B": "OK|KIOWA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 98.09
+    }
+  ]
+}

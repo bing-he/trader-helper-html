@@ -1,0 +1,135 @@
+market_component,Region,price_region,My group,fill_confidence
+APC-ACE,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",Existing
+Chicago,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",Existing
+NBPL-Ventura,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",Existing
+NGPL-Nicor,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",Existing
+NGPL-Nipsco,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",Existing
+NNG-Demarc,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",Existing
+NNG-Ventura,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",Existing
+REX E-ANR,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",High
+REX E-MidW,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",High
+REX E-NGPL,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",High
+REX-Z3 Del Pool,Midwest,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",Existing
+Consumers,Midwest,Midwest - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Michcon,Midwest,Midwest - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+PGLC,Midwest,Midwest - Demand,"Groups 3, 5: Midwest Chicago",Existing
+Eastern Gas-North,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Eastern Gas-South,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Lebanon,Northeast,Northeast - Appalachia,"Groups 3, 5: Midwest Chicago",Existing
+Leidy-Transco,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Millennium East Pool,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Rover (receipt),Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Rover-ANR,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Rover-PEPL,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",High
+TCO,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+TETCO-M2 (receipt),Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+TGP-Z4 300L,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+TGP-Z4 Marcellus,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",High
+TGP-Z4 Sta-219,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+TGP-Z4 Sta-313,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Union-Dawn,Northeast,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",Existing
+AGT-CG (non-G),Northeast,Northeast - Demand,Group 4: Northeast Demand,Existing
+Iroquois (into),Northeast,Northeast - Demand,Group 4: Northeast Demand,Existing
+Millennium-Ramapo,Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+TETCO-M3,Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+TGP-Mahwah,Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+TGP-Z5 200L,Northeast,Northeast - Demand,Group 4: Northeast Demand,Existing
+Transco-165,Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Transco-Z5,Northeast,Northeast - Demand,Group 999: Special Outliers,Existing
+Transco-Z5 North,Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Transco-Z5 South,Northeast,Northeast - Demand,Group 7: Southeast,Existing
+Transco-Z6 (NY),Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Transco-Z6 (non-NY north),Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Transco-Z6 (non-NY south),Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Transco-Z6 Sta-210,Northeast,Northeast - Demand,"Groups 1, 12, 18: Northeast Appalachia",Existing
+Iroquois-Z2,Northeast,Northeast - Demand Rest,Group 4: Northeast Demand,Existing
+PNGTS,Northeast,Northeast - Demand Rest,Group 4: Northeast Demand,Existing
+TGP-Z6 200L North,Northeast,Northeast - Demand Rest,Group 4: Northeast Demand,Existing
+TGP-Z6 200L South,Northeast,Northeast - Demand Rest,Group 4: Northeast Demand,Existing
+TGP-Z6 300L,Northeast,Northeast - Demand Rest,Group 4: Northeast Demand,Existing
+CIG-Mainline South,Rockies,Mountain - Opal,Group 9: Mountain Opal,Existing
+NWP-Rocky Mtn,Rockies,Mountain - Opal,Group 9: Mountain Opal,Existing
+Ruby-Rec Pool,Rockies,Mountain - Opal,Group 9: Mountain Opal,High
+CIG-Mainline,Rockies,Mountain - Rockies,Group 2: Mountain WesTex,Existing
+Cheyenne,Rockies,Mountain - Rockies,Group 2: Mountain WesTex,Existing
+KRGT-Rec Pool,Rockies,Mountain - Rockies,Group 2: Mountain WesTex,Existing
+REX Cheyenne Comp Pool,Rockies,Mountain - Rockies,Group 9: Mountain Opal,Existing
+MountainWest-North,Rockies,Mountain - WesTex,Group 9: Mountain Opal,Existing
+NWP-Wyoming,Rockies,Mountain - WesTex,Group 2: Mountain WesTex,Existing
+GTN-Kingsgate,Rockies,West - California,Group 999: Special Outliers,Existing
+KRGT-Del Pool,Rockies,West - California,Group 2: Mountain WesTex,Existing
+PG&E-Topock,Rockies,West - California,Group 16: West California,Existing
+Socal-Ehrenberg,Rockies,West - California,Group 16: West California,Existing
+NGPL-MidAm,South Central,Midwest - Chicago,"Groups 3, 5: Midwest Chicago",High
+TW-Panhandle,South Central,Mountain - Panhandle,Group 8: SouthCentral WesTex,Existing
+TW-WTX,South Central,Mountain - Panhandle,Group 8: SouthCentral WesTex,Existing
+EP-S.Mainline,South Central,Mountain - WesTex,Group 2: Mountain WesTex,Existing
+EP-SJ Blanco Pool,South Central,Mountain - WesTex,Group 2: Mountain WesTex,Existing
+EP-SJ Bondad Stn,South Central,Mountain - WesTex,Group 2: Mountain WesTex,Existing
+TW-Blanco,South Central,Mountain - WesTex,Group 2: Mountain WesTex,Existing
+White River Hub,South Central,Mountain - WesTex,Group 2: Mountain WesTex,Existing
+ANR-SE-T,South Central,SouthCentral - Henry,Group 13: SouthCentral Henry,Existing
+CG-Onshore,South Central,SouthCentral - Henry,Group 13: SouthCentral Henry,Existing
+Pine Prairie,South Central,SouthCentral - Henry,Group 13: SouthCentral Henry,Existing
+TETCO-WLA,South Central,SouthCentral - Henry,Group 13: SouthCentral Henry,Existing
+TGP-800L,South Central,SouthCentral - Henry,"Groups 15, 19: SouthCentral Perryville",Existing
+Transco-45,South Central,SouthCentral - Henry,Group 999: Special Outliers,Existing
+ENT-STX Map,South Central,SouthCentral - Mexico,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+TGP-Z0 North,South Central,SouthCentral - Mexico,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+ANR-SW,South Central,SouthCentral - Midcon,Group 10: SouthCentral Midcon,Existing
+EGT-Flex,South Central,SouthCentral - Midcon,"Groups 3, 5: Midwest Chicago",High
+Enable West Pool,South Central,SouthCentral - Midcon,Group 10: SouthCentral Midcon,High
+NGPL-AM Pool,South Central,SouthCentral - Midcon,Group 10: SouthCentral Midcon,Existing
+NGPL-Midcont Pool,South Central,SouthCentral - Midcon,Group 10: SouthCentral Midcon,Existing
+OGT,South Central,SouthCentral - Midcon,"Groups 3, 5: Midwest Chicago",High
+Panhandle,South Central,SouthCentral - Midcon,Group 10: SouthCentral Midcon,Existing
+Southern Star,South Central,SouthCentral - Midcon,Group 10: SouthCentral Midcon,Existing
+CG-Mainline,South Central,SouthCentral - Perryville,"Groups 15, 19: SouthCentral Perryville",Existing
+Carthage,South Central,SouthCentral - Perryville,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+TETCO-ELA,South Central,SouthCentral - Perryville,"Groups 15, 19: SouthCentral Perryville",Existing
+TETCO-M1 30,South Central,SouthCentral - Perryville,"Groups 15, 19: SouthCentral Perryville",Existing
+TGP-Z1 100L,South Central,SouthCentral - Perryville,"Groups 3, 5: Midwest Chicago",Existing
+TGP-Z1 Sta-87,South Central,SouthCentral - Perryville,"Groups 3, 5: Midwest Chicago",Existing
+TGT-Mainline,South Central,SouthCentral - Perryville,"Groups 15, 19: SouthCentral Perryville",Existing
+Trunkline-Z1A,South Central,SouthCentral - Perryville,"Groups 15, 19: SouthCentral Perryville",Existing
+Agua Dulce Hub,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+Atmos Zone 3,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",High
+Bennington,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",High
+Gulf S. Pool 16,South Central,SouthCentral - TexCoast,"Groups 3, 5: Midwest Chicago",High
+HSC-HPL Pool,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+Katy-Enstor Pool,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+Katy-Lonestar Inter,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",High
+Katy-Oasis,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",High
+MEP-Lamar,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",High
+NGPL-STX,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+NGPL-TXOK East,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+Nortex-Tolar Hub,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",High
+TETCO-ETX,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+TETCO-STX,South Central,SouthCentral - TexCoast,Group 999: Special Outliers,Existing
+TGP-Z0 Border Pool,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+TGP-Z0 South,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+Transco-30,South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+Tres Palacios (inj),South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+Tres Palacios (w/d),South Central,SouthCentral - TexCoast,"Groups 6, 11, 14, 17: SouthCentral TexCoast",Existing
+AB Pool (inter),South Central,SouthCentral - WesTex,Group 8: SouthCentral WesTex,High
+EP-Keystone,South Central,SouthCentral - WesTex,Group 8: SouthCentral WesTex,Existing
+EP-Plains Pool,South Central,SouthCentral - WesTex,Group 8: SouthCentral WesTex,Existing
+EP-Waha Pool,South Central,SouthCentral - WesTex,Group 8: SouthCentral WesTex,Existing
+ONEOK Westex,South Central,SouthCentral - WesTex,Group 999: Special Outliers,High
+Waha,South Central,SouthCentral - WesTex,Group 8: SouthCentral WesTex,Existing
+Sonat-Z0 South,South Central,Southeast,Group 7: Southeast,Existing
+Transco Zn3,South Central,Southeast,Group 7: Southeast,Existing
+Transco-65,South Central,Southeast,Group 7: Southeast,Existing
+Moss Bluff Inter,South Central,Unassigned,"Groups 3, 5: Midwest Chicago",Medium
+FGT-CG,Southeast,Southeast,Group 7: Southeast,Existing
+FGT-Z3,Southeast,Southeast,Group 7: Southeast,Existing
+TGP-500L,Southeast,Southeast,Group 7: Southeast,Existing
+Transco-85,Southeast,Southeast,Group 7: Southeast,Existing
+GTN-Stanfield,West,Mountain - Rockies,Group 9: Mountain Opal,Existing
+GTN-Malin,West,West - California,Group 9: Mountain Opal,High
+NWP-Sumas,West,West - California,Group 999: Special Outliers,Existing
+PG&E-Citygate,West,West - California,Group 2: Mountain WesTex,Existing
+Socal-Border,West,West - California,Group 2: Mountain WesTex,Existing
+Socal-Citygate,West,West - California,Group 2: Mountain WesTex,Existing
+Socal-Needles,West,West - California,Group 16: West California,Existing
+REX-Z3 (receipt),,Northeast - Appalachia,"Groups 1, 12, 18: Northeast Appalachia",High

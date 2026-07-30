@@ -1,0 +1,109 @@
+{
+  "generated_utc": "2026-07-13T10:55:59.987477+00:00",
+  "public_output_dir": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT",
+  "dashboard_html": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CONUSDash.html",
+  "run_order": [
+    "NYMEXCurve",
+    "Fundy",
+    "EuroWeekly",
+    "CoT"
+  ],
+  "run_results": [
+    {
+      "module": "NYMEXCurve",
+      "label": "NYMEX Curve Analyst",
+      "command": [
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\run.py"
+      ],
+      "return_code": 1,
+      "started_utc": "2026-07-13T10:55:58.066186+00:00",
+      "finished_utc": "2026-07-13T10:55:58.241278+00:00",
+      "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\NYMEXCurve.log"
+    },
+    {
+      "module": "Fundy",
+      "label": "Fundy Dashboard",
+      "command": [
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\Fundy\\run_dashboard.py"
+      ],
+      "return_code": 1,
+      "started_utc": "2026-07-13T10:55:58.241278+00:00",
+      "finished_utc": "2026-07-13T10:55:58.332573+00:00",
+      "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\Fundy.log"
+    },
+    {
+      "module": "EuroWeekly",
+      "label": "Euro Weekly",
+      "command": [
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\EuroWeekly\\run_euro_weekly.py"
+      ],
+      "return_code": 1,
+      "started_utc": "2026-07-13T10:55:58.334079+00:00",
+      "finished_utc": "2026-07-13T10:55:58.494976+00:00",
+      "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\EuroWeekly.log"
+    },
+    {
+      "module": "CoT",
+      "label": "COT",
+      "command": [
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\CoT\\src\\run.py"
+      ],
+      "return_code": 1,
+      "started_utc": "2026-07-13T10:55:58.494976+00:00",
+      "finished_utc": "2026-07-13T10:55:58.630345+00:00",
+      "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\CoT.log"
+    }
+  ],
+  "copy_results": [
+    {
+      "module": "NYMEXCurve",
+      "copied": true,
+      "source": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\OUTPUT",
+      "dest": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\NYMEXCurve",
+      "copy_mode": "merge"
+    },
+    {
+      "module": "Fundy",
+      "copied": true,
+      "source": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\Fundy\\OUTPUT",
+      "dest": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\Fundy",
+      "copy_mode": "merge"
+    },
+    {
+      "module": "EuroWeekly",
+      "copied": true,
+      "source": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\EuroWeekly\\OUTPUT",
+      "dest": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\EuroWeekly",
+      "copy_mode": "merge"
+    },
+    {
+      "module": "CoT",
+      "copied": true,
+      "source": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\CoT\\OUTPUT",
+      "dest": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CoT",
+      "copy_mode": "merge"
+    }
+  ],
+  "panel_order": [
+    {
+      "title": "NYMEX Curve Analyst",
+      "module": "NYMEXCurve"
+    },
+    {
+      "title": "Fundy Dashboard",
+      "module": "Fundy"
+    },
+    {
+      "title": "Euro Weekly",
+      "module": "EuroWeekly"
+    },
+    {
+      "title": "COT",
+      "module": "CoT"
+    }
+  ]
+}

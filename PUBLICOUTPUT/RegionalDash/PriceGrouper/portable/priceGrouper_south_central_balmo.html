@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PriceGrouper Dashboard (Spring)</title>
+    <style>
+      :root {
+        --bg: #0c1324;
+        --card: #131c31;
+        --text: #e6edf7;
+        --muted: #aeb9cc;
+        --border: rgba(255, 255, 255, 0.12);
+        --accent: #46d6c8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(12, 19, 36, 0.92);
+        backdrop-filter: blur(8px);
+      }
+      header h1 { margin: 0; font-size: 20px; }
+      header p { margin: 6px 0 0 0; color: var(--muted); font-size: 13px; }
+      main {
+        max-width: 2200px;
+        margin: 0 auto;
+        padding: 18px;
+        display: grid;
+        gap: 14px;
+      }
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(160px, 1fr));
+        gap: 12px;
+      }
+      .kpi {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px;
+      }
+      .kpi .label { color: var(--muted); font-size: 12px; }
+      .kpi .value { margin-top: 4px; font-size: 28px; font-weight: 700; }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px;
+      }
+      .card h3 { margin: 0 0 10px 0; font-size: 14px; color: var(--muted); text-transform: uppercase; }
+      .instruction-card p {
+        margin: 0 0 10px 0;
+        color: var(--text);
+        line-height: 1.55;
+      }
+      .instruction-list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+      .instruction-list li {
+        margin: 7px 0;
+        line-height: 1.5;
+      }
+      .instruction-list strong {
+        color: var(--text);
+      }
+      .flag-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(360px, 1fr));
+        gap: 12px;
+        align-items: start;
+      }
+      .flag-grid > .flag-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+      }
+      .tabbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .tab-btn {
+        background: rgba(255,255,255,0.06);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-weight: 650;
+      }
+      .tab-btn.active {
+        background: rgba(70,214,200,0.2);
+        border-color: rgba(70,214,200,0.7);
+      }
+      .tab-panel { display: none; }
+      .tab-panel.active { display: block; }
+      .panel-head h2 { margin: 0; font-size: 20px; }
+      .subtitle { margin-top: 4px; color: var(--muted); }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+      }
+      .table th, .table td {
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+        padding: 6px;
+      }
+      .table th {
+        color: var(--muted);
+        font-weight: 700;
+        position: sticky;
+        top: 0;
+        background: rgba(19,28,49,0.95);
+      }
+      .flag-scroll {
+        height: 520px;
+        overflow-y: auto;
+        overflow-x: auto;
+      }
+      .interpretation-list {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .interpretation-list li {
+        margin: 2px 0;
+        line-height: 1.35;
+      }
+      .figure-stack {
+        display: grid;
+        gap: 12px;
+      }
+      .merged-figure-item {
+        display: grid;
+        gap: 6px;
+      }
+      .figure-subtitle {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .group-figure {
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: white;
+      }
+      .group-figure-link {
+        display: block;
+      }
+      a.pg-rdash-comp {
+        color: var(--accent);
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .group-search-wrap {
+        margin: 0 0 12px 0;
+      }
+      .group-search-label {
+        display: block;
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+      .group-search-input {
+        width: 100%;
+        max-width: 480px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        font-size: 14px;
+      }
+      .group-search-input:focus {
+        outline: 2px solid rgba(70, 214, 200, 0.45);
+        outline-offset: 1px;
+      }
+      .group-search-results {
+        margin-top: 8px;
+        max-height: 240px;
+        overflow-y: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.22);
+      }
+      .group-search-results[hidden] {
+        display: none !important;
+      }
+      .group-search-hit {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 8px 10px;
+        cursor: pointer;
+        border: none;
+        border-bottom: 1px solid var(--border);
+        background: transparent;
+        color: var(--text);
+        font: inherit;
+      }
+      .group-search-hit:last-child {
+        border-bottom: none;
+      }
+      .group-search-hit:hover {
+        background: rgba(70, 214, 200, 0.12);
+      }
+      .group-search-hit strong {
+        font-weight: 700;
+      }
+      .group-search-meta {
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 3px;
+      }
+      .group-search-empty {
+        padding: 8px 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .empty { color: var(--muted); font-size: 13px; padding: 6px 0; }
+      @media (max-width: 1180px) {
+        .flag-grid { grid-template-columns: 1fr; }
+        .split { grid-template-columns: 1fr; }
+        .summary-grid { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Spring PriceGrouper Dashboard (Forward Marks)</h1>
+      <p>Top outlier summary plus per-group regional breakdowns and figures. History window: 2026-03-14 to 2026-05-14</p>
+    </header>
+    <main>
+      <section class="card instruction-card">
+        <h3>How PriceGrouper Works</h3>
+        <p>
+          PriceGrouper is a relative-value screen for basis markets. It groups components by how
+          their basis moves together versus Henry Hub, using roughly the last two years of daily
+          basis-correlation history and evaluating each season separately. That means the groups
+          reflect seasonal trading behavior, not just one all-year average relationship.
+        </p>
+        <p>
+          Season definitions are Winter = Dec-Feb, Spring = Mar-May, Summer = Jun-Aug, Autumn = Sep-Nov. The current month is May, so this dashboard is using the Spring seasonal grouping.
+        </p>
+        <ul class="instruction-list">
+          <li><strong>Anomaly detection:</strong> each selected Forward Marks mark is checked against its own history and against a trust-gated peer view built from correlated subgroup or parent-group markets.</li>
+          <li><strong>Strong outlier:</strong> a high-conviction dislocation. The market is stretched versus normal history and/or clearly out of line with trusted peers.</li>
+          <li><strong>Outlier:</strong> a real dislocation that is large enough to investigate and discuss, even if it is not the most extreme print on the page.</li>
+          <li><strong>Watch:</strong> an early warning signal. The market is starting to move away from its usual range or peer relationships, but the signal is not yet strong enough to call a full outlier.</li>
+        </ul>
+      </section>
+
+      <section class="summary-grid">
+        <div class="kpi"><div class="label">Total Components</div><div class="value">134</div></div>
+        <div class="kpi"><div class="label">Marks Avaliable</div><div class="value">46</div></div>
+        <div class="kpi"><div class="label">Strong Outlier</div><div class="value">0</div></div>
+        <div class="kpi"><div class="label">Outlier</div><div class="value">9</div></div>
+        <div class="kpi"><div class="label">Watch</div><div class="value">10</div></div>
+      </section>
+
+      <section class="flag-grid">
+        <div class="card flag-card"><h3>Strong Outlier</h3><div class="flag-scroll"><div class="empty">No rows.</div></div></div>
+        <div class="card flag-card"><h3>Outlier</h3><div class="flag-scroll"><table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Component</th>
+      <th>Group</th>
+      <th>Price Region</th>
+      <th>Flag</th>
+      <th>Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Transco-65</td>
+      <td>Southeast</td>
+      <td>Southeast</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>very far <strong>below</strong> peer-implied value | parent peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Transco-85</td>
+      <td>Southeast</td>
+      <td>Southeast</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li>slightly <strong>above</strong> own-history expected value | own z score=2.39 watch</li><li>very far <strong>above</strong> peer-implied value | parent peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Transco-Z5 South</td>
+      <td>Northeast - Demand</td>
+      <td>Northeast - Demand</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li>slightly <strong>above</strong> own-history expected value | own z score=2.11 watch</li><li>very far <strong>above</strong> peer-implied value | parent peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Trunkline-Z1A</td>
+      <td>SouthCentral - Perryville</td>
+      <td>SouthCentral - Perryville</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>very far <strong>above</strong> peer-implied value | subgroup peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>TGP-500L</td>
+      <td>Southeast</td>
+      <td>Southeast</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li>moderately <strong>above</strong> own-history expected value | own z score=3.22</li></ul></td>
+    </tr>
+    <tr>
+      <td>Transco-Z6 (NY)</td>
+      <td>Northeast - Demand</td>
+      <td>Northeast - Demand</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>moderately <strong>below</strong> peer-implied value | subgroup peers: 7</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>FGT-Z3</td>
+      <td>Southeast</td>
+      <td>Southeast</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li>moderately <strong>above</strong> own-history expected value | own z score=3.00</li></ul></td>
+    </tr>
+    <tr>
+      <td>Transco-165</td>
+      <td>Northeast - Demand</td>
+      <td>Northeast - Demand</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>moderately <strong>above</strong> peer-implied value | subgroup peers: 7</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>NGPL-STX</td>
+      <td>SouthCentral - TexCoast</td>
+      <td>SouthCentral - TexCoast</td>
+      <td>Outlier</td>
+      <td><ul class="interpretation-list"><li>slightly <strong>below</strong> own-history expected value | own z score=2.07 watch</li><li>slightly <strong>below</strong> peer-implied value | parent peers: 5</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+  </tbody>
+</table></div></div>
+        <div class="card flag-card"><h3>Watch</h3><div class="flag-scroll"><table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Component</th>
+      <th>Group</th>
+      <th>Price Region</th>
+      <th>Flag</th>
+      <th>Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ANR-SE-T</td>
+      <td>SouthCentral - Henry</td>
+      <td>SouthCentral - Henry</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li>moderately <strong>below</strong> own-history expected value | own z score=3.00 watch</li><li><strong>Lower</strong> than peer-implied value | subgroup peers: 3</li></ul></td>
+    </tr>
+    <tr>
+      <td>Consumers</td>
+      <td>Midwest - Demand</td>
+      <td>Midwest - Demand</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li>moderately <strong>below</strong> own-history expected value | own z score=2.96 watch</li><li>slightly <strong>below</strong> peer-implied value | parent peers: 4</li></ul></td>
+    </tr>
+    <tr>
+      <td>CG-Mainline</td>
+      <td>SouthCentral - Perryville</td>
+      <td>SouthCentral - Perryville</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>moderately <strong>below</strong> peer-implied value | subgroup peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Transco-Z5</td>
+      <td>Northeast - Demand</td>
+      <td>Northeast - Demand</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li>slightly <strong>above</strong> own-history expected value | own z score=2.35 watch</li></ul></td>
+    </tr>
+    <tr>
+      <td>TGP-Z4 300L</td>
+      <td>Northeast - Appalachia</td>
+      <td>Northeast - Appalachia</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>slightly <strong>below</strong> peer-implied value | parent peers: 17</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>TGP-800L</td>
+      <td>SouthCentral - Henry</td>
+      <td>SouthCentral - Henry</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>slightly <strong>below</strong> peer-implied value | subgroup peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Transco-30</td>
+      <td>SouthCentral - TexCoast</td>
+      <td>SouthCentral - TexCoast</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>slightly <strong>above</strong> peer-implied value | parent peers: 5</li><li>History/peer direction <strong>disagree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Chicago</td>
+      <td>Midwest - Chicago</td>
+      <td>Midwest - Chicago</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>slightly <strong>above</strong> peer-implied value | parent peers: 11</li><li>History/peer direction <strong>disagree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Southern Star</td>
+      <td>SouthCentral - Midcon</td>
+      <td>SouthCentral - Midcon</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>slightly <strong>above</strong> peer-implied value | subgroup peers: 5</li><li>History/peer direction <strong>agree</strong>.</li></ul></td>
+    </tr>
+    <tr>
+      <td>TETCO-M3</td>
+      <td>Northeast - Demand</td>
+      <td>Northeast - Demand</td>
+      <td>Watch</td>
+      <td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>slightly <strong>above</strong> peer-implied value | parent peers: 17</li><li>History/peer direction <strong>disagree</strong>.</li></ul></td>
+    </tr>
+  </tbody>
+</table></div></div>
+      </section>
+
+      <section class="card"><h3>Groups</h3><div class="group-search-wrap">
+  <label class="group-search-label">Find component by name</label>
+  <input type="search" class="group-search-input" placeholder="Type a market component…" autocomplete="off" />
+  <div class="group-search-results" hidden></div>
+</div><div class="tabbar"><button class="tab-btn active" role="tab" aria-selected="true" data-target="groupTab0">Mountain-WesTex</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab1">Midwest-Chicago</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab2">SouthCentral-Perryville</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab3">SouthCentral-Midcon</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab4">SouthCentral-TexCoast</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab5">SouthCentral-Mexico</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab6">Mountain-Panhandle</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab7">SouthCentral-WesTex</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab8">SouthCentral-Henry</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab9">Southeast</button></div></section><section id="groupTab0" class="tab-panel active" role="tabpanel" data-price-region-key="Mountain - WesTex">
+              <div class="panel-head">
+                <h2>Mountain-WesTex</h2>
+                <p class="subtitle">Includes parent groups: Global_G02, Global_G04</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_0.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_0.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 2 | Global_G02 | Type: regular</div><a href="figures/balmo/Global_G02_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G02_spring_basis_overlay.png" alt="Global_G02_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 4 | Global_G04 | Type: regular</div><a href="figures/balmo/Global_G04_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G04_spring_basis_overlay.png" alt="Global_G04_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <div class="empty">No rows.</div>
+              </div>
+            </section><section id="groupTab1" class="tab-panel" role="tabpanel" data-price-region-key="Midwest - Chicago">
+              <div class="panel-head">
+                <h2>Midwest-Chicago</h2>
+                <p class="subtitle">Includes parent groups: Global_G03</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_1.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_1.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 3 | Global_G03 | Type: regular</div><a href="figures/balmo/Global_G03_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G03_spring_basis_overlay.png" alt="Global_G03_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <div class="empty">No rows.</div>
+              </div>
+            </section><section id="groupTab2" class="tab-panel" role="tabpanel" data-price-region-key="SouthCentral - Perryville">
+              <div class="panel-head">
+                <h2>SouthCentral-Perryville</h2>
+                <p class="subtitle">Includes parent groups: Global_G03, Global_G06, Global_G13, Global_G14, Global_G20</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_2.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_2.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 3 | Global_G03 | Type: regular</div><a href="figures/balmo/Global_G03_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G03_spring_basis_overlay.png" alt="Global_G03_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 6 | Global_G06 | Type: regular</div><a href="figures/balmo/Global_G06_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G06_spring_basis_overlay.png" alt="Global_G06_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 13 | Global_G13 | Type: regular</div><a href="figures/balmo/Global_G13_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G13_spring_basis_overlay.png" alt="Global_G13_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 14 | Global_G14 | Type: regular</div><a href="figures/balmo/Global_G14_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G14_spring_basis_overlay.png" alt="Global_G14_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 20 | Global_G20 | Type: regular</div><a href="figures/balmo/Global_G20_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G20_spring_basis_overlay.png" alt="Global_G20_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <table class="table flagged-nav-table" border="0"><thead><tr><th>Component</th><th>Flag</th><th>Price Region</th><th>Peer Level</th><th>Score</th><th>Interpretation</th></tr></thead><tbody><tr><td><a href="#" class="pg-rdash-comp" data-price-region="SouthCentral - Perryville" data-component="Trunkline-Z1A">Trunkline-Z1A</a></td><td>Outlier</td><td>SouthCentral - Perryville</td><td>Subgroup</td><td>3.71</td><td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>very far <strong>above</strong> peer-implied value | subgroup peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td></tr><tr><td><a href="#" class="pg-rdash-comp" data-price-region="SouthCentral - Perryville" data-component="CG-Mainline">CG-Mainline</a></td><td>Watch</td><td>SouthCentral - Perryville</td><td>Subgroup</td><td>2.58</td><td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>moderately <strong>below</strong> peer-implied value | subgroup peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td></tr></tbody></table>
+              </div>
+            </section><section id="groupTab3" class="tab-panel" role="tabpanel" data-price-region-key="SouthCentral - Midcon">
+              <div class="panel-head">
+                <h2>SouthCentral-Midcon</h2>
+                <p class="subtitle">Includes parent groups: Global_G06, Global_G09</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_3.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_3.png" alt="Subgroup summary" class="group-figure" /></a><p class="subtitle" style="margin-top:8px">Not in PRICES.csv (skipped): Enable West Pool</p></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 6 | Global_G06 | Type: regular</div><a href="figures/balmo/Global_G06_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G06_spring_basis_overlay.png" alt="Global_G06_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 9 | Global_G09 | Type: regular</div><a href="figures/balmo/Global_G09_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G09_spring_basis_overlay.png" alt="Global_G09_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <table class="table flagged-nav-table" border="0"><thead><tr><th>Component</th><th>Flag</th><th>Price Region</th><th>Peer Level</th><th>Score</th><th>Interpretation</th></tr></thead><tbody><tr><td><a href="#" class="pg-rdash-comp" data-price-region="SouthCentral - Midcon" data-component="Southern Star">Southern Star</a></td><td>Watch</td><td>SouthCentral - Midcon</td><td>Subgroup</td><td>1.74</td><td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>slightly <strong>above</strong> peer-implied value | subgroup peers: 5</li><li>History/peer direction <strong>agree</strong>.</li></ul></td></tr></tbody></table>
+              </div>
+            </section><section id="groupTab4" class="tab-panel" role="tabpanel" data-price-region-key="SouthCentral - TexCoast">
+              <div class="panel-head">
+                <h2>SouthCentral-TexCoast</h2>
+                <p class="subtitle">Includes parent groups: Global_G06, Global_G07, Global_G10, Global_G13, Global_G16, Global_OUTLIER</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_4.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_4.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 6 | Global_G06 | Type: regular</div><a href="figures/balmo/Global_G06_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G06_spring_basis_overlay.png" alt="Global_G06_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 7 | Global_G07 | Type: regular</div><a href="figures/balmo/Global_G07_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G07_spring_basis_overlay.png" alt="Global_G07_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 10 | Global_G10 | Type: regular</div><a href="figures/balmo/Global_G10_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G10_spring_basis_overlay.png" alt="Global_G10_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 13 | Global_G13 | Type: regular</div><a href="figures/balmo/Global_G13_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G13_spring_basis_overlay.png" alt="Global_G13_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 16 | Global_G16 | Type: regular</div><a href="figures/balmo/Global_G16_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G16_spring_basis_overlay.png" alt="Global_G16_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 999 | Global_OUTLIER | Type: outlier</div><a href="figures/balmo/Global_OUTLIER_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_OUTLIER_spring_basis_overlay.png" alt="Global_OUTLIER_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <table class="table flagged-nav-table" border="0"><thead><tr><th>Component</th><th>Flag</th><th>Price Region</th><th>Peer Level</th><th>Score</th><th>Interpretation</th></tr></thead><tbody><tr><td><a href="#" class="pg-rdash-comp" data-price-region="SouthCentral - TexCoast" data-component="NGPL-STX">NGPL-STX</a></td><td>Outlier</td><td>SouthCentral - TexCoast</td><td>Parent</td><td>2.86</td><td><ul class="interpretation-list"><li>slightly <strong>below</strong> own-history expected value | own z score=2.07 watch</li><li>slightly <strong>below</strong> peer-implied value | parent peers: 5</li><li>History/peer direction <strong>agree</strong>.</li></ul></td></tr><tr><td><a href="#" class="pg-rdash-comp" data-price-region="SouthCentral - TexCoast" data-component="Transco-30">Transco-30</a></td><td>Watch</td><td>SouthCentral - TexCoast</td><td>Parent</td><td>1.99</td><td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>slightly <strong>above</strong> peer-implied value | parent peers: 5</li><li>History/peer direction <strong>disagree</strong>.</li></ul></td></tr></tbody></table>
+              </div>
+            </section><section id="groupTab5" class="tab-panel" role="tabpanel" data-price-region-key="SouthCentral - Mexico">
+              <div class="panel-head">
+                <h2>SouthCentral-Mexico</h2>
+                <p class="subtitle">Includes parent groups: Global_G07</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_5.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_5.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 7 | Global_G07 | Type: regular</div><a href="figures/balmo/Global_G07_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G07_spring_basis_overlay.png" alt="Global_G07_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <div class="empty">No rows.</div>
+              </div>
+            </section><section id="groupTab6" class="tab-panel" role="tabpanel" data-price-region-key="Mountain - Panhandle">
+              <div class="panel-head">
+                <h2>Mountain-Panhandle</h2>
+                <p class="subtitle">Includes parent groups: Global_G08</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_6.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_6.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 8 | Global_G08 | Type: regular</div><a href="figures/balmo/Global_G08_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G08_spring_basis_overlay.png" alt="Global_G08_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <div class="empty">No rows.</div>
+              </div>
+            </section><section id="groupTab7" class="tab-panel" role="tabpanel" data-price-region-key="SouthCentral - WesTex">
+              <div class="panel-head">
+                <h2>SouthCentral-WesTex</h2>
+                <p class="subtitle">Includes parent groups: Global_G08, Global_OUTLIER</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_7.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_7.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 8 | Global_G08 | Type: regular</div><a href="figures/balmo/Global_G08_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G08_spring_basis_overlay.png" alt="Global_G08_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 999 | Global_OUTLIER | Type: outlier</div><a href="figures/balmo/Global_OUTLIER_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_OUTLIER_spring_basis_overlay.png" alt="Global_OUTLIER_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <div class="empty">No rows.</div>
+              </div>
+            </section><section id="groupTab8" class="tab-panel" role="tabpanel" data-price-region-key="SouthCentral - Henry">
+              <div class="panel-head">
+                <h2>SouthCentral-Henry</h2>
+                <p class="subtitle">Includes parent groups: Global_G12, Global_G14, Global_OUTLIER</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (latest two months)</h3><a href="_subgroup_figs_priceGrouper_south_central_balmo/tab_8.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_south_central_balmo/tab_8.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 12 | Global_G12 | Type: regular</div><a href="figures/balmo/Global_G12_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G12_spring_basis_overlay.png" alt="Global_G12_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 14 | Global_G14 | Type: regular</div><a href="figures/balmo/Global_G14_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_G14_spring_basis_overlay.png" alt="Global_G14_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 999 | Global_OUTLIER | Type: outlier</div><a href="figures/balmo/Global_OUTLIER_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/balmo/Global_OUTLIER_spring_basis_overlay.png" alt="Global_OUTLIER_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <table class="table flagged-nav-table" border="0"><thead><tr><th>Component</th><th>Flag</th><th>Price Region</th><th>Peer Level</th><th>Score</th><th>Interpretation</th></tr></thead><tbody><tr><td><a href="#" class="pg-rdash-comp" data-price-region="SouthCentral - Henry" data-component="ANR-SE-T">ANR-SE-T</a></td><td>Watch</td><td>SouthCentral - Henry</td><td>Subgroup</td><td>3.0</td><td><ul class="interpretation-list"><li>moderately <strong>below</strong> own-history expected value | own z score=3.00 watch</li><li><strong>Lower</strong> than peer-implied value | subgroup peers: 3</li></ul></td></tr><tr><td><a href="#" class="pg-rdash-comp" data-price-region="SouthCentral - Henry" data-component="TGP-800L">TGP-800L</a></td><td>Watch</td><td>SouthCentral - Henry</td><td>Subgroup</td><td>2.03</td><td><ul class="interpretation-list"><li><strong>Lower</strong> than own-history expected value</li><li>slightly <strong>below</strong> peer-implied value | subgroup peers: 3</li><li>History/peer direction <strong>agree</strong>.</li></ul></td></tr></tbody></table>
+              </div>
+            </section><section id="groupTab9" class="tab-panel" role="tabpanel" data-price-region-key="Southeast">
+              <div class="panel-head">
+                <h2>Southeast</h2>
+                <p class="subtitle">No components in routed PriceGrouper groups for this Price Admin bucket.</p>
+              </div>
+              <div class="card"><h3>Group components and forward marks</h3><div class="empty">No rows.</div></div>
+              <div class="card">
+                <h3>Spring Basis Overlay (click image to open full size)</h3>
+                <div class="figure-stack"><div class="empty">Group figure not found.</div></div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <div class="empty">No rows.</div>
+              </div>
+            </section>
+    </main>
+    <script>
+      (function() {
+        const buttons = Array.from(document.querySelectorAll('.tab-btn'));
+        const panels = Array.from(document.querySelectorAll('.tab-panel'));
+        function activate(id) {
+          buttons.forEach((b) => {
+            const on = b.dataset.target === id;
+            b.classList.toggle('active', on);
+            b.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+          panels.forEach((p) => p.classList.toggle('active', p.id === id));
+        }
+        buttons.forEach((b) => b.addEventListener('click', () => activate(b.dataset.target)));
+        if (buttons.length > 0) activate(buttons[0].dataset.target);
+
+        const componentSearchIndex = [{"component": "White River Hub", "tabId": "groupTab0", "groupTitle": "Mountain-WesTex", "regionTitle": "Mountain - WesTex"}, {"component": "NGPL-MidAm", "tabId": "groupTab1", "groupTitle": "Midwest-Chicago", "regionTitle": "Midwest - Chicago"}, {"component": "TGP-Z1 100L", "tabId": "groupTab2", "groupTitle": "SouthCentral-Perryville", "regionTitle": "SouthCentral - Perryville"}, {"component": "EP-SJ Blanco Pool", "tabId": "groupTab0", "groupTitle": "Mountain-WesTex", "regionTitle": "Mountain - WesTex"}, {"component": "EP-SJ Bondad Stn", "tabId": "groupTab0", "groupTitle": "Mountain-WesTex", "regionTitle": "Mountain - WesTex"}, {"component": "TW-Blanco", "tabId": "groupTab0", "groupTitle": "Mountain-WesTex", "regionTitle": "Mountain - WesTex"}, {"component": "EP-S.Mainline", "tabId": "groupTab0", "groupTitle": "Mountain-WesTex", "regionTitle": "Mountain - WesTex"}, {"component": "EGT-Flex", "tabId": "groupTab3", "groupTitle": "SouthCentral-Midcon", "regionTitle": "SouthCentral - Midcon"}, {"component": "Gulf S. Pool 16", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "OGT", "tabId": "groupTab3", "groupTitle": "SouthCentral-Midcon", "regionTitle": "SouthCentral - Midcon"}, {"component": "TGP-Z1 Sta-87", "tabId": "groupTab2", "groupTitle": "SouthCentral-Perryville", "regionTitle": "SouthCentral - Perryville"}, {"component": "ENT-STX Map", "tabId": "groupTab5", "groupTitle": "SouthCentral-Mexico", "regionTitle": "SouthCentral - Mexico"}, {"component": "Katy-Oasis", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "TGP-Z0 North", "tabId": "groupTab5", "groupTitle": "SouthCentral-Mexico", "regionTitle": "SouthCentral - Mexico"}, {"component": "Tres Palacios (w/d)", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "Katy-Enstor Pool", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "Katy-Lonestar Inter", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "TGP-Z0 South", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "Tres Palacios (inj)", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "EP-Plains Pool", "tabId": "groupTab7", "groupTitle": "SouthCentral-WesTex", "regionTitle": "SouthCentral - WesTex"}, {"component": "TW-Panhandle", "tabId": "groupTab6", "groupTitle": "Mountain-Panhandle", "regionTitle": "Mountain - Panhandle"}, {"component": "TW-WTX", "tabId": "groupTab6", "groupTitle": "Mountain-Panhandle", "regionTitle": "Mountain - Panhandle"}, {"component": "EP-Waha Pool", "tabId": "groupTab7", "groupTitle": "SouthCentral-WesTex", "regionTitle": "SouthCentral - WesTex"}, {"component": "Waha", "tabId": "groupTab7", "groupTitle": "SouthCentral-WesTex", "regionTitle": "SouthCentral - WesTex"}, {"component": "AB Pool (inter)", "tabId": "groupTab7", "groupTitle": "SouthCentral-WesTex", "regionTitle": "SouthCentral - WesTex"}, {"component": "EP-Keystone", "tabId": "groupTab7", "groupTitle": "SouthCentral-WesTex", "regionTitle": "SouthCentral - WesTex"}, {"component": "ANR-SW", "tabId": "groupTab3", "groupTitle": "SouthCentral-Midcon", "regionTitle": "SouthCentral - Midcon"}, {"component": "Enable West Pool", "tabId": "groupTab3", "groupTitle": "SouthCentral-Midcon", "regionTitle": "SouthCentral - Midcon"}, {"component": "NGPL-AM Pool", "tabId": "groupTab3", "groupTitle": "SouthCentral-Midcon", "regionTitle": "SouthCentral - Midcon"}, {"component": "NGPL-Midcont Pool", "tabId": "groupTab3", "groupTitle": "SouthCentral-Midcon", "regionTitle": "SouthCentral - Midcon"}, {"component": "Panhandle", "tabId": "groupTab3", "groupTitle": "SouthCentral-Midcon", "regionTitle": "SouthCentral - Midcon"}, {"component": "Southern Star", "tabId": "groupTab3", "groupTitle": "SouthCentral-Midcon", "regionTitle": "SouthCentral - Midcon"}, {"component": "Agua Dulce Hub", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "HSC-HPL Pool", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "TETCO-ETX", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "Transco-30", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "NGPL-STX", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "TGP-Z0 Border Pool", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "ANR-SE-T", "tabId": "groupTab8", "groupTitle": "SouthCentral-Henry", "regionTitle": "SouthCentral - Henry"}, {"component": "CG-Onshore", "tabId": "groupTab8", "groupTitle": "SouthCentral-Henry", "regionTitle": "SouthCentral - Henry"}, {"component": "Pine Prairie", "tabId": "groupTab8", "groupTitle": "SouthCentral-Henry", "regionTitle": "SouthCentral - Henry"}, {"component": "TETCO-WLA", "tabId": "groupTab8", "groupTitle": "SouthCentral-Henry", "regionTitle": "SouthCentral - Henry"}, {"component": "Bennington", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "MEP-Lamar", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "NGPL-TXOK East", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "Carthage", "tabId": "groupTab2", "groupTitle": "SouthCentral-Perryville", "regionTitle": "SouthCentral - Perryville"}, {"component": "CG-Mainline", "tabId": "groupTab2", "groupTitle": "SouthCentral-Perryville", "regionTitle": "SouthCentral - Perryville"}, {"component": "TGP-800L", "tabId": "groupTab8", "groupTitle": "SouthCentral-Henry", "regionTitle": "SouthCentral - Henry"}, {"component": "TGT-Mainline", "tabId": "groupTab2", "groupTitle": "SouthCentral-Perryville", "regionTitle": "SouthCentral - Perryville"}, {"component": "Trunkline-Z1A", "tabId": "groupTab2", "groupTitle": "SouthCentral-Perryville", "regionTitle": "SouthCentral - Perryville"}, {"component": "Atmos Zone 3", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "Nortex-Tolar Hub", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "TETCO-ELA", "tabId": "groupTab2", "groupTitle": "SouthCentral-Perryville", "regionTitle": "SouthCentral - Perryville"}, {"component": "TETCO-M1 30", "tabId": "groupTab2", "groupTitle": "SouthCentral-Perryville", "regionTitle": "SouthCentral - Perryville"}, {"component": "ONEOK Westex", "tabId": "groupTab7", "groupTitle": "SouthCentral-WesTex", "regionTitle": "SouthCentral - WesTex"}, {"component": "TETCO-STX", "tabId": "groupTab4", "groupTitle": "SouthCentral-TexCoast", "regionTitle": "SouthCentral - TexCoast"}, {"component": "Transco-45", "tabId": "groupTab8", "groupTitle": "SouthCentral-Henry", "regionTitle": "SouthCentral - Henry"}];
+        const input = document.querySelector('.group-search-input');
+        const outEl = document.querySelector('.group-search-results');
+        if (input && outEl && Array.isArray(componentSearchIndex)) {
+          function renderSearch(q) {
+            const term = (q || '').trim().toLowerCase();
+            outEl.innerHTML = '';
+            if (!term) {
+              outEl.hidden = true;
+              return;
+            }
+            if (!componentSearchIndex.length) {
+              outEl.hidden = false;
+              const empty = document.createElement('div');
+              empty.className = 'group-search-empty';
+              empty.textContent = 'Component search index is empty; regenerate PriceGrouper HTML.';
+              outEl.appendChild(empty);
+              return;
+            }
+            const scored = [];
+            for (const row of componentSearchIndex) {
+              const c = (row.component || '').toLowerCase();
+              if (!c.includes(term)) continue;
+              const starts = c.startsWith(term) ? 0 : 1;
+              scored.push({ starts, name: row.component, row });
+            }
+            scored.sort((a, b) => (a.starts - b.starts) || a.name.localeCompare(b.name));
+            const lim = scored.slice(0, 50);
+            if (lim.length === 0) {
+              outEl.hidden = false;
+              const empty = document.createElement('div');
+              empty.className = 'group-search-empty';
+              empty.textContent = 'No components match.';
+              outEl.appendChild(empty);
+              return;
+            }
+            outEl.hidden = false;
+            for (const { row } of lim) {
+              const hit = document.createElement('button');
+              hit.type = 'button';
+              hit.className = 'group-search-hit';
+              const strong = document.createElement('strong');
+              strong.textContent = row.component || '';
+              const meta = document.createElement('div');
+              meta.className = 'group-search-meta';
+              const metaParts = [];
+              if (row.groupTitle) metaParts.push('Group: ' + row.groupTitle);
+              if (row.regionTitle) metaParts.push('Region: ' + row.regionTitle);
+              meta.textContent = metaParts.join(' | ');
+              hit.appendChild(strong);
+              hit.appendChild(meta);
+              hit.addEventListener('click', () => {
+                if (row.tabId) activate(row.tabId);
+                input.value = row.component || '';
+                outEl.hidden = true;
+                outEl.innerHTML = '';
+              });
+              outEl.appendChild(hit);
+            }
+          }
+          input.addEventListener('input', () => renderSearch(input.value));
+          input.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              outEl.hidden = true;
+              outEl.innerHTML = '';
+            }
+          });
+          document.addEventListener('click', (e) => {
+            if (!input.contains(e.target) && !outEl.contains(e.target)) {
+              outEl.hidden = true;
+            }
+          });
+        }
+      })();
+    </script>
+
+    <script>
+      (function() {
+        const crit = "South Central";
+        document.querySelectorAll("a.pg-rdash-comp").forEach((a) => {
+          a.addEventListener("click", (e) => {
+            e.preventDefault();
+            const pr = a.getAttribute("data-price-region") || "";
+            const comp = a.getAttribute("data-component") || "";
+            if (window.top) {
+              window.top.postMessage(
+                { type: "rdash-nav", criterion: crit, priceRegion: pr, component: comp },
+                "*"
+              );
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

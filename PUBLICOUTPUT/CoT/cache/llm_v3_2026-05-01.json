@@ -1,0 +1,526 @@
+{
+  "asof_date": "2026-05-01",
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v3",
+  "payload_hash": "abd32b82f0b45c07e256e597fef33c834c3d5600ba1eab631b14f1215099cac1",
+  "narrative": {
+    "placeholder": false,
+    "message": "",
+    "price_view": "Bearish",
+    "pulse": "Prompt spread is in contango with Managed Money heavily short (MM_z -1.61), near crowded short territory. Storage is close to 5-year norm and weather demand is near normal, limiting bullish catalysts.",
+    "risk_alert": "Risk bias is bearish due to strong Managed Money short positioning and contango structure, though short squeeze spikes remain possible.",
+    "historical_comparison": "Current MM index (15) is well below seasonal average (38), signaling elevated short pressure versus typical May conditions.",
+    "source": "openai_http",
+    "generated_at_utc": "2026-05-05T15:43:51.397240+00:00"
+  },
+  "payload": {
+    "asof_date": "2026-05-01",
+    "current_statistics": {
+      "FWD_00": 2.767,
+      "PromptSpread": 0.27700000000000014,
+      "WidowMaker": 0.2610000000000001,
+      "MM_z": -1.6099049205189682,
+      "Prod_z": -0.7437744542163115,
+      "MM_index": 15.384615384615385,
+      "Prod_index": 67.94871794871796,
+      "Price_4w_return": -0.011785714285714288,
+      "MM_vs_Prod_index_spread": -52.56410256410257,
+      "Lower48": 2142.0,
+      "EIA_vs_5y_bcf": 36.59999999999991,
+      "EIA_balance_label": "closer",
+      "weather_intensity_dev": 0.9604300402893424,
+      "Weather_vs_normal_label": "near normal"
+    },
+    "triggered_regimes": [
+      {
+        "type": "Structure: Contango + Short Bias",
+        "reason": "Prompt spread is contango while managed money z-score is negative.",
+        "metrics": {
+          "PromptSpread": 0.27700000000000014,
+          "MM_z": -1.6099049205189682
+        }
+      }
+    ],
+    "near_regimes": [
+      {
+        "type": "Near Crowded Short",
+        "reason": "MM_z=-1.61 is within 0.5 of the -2 crowded threshold."
+      }
+    ],
+    "last_8_weeks_context": [
+      {
+        "Date": "2026-03-13",
+        "FWD_00": 3.233,
+        "PromptSpread": -0.006000000000000227,
+        "WidowMaker": 0.4049999999999998,
+        "MM_z": -0.6227207045424498,
+        "Prod_z": 0.9268125147597567,
+        "MM_index": 30.76923076923077,
+        "Prod_index": 94.87179487179486,
+        "Price_4w_return": 0.004973577867578571,
+        "EIA_vs_5y_bcf": 56.40000000000009,
+        "EIA_balance_label": "higher",
+        "weather_intensity_dev": -3.8579377624298408,
+        "Weather_vs_normal_label": "much milder"
+      },
+      {
+        "Date": "2026-03-20",
+        "FWD_00": 3.166,
+        "PromptSpread": -0.040000000000000036,
+        "WidowMaker": 0.41200000000000037,
+        "MM_z": -0.020801176166892595,
+        "Prod_z": 0.3239521387013512,
+        "MM_index": 47.43589743589743,
+        "Prod_index": 88.46153846153845,
+        "Price_4w_return": 0.0567423230974633,
+        "EIA_vs_5y_bcf": 3.599999999999909,
+        "EIA_balance_label": "closer",
+        "weather_intensity_dev": 0.6682581100577767,
+        "Weather_vs_normal_label": "near normal"
+      },
+      {
+        "Date": "2026-03-27",
+        "FWD_00": 2.999,
+        "PromptSpread": -0.07100000000000017,
+        "WidowMaker": 0.3400000000000003,
+        "MM_z": -0.2976835224714595,
+        "Prod_z": -0.018490837041119205,
+        "MM_index": 39.1025641025641,
+        "Prod_index": 83.97435897435898,
+        "Price_4w_return": 0.06084188185355499,
+        "EIA_vs_5y_bcf": 45.40000000000009,
+        "EIA_balance_label": "closer",
+        "weather_intensity_dev": -1.6658384193125464,
+        "Weather_vs_normal_label": "milder"
+      },
+      {
+        "Date": "2026-04-03",
+        "FWD_00": 2.8,
+        "PromptSpread": 0.12400000000000011,
+        "WidowMaker": 0.3059999999999996,
+        "MM_z": -0.7605251223709486,
+        "Prod_z": -0.3315164843439509,
+        "MM_index": 26.923076923076923,
+        "Prod_index": 77.56410256410257,
+        "Price_4w_return": -0.06759906759906764,
+        "EIA_vs_5y_bcf": 58.0,
+        "EIA_balance_label": "higher",
+        "weather_intensity_dev": -1.3959099955036751,
+        "Weather_vs_normal_label": "milder"
+      },
+      {
+        "Date": "2026-04-10",
+        "FWD_00": 2.67,
+        "PromptSpread": 0.14400000000000013,
+        "WidowMaker": 0.29400000000000004,
+        "MM_z": -1.4520285185060622,
+        "Prod_z": 0.03393233950643298,
+        "MM_index": 17.307692307692307,
+        "Prod_index": 84.61538461538461,
+        "Price_4w_return": -0.17414166408908138,
+        "EIA_vs_5y_bcf": 71.59999999999991,
+        "EIA_balance_label": "higher",
+        "weather_intensity_dev": -0.8111590665906254,
+        "Weather_vs_normal_label": "near normal"
+      },
+      {
+        "Date": "2026-04-17",
+        "FWD_00": 2.647,
+        "PromptSpread": 0.14400000000000013,
+        "WidowMaker": 0.2589999999999999,
+        "MM_z": -2.4496345440182794,
+        "Prod_z": -0.02078113507433792,
+        "MM_index": 8.333333333333332,
+        "Prod_index": 83.33333333333334,
+        "Price_4w_return": -0.1639292482627922,
+        "EIA_vs_5y_bcf": 111.79999999999995,
+        "EIA_balance_label": "higher",
+        "weather_intensity_dev": -1.6208745955072534,
+        "Weather_vs_normal_label": "milder"
+      },
+      {
+        "Date": "2026-04-24",
+        "FWD_00": 2.614,
+        "PromptSpread": 0.1459999999999999,
+        "WidowMaker": 0.2709999999999999,
+        "MM_z": -1.8178300804000678,
+        "Prod_z": -0.6339883391251326,
+        "MM_index": 14.102564102564102,
+        "Prod_index": 69.23076923076923,
+        "Price_4w_return": -0.1283761253751251,
+        "EIA_vs_5y_bcf": 119.40000000000009,
+        "EIA_balance_label": "higher",
+        "weather_intensity_dev": -1.0013303874483053,
+        "Weather_vs_normal_label": "milder"
+      },
+      {
+        "Date": "2026-05-01",
+        "FWD_00": 2.767,
+        "PromptSpread": 0.27700000000000014,
+        "WidowMaker": 0.2610000000000001,
+        "MM_z": -1.6099049205189682,
+        "Prod_z": -0.7437744542163115,
+        "MM_index": 15.384615384615385,
+        "Prod_index": 67.94871794871796,
+        "Price_4w_return": -0.011785714285714288,
+        "EIA_vs_5y_bcf": 36.59999999999991,
+        "EIA_balance_label": "closer",
+        "weather_intensity_dev": 0.9604300402893424,
+        "Weather_vs_normal_label": "near normal"
+      }
+    ],
+    "analog_weeks": [
+      {
+        "Date": "2015-05-22",
+        "distance": 2.267607232394459,
+        "FWD_00": 2.949,
+        "MM_z": -0.9925694260854673,
+        "Prod_z": -1.0220510451745757,
+        "PromptSpread": 0.04500000000000037,
+        "WidowMaker": 0.19100000000000028,
+        "Price_4w_return": 0.16515211378901618,
+        "EIA_balance_label": "much higher",
+        "Weather_vs_normal_label": "near normal"
+      },
+      {
+        "Date": "2019-05-10",
+        "distance": 2.868866724285752,
+        "FWD_00": 2.595,
+        "MM_z": -2.1689409202549337,
+        "Prod_z": -0.47550856498099964,
+        "PromptSpread": 0.03599999999999959,
+        "WidowMaker": 0.24800000000000022,
+        "Price_4w_return": -0.025900900900900914,
+        "EIA_balance_label": "much lower",
+        "Weather_vs_normal_label": "near normal"
+      },
+      {
+        "Date": "2024-04-26",
+        "distance": 3.9057151991143506,
+        "FWD_00": 1.638,
+        "MM_z": -0.7269862486574116,
+        "Prod_z": 0.657539354839486,
+        "PromptSpread": 0.3480000000000001,
+        "WidowMaker": 0.20699999999999985,
+        "Price_4w_return": -0.07090187180941576,
+        "EIA_balance_label": "much higher",
+        "Weather_vs_normal_label": "near normal"
+      },
+      {
+        "Date": "2016-05-27",
+        "distance": 6.023403675719666,
+        "FWD_00": 1.963,
+        "MM_z": 0.7100316428365299,
+        "Prod_z": 0.8842571945529161,
+        "PromptSpread": 0.18799999999999972,
+        "WidowMaker": 0.18999999999999995,
+        "Price_4w_return": -0.05534167468719908,
+        "EIA_balance_label": "much higher",
+        "Weather_vs_normal_label": "milder"
+      },
+      {
+        "Date": "2020-05-15",
+        "distance": 7.1125129939126985,
+        "FWD_00": 1.681,
+        "MM_z": 1.6363361275809165,
+        "Prod_z": 0.273989573903957,
+        "PromptSpread": 0.20299999999999985,
+        "WidowMaker": 0.278,
+        "Price_4w_return": -0.0029655990510082386,
+        "EIA_balance_label": "much higher",
+        "Weather_vs_normal_label": "hotter/colder"
+      },
+      {
+        "Date": "2015-04-24",
+        "distance": 8.537088186334294,
+        "FWD_00": 2.531,
+        "MM_z": -2.1438926464921066,
+        "Prod_z": 0.19639427997612272,
+        "PromptSpread": 0.03799999999999981,
+        "WidowMaker": 0.13200000000000012,
+        "Price_4w_return": -0.052769461077844304,
+        "EIA_balance_label": "much higher",
+        "Weather_vs_normal_label": "near normal"
+      },
+      {
+        "Date": "2020-04-03",
+        "distance": 8.343201013359433,
+        "FWD_00": 1.552,
+        "MM_z": 0.8292573287391394,
+        "Prod_z": 1.2466305241807423,
+        "PromptSpread": 0.11999999999999988,
+        "WidowMaker": 0.2370000000000001,
+        "Price_4w_return": -0.12415349887133176,
+        "EIA_balance_label": "much higher",
+        "Weather_vs_normal_label": "near normal"
+      },
+      {
+        "Date": "2016-04-15",
+        "distance": 8.62239115315611,
+        "FWD_00": 1.97,
+        "MM_z": 1.6926993697602135,
+        "Prod_z": 1.0352562753676722,
+        "PromptSpread": 0.0930000000000002,
+        "WidowMaker": 0.19600000000000017,
+        "Price_4w_return": 0.017561983471074294,
+        "EIA_balance_label": "much higher",
+        "Weather_vs_normal_label": "near normal"
+      },
+      {
+        "Date": "2025-05-30",
+        "distance": 11.958314687899518,
+        "FWD_00": 3.522,
+        "MM_z": -0.6961340479481057,
+        "Prod_z": 1.35948948878896,
+        "PromptSpread": 0.0810000000000004,
+        "WidowMaker": 0.2979999999999996,
+        "Price_4w_return": 0.012359873526875509,
+        "EIA_balance_label": "higher",
+        "Weather_vs_normal_label": "near normal"
+      }
+    ],
+    "analog_message": "Close historical analogs available.",
+    "analog_reason": "Close analogs found. Seasonal candidate window \u00b14 ISO weeks applied. Regime gating used >= 3 regime matches. Minimum spacing of 4 weekly bars enforced across selected analog starts. Excluded 1 selected analog(s) without complete 2w/4w/8w outcomes.",
+    "analog_distance_threshold": 2.5,
+    "analog_details": [
+      {
+        "rank": 1,
+        "Date": "2015-05-22",
+        "distance": 2.267607232394459,
+        "start_price": 2.949,
+        "end_price_8w": 2.854,
+        "move_2w": -0.32299999999999995,
+        "move_4w": -0.1719999999999997,
+        "move_8w": -0.09499999999999975,
+        "eia_label": "much higher",
+        "weather_label": "near normal"
+      },
+      {
+        "rank": 2,
+        "Date": "2019-05-10",
+        "distance": 2.868866724285752,
+        "start_price": 2.595,
+        "end_price_8w": 2.29,
+        "move_2w": -0.017000000000000348,
+        "move_4w": -0.27100000000000035,
+        "move_8w": -0.30500000000000016,
+        "eia_label": "much lower",
+        "weather_label": "near normal"
+      },
+      {
+        "rank": 3,
+        "Date": "2024-04-26",
+        "distance": 3.9057151991143506,
+        "start_price": 1.638,
+        "end_price_8w": 2.741,
+        "move_2w": 0.6630000000000003,
+        "move_4w": 1.0190000000000001,
+        "move_8w": 1.1030000000000002,
+        "eia_label": "much higher",
+        "weather_label": "near normal"
+      },
+      {
+        "rank": 4,
+        "Date": "2016-05-27",
+        "distance": 6.023403675719666,
+        "start_price": 1.963,
+        "end_price_8w": 2.692,
+        "move_2w": 0.6539999999999999,
+        "move_4w": 0.7349999999999999,
+        "move_8w": 0.7290000000000001,
+        "eia_label": "much higher",
+        "weather_label": "milder"
+      },
+      {
+        "rank": 5,
+        "Date": "2020-05-15",
+        "distance": 7.1125129939126985,
+        "start_price": 1.681,
+        "end_price_8w": 1.779,
+        "move_2w": 0.1459999999999999,
+        "move_4w": 0.1319999999999999,
+        "move_8w": 0.09799999999999986,
+        "eia_label": "much higher",
+        "weather_label": "hotter/colder"
+      },
+      {
+        "rank": 6,
+        "Date": "2015-04-24",
+        "distance": 8.537088186334294,
+        "start_price": 2.531,
+        "end_price_8w": 2.777,
+        "move_2w": 0.20299999999999985,
+        "move_4w": 0.4179999999999997,
+        "move_8w": 0.246,
+        "eia_label": "much higher",
+        "weather_label": "near normal"
+      },
+      {
+        "rank": 7,
+        "Date": "2020-04-03",
+        "distance": 8.343201013359433,
+        "start_price": 1.552,
+        "end_price_8w": 1.827,
+        "move_2w": 0.1339999999999999,
+        "move_4w": 0.397,
+        "move_8w": 0.2749999999999999,
+        "eia_label": "much higher",
+        "weather_label": "near normal"
+      },
+      {
+        "rank": 8,
+        "Date": "2016-04-15",
+        "distance": 8.62239115315611,
+        "start_price": 1.97,
+        "end_price_8w": 2.617,
+        "move_2w": 0.10799999999999987,
+        "move_4w": 0.18499999999999983,
+        "move_8w": 0.647,
+        "eia_label": "much higher",
+        "weather_label": "near normal"
+      },
+      {
+        "rank": 9,
+        "Date": "2025-05-30",
+        "distance": 11.958314687899518,
+        "start_price": 3.522,
+        "end_price_8w": 3.094,
+        "move_2w": -0.029999999999999805,
+        "move_4w": -0.2609999999999997,
+        "move_8w": -0.42799999999999994,
+        "eia_label": "higher",
+        "weather_label": "near normal"
+      }
+    ],
+    "analog_horizon_stats": {
+      "2w": {
+        "p25": -0.017000000000000348,
+        "p50": 0.1339999999999999,
+        "p75": 0.20299999999999985,
+        "hit_rate_up": 66.66666666666666,
+        "n": 9
+      },
+      "4w": {
+        "p25": -0.1719999999999997,
+        "p50": 0.18499999999999983,
+        "p75": 0.4179999999999997,
+        "hit_rate_up": 66.66666666666666,
+        "n": 9
+      },
+      "8w": {
+        "p25": -0.09499999999999975,
+        "p50": 0.246,
+        "p75": 0.647,
+        "hit_rate_up": 66.66666666666666,
+        "n": 9
+      }
+    },
+    "analog_sample_size": 9,
+    "analog_strength_score": 45.650793650793645,
+    "analog_match_quality": "weak",
+    "analog_features_used": [
+      "MM_z",
+      "Prod_z",
+      "MM_index",
+      "Prod_index",
+      "MM_vs_Prod_index_spread",
+      "PromptSpread_z",
+      "WidowMaker_z",
+      "Price_4w_return",
+      "EIA_vs_5y_z",
+      "WeatherIntensity_z"
+    ],
+    "analog_missing_features": [],
+    "seasonal_5y_average": {
+      "FWD_00": 3.8651999999999993,
+      "PromptSpread": 0.18280000000000002,
+      "MM_index": 37.82051282051282,
+      "Prod_index": 45.0
+    },
+    "influential_inputs": [
+      {
+        "feature": "MM_z",
+        "label": "Managed Money z-score",
+        "correlation": 0.3802163108680847,
+        "relationship": "positive",
+        "sample_size": 156
+      },
+      {
+        "feature": "MM_vs_Prod_index_spread",
+        "label": "MM-Commercial index spread",
+        "correlation": 0.2666798668064709,
+        "relationship": "positive",
+        "sample_size": 156
+      },
+      {
+        "feature": "MM_index",
+        "label": "Managed Money index",
+        "correlation": 0.24564867573612192,
+        "relationship": "positive",
+        "sample_size": 156
+      }
+    ],
+    "feature_states": {
+      "eia": {
+        "label": "closer",
+        "interpretation": "Storage is close to the 5-year norm.",
+        "delta_bcf": 36.59999999999991
+      },
+      "weather": {
+        "label": "near normal",
+        "interpretation": "Weather-driven demand is near normal.",
+        "anomaly": 0.9604300402893424
+      },
+      "cot": {
+        "mm_index": 15.384615384615385,
+        "prod_index": 67.94871794871796,
+        "spread": -52.56410256410257
+      }
+    },
+    "analog_methodology": {
+      "data_files": [
+        "NGCommitofTraders.csv",
+        "HenryForwardCurve.csv",
+        "HenryHub_Absolute_History.csv",
+        "EIAtotals.csv",
+        "WEATHER.csv",
+        "city_population_weights.csv"
+      ],
+      "feature_families": [
+        "Price structure (prompt spread, widow-maker, 4-week price return)",
+        "Storage context (Lower48 vs seasonal 5-year average)",
+        "Weather demand context (population-weighted HDD/CDD anomaly vs 10-year normals)",
+        "Positioning context (MM/Producer z-scores and index spread)"
+      ],
+      "fallback": "If any feature is unavailable in the current week, analog distance uses the remaining valid feature columns. Candidate weeks are first filtered to a seasonal window (with fallback to broader history when sparse), selected with regime-aware ranking plus minimum spacing, and analog rows missing complete 2w/4w/8w outcomes are excluded from quality/sample display."
+    },
+    "math_context": {
+      "data_lag": {
+        "capture_day": "Tuesday",
+        "release_day": "Friday",
+        "release_lag_days": 3,
+        "latest_capture_date": "2026-04-28",
+        "latest_release_date": "2026-05-01"
+      },
+      "mm_index_band": "extreme_low (0-20)",
+      "prod_index_band": "moderate",
+      "structure_state": "contango",
+      "mm_vs_prod_index_divergence": -52.56410256410257,
+      "risk_direction": "Directional bias: bearish (downside pressure is favored, with squeeze spikes still possible)."
+    },
+    "methodology_notes": [
+      "Managed Money and Producer nets are modeled as raw contract nets (no open-interest normalization).",
+      "Weekly z-scores use a 52-week rolling window with min 40 observations.",
+      "COT index uses a 156-week rolling percentile with min 120 observations.",
+      "As-of alignment prevents lookahead: Tuesday capture is tradable only after Friday release.",
+      "Regime flags only trigger on extremes or directional conflict, not on neutral noise.",
+      "EIA balance label compares current Lower48 storage with same-season 5-year average.",
+      "Weighted weather anomaly is computed from (HDD-10yr HDD)+(CDD-10yr CDD) using city population weights.",
+      "Analog seasonal candidate window defaults to \u00b14 ISO weeks with broader-history fallback when sparse.",
+      "Analog start dates are spacing-constrained (default minimum 4 weekly bars).",
+      "Regime-aware analog ranking uses a progressive match ladder and a distance bonus (default bonus=0.20).",
+      "Analog quality/sample display excludes rows without complete 2w/4w/8w forward outcomes."
+    ]
+  },
+  "generated_at_utc": "2026-05-05T15:43:51.397240+00:00"
+}

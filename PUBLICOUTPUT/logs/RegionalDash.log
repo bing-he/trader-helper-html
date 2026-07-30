@@ -1,0 +1,408 @@
+Command: C:\Users\BHe\trader-helper-bing\.venv\Scripts\python.exe C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\run_dashboard.py --public-dir C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT
+Started UTC: 2026-04-27T14:47:36.215163+00:00
+Finished UTC: 2026-04-27T15:08:32.835780+00:00
+Return code: 0
+
+=== STDOUT ===
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\__builder_probe_forward_all.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\__probe_forward_all.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\__probe_balmo_all.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_lower48.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_lower48_balmo.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_northeast.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_northeast_balmo.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_southeast.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_southeast_balmo.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_midwest.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_midwest_balmo.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_rockies.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_rockies_balmo.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_pacific.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_pacific_balmo.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_south_central.html
+Saved: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\PriceGrouper\OUTPUT_step2\spring_basis_figures\regional_dash_portable\priceGrouper_south_central_balmo.html
+
+
+=== STDERR ===
+2026-04-27 09:47:38 | INFO | regional_dash | Repo root: C:\Users\BHe\trader-helper-bing
+2026-04-27 09:47:38 | INFO | regional_dash | INFO dir: C:\Users\BHe\trader-helper-bing\INFO
+2026-04-27 09:47:38 | INFO | regional_dash | Internal output dir: C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\OUTPUT
+2026-04-27 09:47:38 | INFO | regional_dash | Public output root: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT
+2026-04-27 09:47:38 | INFO | regional_dash | Public dashboard HTML: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash.html
+2026-04-27 09:47:38 | INFO | regional_dash | Public asset dir: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash
+2026-04-27 09:47:38 | INFO | regional_dash | ICE-dependent charts enabled: False
+2026-04-27 09:47:39 | INFO | regional_dash | Loaded WEATHER.csv                  rows=637598 (raw=637598) range=2010-01-01..2026-04-25
+2026-04-27 09:47:40 | INFO | regional_dash | Loaded WEATHERforecast.csv          rows=1605 (raw=1605) range=2026-04-26..2026-05-10
+2026-04-27 09:47:40 | INFO | regional_dash | Loaded Fundy.csv                    rows=420542 (raw=420542) range=2010-01-01..2026-04-26
+2026-04-27 09:47:40 | INFO | regional_dash | Loaded FundyForecast.csv            rows=3906 (raw=3906) range=2026-04-26..2026-06-30
+2026-04-27 09:47:40 | INFO | regional_dash | Loaded PlattsPowerFundy.csv         rows=294768 (raw=294768) range=2015-01-01..2026-04-23
+2026-04-27 09:47:40 | INFO | regional_dash | Loaded CriterionLNGHist.csv         rows=37206 (raw=37206) range=2015-01-01..2026-04-26
+2026-04-27 09:47:40 | INFO | regional_dash | Loaded CriterionLNGForecast.csv     rows=540 (raw=540) range=2026-04-27..2026-06-25
+2026-04-27 09:47:41 | INFO | regional_dash | Loaded CriterionNuclearHist.csv     rows=236850 (raw=236850) range=2015-01-01..2026-04-24
+2026-04-27 09:47:41 | INFO | regional_dash | Loaded CriterionNuclearForecast.csv rows=13446 (raw=13446) range=2026-04-27..2026-12-31
+2026-04-27 09:47:41 | INFO | regional_dash | Loaded EIAtotals.csv                rows=851 (raw=851) range=2010-01-01..2026-04-17
+2026-04-27 09:47:42 | INFO | regional_dash | Combined WEATHER_for_mapping rows=639203 range=2010-01-01..2026-05-10
+2026-04-27 09:47:42 | INFO | regional_dash | Loaded optional city_population_weights.csv with 107 rows.
+2026-04-27 09:47:44 | INFO | regional_dash | Combined WEATHER rows=639203 range=2010-01-01..2026-05-10
+2026-04-27 09:47:46 | INFO | regional_dash | Power ISO exclusions: {'excluded_canada_default': 32903}
+2026-04-27 09:47:46 | INFO | regional_dash | Power ThermalGap formula usage for Midwest: {'peakload_minus_renewables_plus_nuclear': 4131}
+2026-04-27 09:47:46 | INFO | regional_dash | Power ThermalGap formula usage for Northeast: {'peakload_minus_renewables_plus_nuclear': 4131}
+2026-04-27 09:47:46 | INFO | regional_dash | Power ThermalGap formula usage for Pacific: {'peakload_minus_renewables_plus_nuclear': 4131}
+2026-04-27 09:47:46 | INFO | regional_dash | Power ThermalGap formula usage for South Central: {'peakload_minus_renewables_plus_nuclear': 4131}
+2026-04-27 09:47:47 | INFO | regional_dash | Combined Fundy rows=424448 range=2010-01-01..2026-06-30
+2026-04-27 09:47:49 | INFO | regional_dash | Combined LNG rows=37746 range=2015-01-01..2026-06-25
+2026-04-27 09:47:49 | INFO | regional_dash | Combined Nuclear rows=250296 range=2015-01-01..2026-12-31
+2026-04-27 09:48:36 | INFO | regional_dash | Weekly storage East series copied to Northeast and Southeast (1702 derived rows).
+2026-04-27 09:48:37 | INFO | regional_dash | Skipping ThermalGapSpike for Lower48 (insufficient history).
+2026-04-27 09:48:37 | INFO | regional_dash | Skipping NuclearVulnerability for Lower48 (insufficient history).
+2026-04-27 09:48:37 | INFO | regional_dash | Skipping WeatherDemandShock for Lower48 (insufficient history).
+2026-04-27 09:48:37 | INFO | regional_dash | Skipping ThermalGapSpike for Southeast (insufficient history).
+2026-04-27 09:48:38 | INFO | regional_dash | Skipping ThermalGapSpike for Rockies (insufficient history).
+2026-04-27 09:48:44 | INFO | regional_dash | Wrote outputs in C:\Users\BHe\trader-helper-bing\CONUSDash\RegionalDash\OUTPUT
+2026-04-27 09:48:44 | INFO | regional_dash | Timing | run_pipeline: 65.87s
+2026-04-27 09:48:48 | INFO | regional_dash | Platts gas share rows=57453 iso_count=7 range=2015-01-01..2026-04-23
+2026-04-27 09:48:58 | INFO | regional_dash | Nuclear chart rows=30639 region_count=7 range=2015-01-01..2026-12-31
+2026-04-27 09:48:59 | INFO | regional_dash | [Lower48|Power] filtered rows=4148
+2026-04-27 09:48:59 | INFO | regional_dash | [Lower48|Power] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:48:59 | INFO | regional_dash | [Lower48|Power] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:48:59 | INFO | regional_dash | [Lower48|Power] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:00 | INFO | regional_dash | [Lower48|ResCom] filtered rows=4148
+2026-04-27 09:49:00 | INFO | regional_dash | [Lower48|ResCom] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:00 | INFO | regional_dash | [Lower48|ResCom] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:00 | INFO | regional_dash | [Lower48|ResCom] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:01 | INFO | regional_dash | [Lower48|Prod] filtered rows=4199
+2026-04-27 09:49:01 | INFO | regional_dash | [Lower48|Prod] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:01 | INFO | regional_dash | [Lower48|Prod] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:01 | INFO | regional_dash | [Lower48|Prod] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:02 | INFO | regional_dash | [Lower48|Balance] filtered rows=3236
+2026-04-27 09:49:02 | INFO | regional_dash | [Lower48|Balance] filtered date range=2017-07-01..2026-05-10
+2026-04-27 09:49:02 | INFO | regional_dash | [Lower48|Balance] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:02 | INFO | regional_dash | [Lower48|Balance] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:03 | INFO | regional_dash | [Lower48|ISO Power Gas Share (NG/TotalGen %)] iso charts=7
+2026-04-27 09:49:03 | INFO | regional_dash | [Lower48|CAISO] filtered rows=4126
+2026-04-27 09:49:03 | INFO | regional_dash | [Lower48|CAISO] filtered date range=2015-01-01..2026-04-23
+2026-04-27 09:49:03 | INFO | regional_dash | [Lower48|CAISO] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:03 | INFO | regional_dash | [Lower48|CAISO] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:04 | INFO | regional_dash | [Lower48|ERCOT] filtered rows=2832
+2026-04-27 09:49:04 | INFO | regional_dash | [Lower48|ERCOT] filtered date range=2018-07-02..2026-04-22
+2026-04-27 09:49:04 | INFO | regional_dash | [Lower48|ERCOT] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:04 | INFO | regional_dash | [Lower48|ERCOT] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:05 | INFO | regional_dash | [Lower48|ISONE] filtered rows=4099
+2026-04-27 09:49:05 | INFO | regional_dash | [Lower48|ISONE] filtered date range=2015-01-01..2026-04-19
+2026-04-27 09:49:05 | INFO | regional_dash | [Lower48|ISONE] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:05 | INFO | regional_dash | [Lower48|ISONE] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:06 | INFO | regional_dash | [Lower48|MISO] filtered rows=3923
+2026-04-27 09:49:06 | INFO | regional_dash | [Lower48|MISO] filtered date range=2015-07-26..2026-04-23
+2026-04-27 09:49:06 | INFO | regional_dash | [Lower48|MISO] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:06 | INFO | regional_dash | [Lower48|MISO] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:07 | INFO | regional_dash | [Lower48|NYISO] filtered rows=3788
+2026-04-27 09:49:07 | INFO | regional_dash | [Lower48|NYISO] filtered date range=2015-12-09..2026-04-23
+2026-04-27 09:49:08 | INFO | regional_dash | [Lower48|NYISO] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:08 | INFO | regional_dash | [Lower48|NYISO] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:08 | INFO | regional_dash | [Lower48|PJM] filtered rows=3762
+2026-04-27 09:49:08 | INFO | regional_dash | [Lower48|PJM] filtered date range=2016-01-01..2026-04-23
+2026-04-27 09:49:09 | INFO | regional_dash | [Lower48|PJM] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:09 | INFO | regional_dash | [Lower48|PJM] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:10 | INFO | regional_dash | [Lower48|SPP] filtered rows=4131
+2026-04-27 09:49:10 | INFO | regional_dash | [Lower48|SPP] filtered date range=2015-01-01..2026-04-23
+2026-04-27 09:49:10 | INFO | regional_dash | [Lower48|SPP] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:10 | INFO | regional_dash | [Lower48|SPP] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:11 | INFO | regional_dash | [Lower48|Nuclear] filtered rows=4377
+2026-04-27 09:49:11 | INFO | regional_dash | [Lower48|Nuclear] filtered date range=2015-01-01..2026-12-31
+2026-04-27 09:49:11 | INFO | regional_dash | [Lower48|Nuclear] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:11 | INFO | regional_dash | [Lower48|Nuclear] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:12 | INFO | regional_dash | [Lower48|Top Plant Outage Contributors] contributors=12 asof=2026-04-24
+2026-04-27 09:49:12 | INFO | regional_dash | [Northeast|Power] filtered rows=4148
+2026-04-27 09:49:12 | INFO | regional_dash | [Northeast|Power] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:12 | INFO | regional_dash | [Northeast|Power] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:12 | INFO | regional_dash | [Northeast|Power] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:13 | INFO | regional_dash | [Northeast|ResCom] filtered rows=4148
+2026-04-27 09:49:13 | INFO | regional_dash | [Northeast|ResCom] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:13 | INFO | regional_dash | [Northeast|ResCom] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:13 | INFO | regional_dash | [Northeast|ResCom] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:14 | INFO | regional_dash | [Northeast|Prod] filtered rows=4199
+2026-04-27 09:49:14 | INFO | regional_dash | [Northeast|Prod] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:14 | INFO | regional_dash | [Northeast|Prod] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:14 | INFO | regional_dash | [Northeast|Prod] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:15 | INFO | regional_dash | [Northeast|Balance] filtered rows=4199
+2026-04-27 09:49:15 | INFO | regional_dash | [Northeast|Balance] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:15 | INFO | regional_dash | [Northeast|Balance] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:15 | INFO | regional_dash | [Northeast|Balance] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:15 | INFO | regional_dash | [Northeast|ISO Power Gas Share (NG/TotalGen %)] iso charts=3
+2026-04-27 09:49:15 | INFO | regional_dash | [Northeast|ISONE] filtered rows=4099
+2026-04-27 09:49:15 | INFO | regional_dash | [Northeast|ISONE] filtered date range=2015-01-01..2026-04-19
+2026-04-27 09:49:16 | INFO | regional_dash | [Northeast|ISONE] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:16 | INFO | regional_dash | [Northeast|ISONE] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:16 | INFO | regional_dash | [Northeast|NYISO] filtered rows=3788
+2026-04-27 09:49:16 | INFO | regional_dash | [Northeast|NYISO] filtered date range=2015-12-09..2026-04-23
+2026-04-27 09:49:16 | INFO | regional_dash | [Northeast|NYISO] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:16 | INFO | regional_dash | [Northeast|NYISO] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:17 | INFO | regional_dash | [Northeast|PJM] filtered rows=3762
+2026-04-27 09:49:17 | INFO | regional_dash | [Northeast|PJM] filtered date range=2016-01-01..2026-04-23
+2026-04-27 09:49:18 | INFO | regional_dash | [Northeast|PJM] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:18 | INFO | regional_dash | [Northeast|PJM] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:18 | INFO | regional_dash | [Northeast|Nuclear] filtered rows=4377
+2026-04-27 09:49:18 | INFO | regional_dash | [Northeast|Nuclear] filtered date range=2015-01-01..2026-12-31
+2026-04-27 09:49:18 | INFO | regional_dash | [Northeast|Nuclear] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:18 | INFO | regional_dash | [Northeast|Nuclear] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:19 | INFO | regional_dash | [Northeast|Top Plant Outage Contributors] contributors=12 asof=2026-04-24
+2026-04-27 09:49:19 | INFO | regional_dash | [Southeast|Power] filtered rows=4148
+2026-04-27 09:49:19 | INFO | regional_dash | [Southeast|Power] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:19 | INFO | regional_dash | [Southeast|Power] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:19 | INFO | regional_dash | [Southeast|Power] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:20 | INFO | regional_dash | [Southeast|ResCom] filtered rows=4148
+2026-04-27 09:49:20 | INFO | regional_dash | [Southeast|ResCom] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:20 | INFO | regional_dash | [Southeast|ResCom] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:20 | INFO | regional_dash | [Southeast|ResCom] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:21 | INFO | regional_dash | [Southeast|Prod] filtered rows=3834
+2026-04-27 09:49:21 | INFO | regional_dash | [Southeast|Prod] filtered date range=2016-01-01..2026-06-30
+2026-04-27 09:49:21 | INFO | regional_dash | [Southeast|Prod] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:21 | INFO | regional_dash | [Southeast|Prod] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|Balance] filtered rows=4199
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|Balance] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|Balance] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|Balance] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|ISO Power Gas Share (NG/TotalGen %)] iso charts=0
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|Nuclear] filtered rows=4377
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|Nuclear] filtered date range=2015-01-01..2026-12-31
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|Nuclear] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:22 | INFO | regional_dash | [Southeast|Nuclear] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:24 | INFO | regional_dash | [Southeast|Top Plant Outage Contributors] contributors=12 asof=2026-04-24
+2026-04-27 09:49:24 | INFO | regional_dash | [Midwest|Power] filtered rows=4148
+2026-04-27 09:49:24 | INFO | regional_dash | [Midwest|Power] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:24 | INFO | regional_dash | [Midwest|Power] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:24 | INFO | regional_dash | [Midwest|Power] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:25 | INFO | regional_dash | [Midwest|ResCom] filtered rows=4148
+2026-04-27 09:49:25 | INFO | regional_dash | [Midwest|ResCom] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:25 | INFO | regional_dash | [Midwest|ResCom] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:25 | INFO | regional_dash | [Midwest|ResCom] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:26 | INFO | regional_dash | [Midwest|Prod] filtered rows=3834
+2026-04-27 09:49:26 | INFO | regional_dash | [Midwest|Prod] filtered date range=2016-01-01..2026-06-30
+2026-04-27 09:49:26 | INFO | regional_dash | [Midwest|Prod] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:26 | INFO | regional_dash | [Midwest|Prod] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:26 | INFO | regional_dash | [Midwest|Balance] filtered rows=4199
+2026-04-27 09:49:26 | INFO | regional_dash | [Midwest|Balance] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:26 | INFO | regional_dash | [Midwest|Balance] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:26 | INFO | regional_dash | [Midwest|Balance] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:27 | INFO | regional_dash | [Midwest|ISO Power Gas Share (NG/TotalGen %)] iso charts=2
+2026-04-27 09:49:27 | INFO | regional_dash | [Midwest|MISO] filtered rows=3923
+2026-04-27 09:49:27 | INFO | regional_dash | [Midwest|MISO] filtered date range=2015-07-26..2026-04-23
+2026-04-27 09:49:27 | INFO | regional_dash | [Midwest|MISO] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:27 | INFO | regional_dash | [Midwest|MISO] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:28 | INFO | regional_dash | [Midwest|SPP] filtered rows=4131
+2026-04-27 09:49:28 | INFO | regional_dash | [Midwest|SPP] filtered date range=2015-01-01..2026-04-23
+2026-04-27 09:49:28 | INFO | regional_dash | [Midwest|SPP] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:28 | INFO | regional_dash | [Midwest|SPP] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:29 | INFO | regional_dash | [Midwest|Nuclear] filtered rows=4377
+2026-04-27 09:49:29 | INFO | regional_dash | [Midwest|Nuclear] filtered date range=2015-01-01..2026-12-31
+2026-04-27 09:49:29 | INFO | regional_dash | [Midwest|Nuclear] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:29 | INFO | regional_dash | [Midwest|Nuclear] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:30 | INFO | regional_dash | [Midwest|Top Plant Outage Contributors] contributors=12 asof=2026-04-24
+2026-04-27 09:49:30 | INFO | regional_dash | [Rockies|Power] filtered rows=4148
+2026-04-27 09:49:30 | INFO | regional_dash | [Rockies|Power] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:30 | INFO | regional_dash | [Rockies|Power] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:30 | INFO | regional_dash | [Rockies|Power] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:31 | INFO | regional_dash | [Rockies|ResCom] filtered rows=4148
+2026-04-27 09:49:31 | INFO | regional_dash | [Rockies|ResCom] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:31 | INFO | regional_dash | [Rockies|ResCom] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:31 | INFO | regional_dash | [Rockies|ResCom] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:32 | INFO | regional_dash | [Rockies|Prod] filtered rows=4199
+2026-04-27 09:49:32 | INFO | regional_dash | [Rockies|Prod] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:32 | INFO | regional_dash | [Rockies|Prod] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:32 | INFO | regional_dash | [Rockies|Prod] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|Balance] filtered rows=4199
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|Balance] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|Balance] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|Balance] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|ISO Power Gas Share (NG/TotalGen %)] iso charts=0
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|Nuclear] filtered rows=4377
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|Nuclear] filtered date range=2015-01-01..2026-12-31
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|Nuclear] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:33 | INFO | regional_dash | [Rockies|Nuclear] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:34 | INFO | regional_dash | [Rockies|Top Plant Outage Contributors] contributors=2 asof=2026-04-24
+2026-04-27 09:49:35 | INFO | regional_dash | [Pacific|Power] filtered rows=4148
+2026-04-27 09:49:35 | INFO | regional_dash | [Pacific|Power] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:35 | INFO | regional_dash | [Pacific|Power] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:35 | INFO | regional_dash | [Pacific|Power] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:35 | INFO | regional_dash | [Pacific|ResCom] filtered rows=4148
+2026-04-27 09:49:35 | INFO | regional_dash | [Pacific|ResCom] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:35 | INFO | regional_dash | [Pacific|ResCom] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:35 | INFO | regional_dash | [Pacific|ResCom] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:36 | INFO | regional_dash | [Pacific|Prod] filtered rows=4199
+2026-04-27 09:49:36 | INFO | regional_dash | [Pacific|Prod] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:36 | INFO | regional_dash | [Pacific|Prod] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:36 | INFO | regional_dash | [Pacific|Prod] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|Balance] filtered rows=4199
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|Balance] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|Balance] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|Balance] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|ISO Power Gas Share (NG/TotalGen %)] iso charts=1
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|CAISO] filtered rows=4126
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|CAISO] filtered date range=2015-01-01..2026-04-23
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|CAISO] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:37 | INFO | regional_dash | [Pacific|CAISO] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:38 | INFO | regional_dash | [Pacific|Nuclear] filtered rows=4377
+2026-04-27 09:49:38 | INFO | regional_dash | [Pacific|Nuclear] filtered date range=2015-01-01..2026-12-31
+2026-04-27 09:49:38 | INFO | regional_dash | [Pacific|Nuclear] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:38 | INFO | regional_dash | [Pacific|Nuclear] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:39 | INFO | regional_dash | [Pacific|Top Plant Outage Contributors] contributors=2 asof=2026-04-24
+2026-04-27 09:49:39 | INFO | regional_dash | [South Central|Power] filtered rows=4148
+2026-04-27 09:49:39 | INFO | regional_dash | [South Central|Power] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:39 | INFO | regional_dash | [South Central|Power] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:39 | INFO | regional_dash | [South Central|Power] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:39 | INFO | regional_dash | [South Central|ResCom] filtered rows=4148
+2026-04-27 09:49:39 | INFO | regional_dash | [South Central|ResCom] filtered date range=2015-01-01..2026-05-10
+2026-04-27 09:49:39 | INFO | regional_dash | [South Central|ResCom] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:39 | INFO | regional_dash | [South Central|ResCom] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:40 | INFO | regional_dash | [South Central|Prod] filtered rows=4199
+2026-04-27 09:49:40 | INFO | regional_dash | [South Central|Prod] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:40 | INFO | regional_dash | [South Central|Prod] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:40 | INFO | regional_dash | [South Central|Prod] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|Balance] filtered rows=4199
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|Balance] filtered date range=2015-01-01..2026-06-30
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|Balance] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|Balance] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|ISO Power Gas Share (NG/TotalGen %)] iso charts=2
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|ERCOT] filtered rows=2832
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|ERCOT] filtered date range=2018-07-02..2026-04-22
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|ERCOT] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:41 | INFO | regional_dash | [South Central|ERCOT] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:42 | INFO | regional_dash | [South Central|SPP] filtered rows=4131
+2026-04-27 09:49:42 | INFO | regional_dash | [South Central|SPP] filtered date range=2015-01-01..2026-04-23
+2026-04-27 09:49:42 | INFO | regional_dash | [South Central|SPP] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:42 | INFO | regional_dash | [South Central|SPP] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:42 | INFO | regional_dash | [South Central|Nuclear] filtered rows=4377
+2026-04-27 09:49:42 | INFO | regional_dash | [South Central|Nuclear] filtered date range=2015-01-01..2026-12-31
+2026-04-27 09:49:42 | INFO | regional_dash | [South Central|Nuclear] 3 months chosen: Apr-2026, May-2026, Jun-2026
+2026-04-27 09:49:42 | INFO | regional_dash | [South Central|Nuclear] current_week_end=2026-04-30, plotted week_ends=2026-02-12..2026-07-23
+2026-04-27 09:49:43 | INFO | regional_dash | [South Central|Top Plant Outage Contributors] contributors=9 asof=2026-04-24
+2026-04-27 09:49:43 | INFO | regional_dash | Timing | generate_region_metric_images: 58.93s
+2026-04-27 09:49:45 | INFO | regional_dash | Combined WEATHER_for_charting rows=639203 city_count=107 range=2010-01-01..2026-05-10
+2026-04-27 09:49:45 | INFO | regional_dash | Loaded power prices for weather rows=23961 isos=7 range=2015-01-01..2026-04-24
+2026-04-27 09:49:45 | INFO | regional_dash | Loaded latest Euro anomalies base=2026-04-26 valid_range=2026-05-04..2026-06-01 rows=5
+2026-04-27 09:49:45 | INFO | regional_dash | [Lower48|Weather] selected cities: KNYC(5959d), KLAX(5959d), KORD(5959d)
+2026-04-27 09:49:45 | INFO | regional_dash | [Northeast|Weather] selected cities: KNYC(5959d), KPHL(5956d), KBOS(5959d)
+2026-04-27 09:49:45 | INFO | regional_dash | [Southeast|Weather] selected cities: KDCA(5959d), KMIA(5956d), KATL(5959d)
+2026-04-27 09:49:45 | INFO | regional_dash | [Midwest|Weather] selected cities: KORD(5959d), KDTW(5956d), KMSP(5959d)
+2026-04-27 09:49:45 | INFO | regional_dash | [Rockies|Weather] selected cities: KPHX(5959d), KDEN(5959d), KLAS(5959d)
+2026-04-27 09:49:45 | INFO | regional_dash | [Pacific|Weather] selected cities: KLAX(5959d), KSEA(5959d), KPDX(5959d)
+2026-04-27 09:49:45 | INFO | regional_dash | [South Central|Weather] selected cities: KDFW(5959d), KOKC(5959d), KMSY(5959d)
+2026-04-27 09:49:50 | INFO | regional_dash | [Lower48|Weather] plotted cities=KNYC, KLAX, KORD power_lines=7 range=2026-02-27..2026-06-01 euro_end=2026-06-01
+2026-04-27 09:49:54 | INFO | regional_dash | [Northeast|Weather] plotted cities=KNYC, KPHL, KBOS power_lines=3 range=2026-02-27..2026-06-01 euro_end=2026-06-01
+2026-04-27 09:50:01 | INFO | regional_dash | [Southeast|Weather] plotted cities=KDCA, KMIA, KATL power_lines=0 range=2026-02-27..2026-06-01 euro_end=2026-06-01
+2026-04-27 09:50:10 | INFO | regional_dash | [Midwest|Weather] plotted cities=KORD, KDTW, KMSP power_lines=2 range=2026-02-27..2026-06-01 euro_end=2026-06-01
+2026-04-27 09:50:18 | INFO | regional_dash | [Rockies|Weather] plotted cities=KPHX, KDEN, KLAS power_lines=0 range=2026-02-27..2026-06-01 euro_end=2026-06-01
+2026-04-27 09:50:24 | INFO | regional_dash | [Pacific|Weather] plotted cities=KLAX, KSEA, KPDX power_lines=1 range=2026-02-27..2026-06-01 euro_end=2026-06-01
+2026-04-27 09:50:32 | INFO | regional_dash | [South Central|Weather] plotted cities=KDFW, KOKC, KMSY power_lines=2 range=2026-02-27..2026-06-01 euro_end=2026-06-01
+2026-04-27 09:50:32 | INFO | regional_dash | Timing | generate_region_weather_images: 48.69s
+2026-04-27 09:50:32 | INFO | regional_dash | Price analysis loaded PRICES rows=9614 components=240 range=2000-01-01..2026-04-27
+2026-04-27 09:50:33 | INFO | regional_dash | Price analysis loaded ICE_Forward_Settles rows=126790 fin_basis=62 contracts=24 range=2025-01-02..2026-04-23
+2026-04-27 09:50:33 | INFO | regional_dash | Price analysis loaded ForwardMarks entries=181
+2026-04-27 09:50:33 | INFO | regional_dash | Price analysis loaded BalMo entries=0
+2026-04-27 09:50:36 | INFO | regional_dash | Price analysis using PriceAdmin PriceRegion mapping; no groups file configured.
+2026-04-27 09:50:36 | INFO | regional_dash | Price analysis active components=149 (threshold=0.75 lookback=90d)
+2026-04-27 09:50:36 | WARNING | regional_dash | Groups mapping empty after filtering; falling back to PriceAdmin PriceRegion.
+2026-04-27 09:50:36 | INFO | regional_dash | Price analysis criterion regions with selections: Lower48:17, Northeast:3, Southeast:1, Midwest:2, Rockies:4, Pacific:2, South Central:9
+2026-04-27 09:50:37 | INFO | regional_dash | Price analysis effective as-of: 2026-04-27
+2026-04-27 09:50:41 | INFO | regional_dash | Price analysis grouped mode active: skipping legacy price-region payload build.
+2026-04-27 09:50:42 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_1_17_northeast_appalachia\regional_basis.png
+2026-04-27 09:50:46 | INFO | regional_dash | Spread heatmaps saved for Groups 1, 17: Northeast Appalachia count=3
+2026-04-27 09:50:47 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_1_17_northeast_appalachia\forward_month.png
+2026-04-27 09:51:53 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_2_midwest_chicago\regional_basis.png
+2026-04-27 09:51:58 | INFO | regional_dash | Spread heatmaps saved for Group 2: Midwest Chicago count=3
+2026-04-27 09:51:59 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_2_midwest_chicago\forward_month.png
+2026-04-27 09:53:07 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_3_mountain_westex\regional_basis.png
+2026-04-27 09:53:11 | INFO | regional_dash | Spread heatmaps saved for Group 3: Mountain WesTex count=3
+2026-04-27 09:53:11 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_3_mountain_westex\forward_month.png
+2026-04-27 09:54:03 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_4_19_northeast_demand\regional_basis.png
+2026-04-27 09:54:07 | INFO | regional_dash | Spread heatmaps saved for Groups 4, 19: Northeast Demand count=3
+2026-04-27 09:54:07 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_4_19_northeast_demand\forward_month.png
+2026-04-27 09:54:44 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_5_11_southcentral_texcoast\regional_basis.png
+2026-04-27 09:54:49 | INFO | regional_dash | Spread heatmaps saved for Groups 5, 11: SouthCentral TexCoast count=3
+2026-04-27 09:54:49 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_5_11_southcentral_texcoast\forward_month.png
+2026-04-27 09:55:36 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_6_southeast\regional_basis.png
+2026-04-27 09:55:39 | INFO | regional_dash | Spread heatmaps saved for Group 6: Southeast count=3
+2026-04-27 09:55:40 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_6_southeast\forward_month.png
+2026-04-27 09:56:12 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_7_southcentral_westex\regional_basis.png
+2026-04-27 09:56:13 | INFO | regional_dash | Spread heatmaps saved for Group 7: SouthCentral WesTex count=3
+2026-04-27 09:56:14 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_7_southcentral_westex\forward_month.png
+2026-04-27 09:56:35 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_8_mountain_opal\regional_basis.png
+2026-04-27 09:56:36 | INFO | regional_dash | Spread heatmaps saved for Group 8: Mountain Opal count=3
+2026-04-27 09:56:37 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_8_mountain_opal\forward_month.png
+2026-04-27 09:56:59 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_9_16_unassigned\regional_basis.png
+2026-04-27 09:57:01 | INFO | regional_dash | Spread heatmaps saved for Groups 9, 16: Unassigned count=3
+2026-04-27 09:57:02 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_9_16_unassigned\forward_month.png
+2026-04-27 09:57:33 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_10_southcentral_midcon\regional_basis.png
+2026-04-27 09:57:35 | INFO | regional_dash | Spread heatmaps saved for Group 10: SouthCentral Midcon count=3
+2026-04-27 09:57:35 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_10_southcentral_midcon\forward_month.png
+2026-04-27 09:58:02 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_12_southcentral_henry\regional_basis.png
+2026-04-27 09:58:03 | INFO | regional_dash | Spread heatmaps saved for Group 12: SouthCentral Henry count=3
+2026-04-27 09:58:04 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_12_southcentral_henry\forward_month.png
+2026-04-27 09:58:20 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_13_14_18_southcentral_perryville\regional_basis.png
+2026-04-27 09:58:22 | INFO | regional_dash | Spread heatmaps saved for Groups 13, 14, 18: SouthCentral Perryville count=3
+2026-04-27 09:58:22 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_13_14_18_southcentral_perryville\forward_month.png
+2026-04-27 09:58:52 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_15_west_california\regional_basis.png
+2026-04-27 09:58:53 | INFO | regional_dash | Spread heatmaps saved for Group 15: West California count=3
+2026-04-27 09:58:53 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_15_west_california\forward_month.png
+2026-04-27 09:59:04 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_999_special_outliers\regional_basis.png
+2026-04-27 09:59:06 | INFO | regional_dash | Spread heatmaps saved for Group 999: Special Outliers count=3
+2026-04-27 09:59:07 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_999_special_outliers\forward_month.png
+2026-04-27 09:59:41 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_1_17_northeast_appalachia\regional_basis.png
+2026-04-27 09:59:46 | INFO | regional_dash | Spread heatmaps saved for Groups 1, 17: Northeast Appalachia count=3
+2026-04-27 09:59:48 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_1_17_northeast_appalachia\forward_month.png
+2026-04-27 10:01:15 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_4_19_northeast_demand\regional_basis.png
+2026-04-27 10:01:18 | INFO | regional_dash | Spread heatmaps saved for Groups 4, 19: Northeast Demand count=3
+2026-04-27 10:01:18 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_4_19_northeast_demand\forward_month.png
+2026-04-27 10:01:54 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_6_southeast\regional_basis.png
+2026-04-27 10:01:56 | INFO | regional_dash | Spread heatmaps saved for Group 6: Southeast count=3
+2026-04-27 10:01:57 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_6_southeast\forward_month.png
+2026-04-27 10:02:23 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_2_midwest_chicago\regional_basis.png
+2026-04-27 10:02:27 | INFO | regional_dash | Spread heatmaps saved for Group 2: Midwest Chicago count=3
+2026-04-27 10:02:28 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_2_midwest_chicago\forward_month.png
+2026-04-27 10:03:29 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_3_mountain_westex\regional_basis.png
+2026-04-27 10:03:34 | INFO | regional_dash | Spread heatmaps saved for Group 3: Mountain WesTex count=3
+2026-04-27 10:03:35 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_3_mountain_westex\forward_month.png
+2026-04-27 10:04:28 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_7_southcentral_westex\regional_basis.png
+2026-04-27 10:04:30 | INFO | regional_dash | Spread heatmaps saved for Group 7: SouthCentral WesTex count=3
+2026-04-27 10:04:31 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_7_southcentral_westex\forward_month.png
+2026-04-27 10:04:56 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_8_mountain_opal\regional_basis.png
+2026-04-27 10:04:59 | INFO | regional_dash | Spread heatmaps saved for Group 8: Mountain Opal count=3
+2026-04-27 10:04:59 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_8_mountain_opal\forward_month.png
+2026-04-27 10:05:24 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_15_west_california\regional_basis.png
+2026-04-27 10:05:25 | INFO | regional_dash | Spread heatmaps saved for Group 15: West California count=3
+2026-04-27 10:05:25 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_15_west_california\forward_month.png
+2026-04-27 10:05:38 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_5_11_southcentral_texcoast\regional_basis.png
+2026-04-27 10:05:42 | INFO | regional_dash | Spread heatmaps saved for Groups 5, 11: SouthCentral TexCoast count=3
+2026-04-27 10:05:43 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_5_11_southcentral_texcoast\forward_month.png
+2026-04-27 10:06:24 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_7_southcentral_westex\regional_basis.png
+2026-04-27 10:06:25 | INFO | regional_dash | Spread heatmaps saved for Group 7: SouthCentral WesTex count=3
+2026-04-27 10:06:25 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_7_southcentral_westex\forward_month.png
+2026-04-27 10:06:44 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_10_southcentral_midcon\regional_basis.png
+2026-04-27 10:06:46 | INFO | regional_dash | Spread heatmaps saved for Group 10: SouthCentral Midcon count=3
+2026-04-27 10:06:46 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_10_southcentral_midcon\forward_month.png
+2026-04-27 10:07:07 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_12_southcentral_henry\regional_basis.png
+2026-04-27 10:07:09 | INFO | regional_dash | Spread heatmaps saved for Group 12: SouthCentral Henry count=3
+2026-04-27 10:07:09 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\group_12_southcentral_henry\forward_month.png
+2026-04-27 10:07:22 | INFO | regional_dash | Price chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_13_14_18_southcentral_perryville\regional_basis.png
+2026-04-27 10:07:24 | INFO | regional_dash | Spread heatmaps saved for Groups 13, 14, 18: SouthCentral Perryville count=3
+2026-04-27 10:07:25 | INFO | regional_dash | Forward month chart saved: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash\images\price\groups_13_14_18_southcentral_perryville\forward_month.png
+2026-04-27 10:08:03 | INFO | regional_dash | Timing | generate_price_analysis_payload: 1051.73s
+2026-04-27 10:08:03 | INFO | regional_dash | PriceGrouper: Balmo bundle ready; output will include Forward Marks + Balmo source tabs.
+2026-04-27 10:08:07 | INFO | regional_dash | PriceGrouper Lower48 include labels: <none; unfiltered>
+2026-04-27 10:08:12 | INFO | regional_dash | Published PriceGrouper portable + inline fragment for Lower48 (standalone: priceGrouper_lower48.html)
+2026-04-27 10:08:12 | INFO | regional_dash | PriceGrouper Northeast include labels: Global_G01|Global_G04|Global_G17|Global_G19
+2026-04-27 10:08:16 | INFO | regional_dash | Published PriceGrouper portable + inline fragment for Northeast (standalone: priceGrouper_northeast.html)
+2026-04-27 10:08:16 | INFO | regional_dash | PriceGrouper Southeast include labels: Global_G06
+2026-04-27 10:08:19 | INFO | regional_dash | Published PriceGrouper portable + inline fragment for Southeast (standalone: priceGrouper_southeast.html)
+2026-04-27 10:08:19 | INFO | regional_dash | PriceGrouper Midwest include labels: Global_G02
+2026-04-27 10:08:22 | INFO | regional_dash | Published PriceGrouper portable + inline fragment for Midwest (standalone: priceGrouper_midwest.html)
+2026-04-27 10:08:22 | INFO | regional_dash | PriceGrouper Rockies include labels: Global_G03|Global_G07|Global_G08
+2026-04-27 10:08:25 | INFO | regional_dash | Published PriceGrouper portable + inline fragment for Rockies (standalone: priceGrouper_rockies.html)
+2026-04-27 10:08:25 | INFO | regional_dash | PriceGrouper Pacific include labels: Global_G15
+2026-04-27 10:08:28 | INFO | regional_dash | Published PriceGrouper portable + inline fragment for Pacific (standalone: priceGrouper_pacific.html)
+2026-04-27 10:08:28 | INFO | regional_dash | PriceGrouper South Central include labels: Global_G05|Global_G07|Global_G10|Global_G11|Global_G12|Global_G13|Global_G14|Global_G18
+2026-04-27 10:08:31 | INFO | regional_dash | Published PriceGrouper portable + inline fragment for South Central (standalone: priceGrouper_south_central.html)
+2026-04-27 10:08:31 | INFO | regional_dash | Timing | build_and_publish_price_grouper_portables: 27.72s
+2026-04-27 10:08:32 | INFO | regional_dash | Rendered dashboard HTML: C:\Users\BHe\trader-helper-bing\INFO\PUBLICOUTPUT\RegionalDash.html
+2026-04-27 10:08:32 | INFO | regional_dash | Timing | render_dashboard: 0.74s
+2026-04-27 10:08:32 | INFO | regional_dash | Regional dashboard build complete.

@@ -1,0 +1,109 @@
+{
+  "generated_utc": "2026-07-28T18:24:15.754922+00:00",
+  "public_output_dir": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT",
+  "dashboard_html": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CONUSDash.html",
+  "run_order": [
+    "NYMEXCurve",
+    "Fundy",
+    "EuroWeekly",
+    "CoT"
+  ],
+  "run_results": [
+    {
+      "module": "NYMEXCurve",
+      "label": "NYMEX Curve Analyst",
+      "command": [
+        "C:\\Users\\BHe\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\run.py"
+      ],
+      "return_code": 0,
+      "started_utc": "2026-07-28T18:16:24.884235+00:00",
+      "finished_utc": "2026-07-28T18:18:19.072609+00:00",
+      "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\NYMEXCurve.log"
+    },
+    {
+      "module": "Fundy",
+      "label": "Fundy Dashboard",
+      "command": [
+        "C:\\Users\\BHe\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\Fundy\\run_dashboard.py"
+      ],
+      "return_code": 0,
+      "started_utc": "2026-07-28T18:18:19.074609+00:00",
+      "finished_utc": "2026-07-28T18:20:58.651392+00:00",
+      "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\Fundy.log"
+    },
+    {
+      "module": "EuroWeekly",
+      "label": "Euro Weekly",
+      "command": [
+        "C:\\Users\\BHe\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\EuroWeekly\\run_euro_weekly.py"
+      ],
+      "return_code": 0,
+      "started_utc": "2026-07-28T18:20:58.653578+00:00",
+      "finished_utc": "2026-07-28T18:24:02.480598+00:00",
+      "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\EuroWeekly.log"
+    },
+    {
+      "module": "CoT",
+      "label": "COT",
+      "command": [
+        "C:\\Users\\BHe\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\CoT\\src\\run.py"
+      ],
+      "return_code": 0,
+      "started_utc": "2026-07-28T18:24:02.482594+00:00",
+      "finished_utc": "2026-07-28T18:24:13.396162+00:00",
+      "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\CoT.log"
+    }
+  ],
+  "copy_results": [
+    {
+      "module": "NYMEXCurve",
+      "copied": true,
+      "source": "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\OUTPUT",
+      "dest": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\NYMEXCurve",
+      "copy_mode": "replace"
+    },
+    {
+      "module": "Fundy",
+      "copied": true,
+      "source": "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\Fundy\\OUTPUT",
+      "dest": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\Fundy",
+      "copy_mode": "replace"
+    },
+    {
+      "module": "EuroWeekly",
+      "copied": true,
+      "source": "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\EuroWeekly\\OUTPUT",
+      "dest": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\EuroWeekly",
+      "copy_mode": "replace"
+    },
+    {
+      "module": "CoT",
+      "copied": true,
+      "source": "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\CoT\\OUTPUT",
+      "dest": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CoT",
+      "copy_mode": "replace"
+    }
+  ],
+  "panel_order": [
+    {
+      "title": "NYMEX Curve Analyst",
+      "module": "NYMEXCurve"
+    },
+    {
+      "title": "Fundy Dashboard",
+      "module": "Fundy"
+    },
+    {
+      "title": "Euro Weekly",
+      "module": "EuroWeekly"
+    },
+    {
+      "title": "COT",
+      "module": "CoT"
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PriceGrouper Dashboard (Summer)</title>
+    <style>
+      :root {
+        --bg: #0c1324;
+        --card: #131c31;
+        --text: #e6edf7;
+        --muted: #aeb9cc;
+        --border: rgba(255, 255, 255, 0.12);
+        --accent: #46d6c8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(12, 19, 36, 0.92);
+        backdrop-filter: blur(8px);
+      }
+      header h1 { margin: 0; font-size: 20px; }
+      header p { margin: 6px 0 0 0; color: var(--muted); font-size: 13px; }
+      main {
+        max-width: 2200px;
+        margin: 0 auto;
+        padding: 18px;
+        display: grid;
+        gap: 14px;
+      }
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(160px, 1fr));
+        gap: 12px;
+      }
+      .kpi {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px;
+      }
+      .kpi .label { color: var(--muted); font-size: 12px; }
+      .kpi .value { margin-top: 4px; font-size: 28px; font-weight: 700; }
+      .kpi-dual {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-top: 4px;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+      .kpi-src--forward { color: #4db8e8; }
+      .kpi-src--balmo { color: #e8a84d; }
+      .pg-cross-src-inline {
+        display: block;
+        margin-top: 6px;
+        font-style: italic;
+        line-height: 1.4;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px;
+      }
+      .card h3 { margin: 0 0 10px 0; font-size: 14px; color: var(--muted); text-transform: uppercase; }
+      .instruction-card p {
+        margin: 0 0 10px 0;
+        color: var(--text);
+        line-height: 1.55;
+      }
+      .instruction-list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+      .instruction-list li {
+        margin: 7px 0;
+        line-height: 1.5;
+      }
+      .instruction-list strong {
+        color: var(--text);
+      }
+      .flag-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(360px, 1fr));
+        gap: 12px;
+        align-items: start;
+      }
+      .flag-grid > .flag-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+      }
+      .tabbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .tab-btn {
+        background: rgba(255,255,255,0.06);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-weight: 650;
+      }
+      .tab-btn.active {
+        background: rgba(70,214,200,0.2);
+        border-color: rgba(70,214,200,0.7);
+      }
+      .tab-panel { display: none; }
+      .tab-panel.active { display: block; }
+      .panel-head h2 { margin: 0; font-size: 20px; }
+      .subtitle { margin-top: 4px; color: var(--muted); }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+      }
+      .table th, .table td {
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+        padding: 6px;
+      }
+      .table th {
+        color: var(--muted);
+        font-weight: 700;
+        position: sticky;
+        top: 0;
+        background: rgba(19,28,49,0.95);
+      }
+      .flag-scroll {
+        height: 520px;
+        overflow-y: auto;
+        overflow-x: auto;
+      }
+      .interpretation-list {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .interpretation-list li {
+        margin: 2px 0;
+        line-height: 1.35;
+      }
+      
+      .pg-explain-toggle {{
+        cursor: pointer;
+        display: block;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.25;
+        padding: 9px 11px;
+        width: 100%;
+        text-align: left;
+        border-radius: 10px;
+        border: 1px solid #d2dfed !important;
+        background: #edf4fb !important;
+        color: #244560 !important;
+        font-family: inherit;
+        appearance: none;
+        -webkit-appearance: none;
+        box-shadow: none;
+      }}
+      .pg-explain-toggle:hover {{
+        background: #e5effa !important;
+      }}
+      .pg-explain-toggle:focus-visible {{
+        outline: 2px solid rgba(47, 111, 176, 0.2);
+        outline-offset: 2px;
+      }}
+      .pg-explain-toggle[aria-expanded="true"] {{
+        background: #dceaf8 !important;
+      }}
+      .pg-explain-body .figure-stack {{
+        padding: 10px 12px 12px;
+      }}
+
+      .figure-stack {
+        display: grid;
+        gap: 12px;
+      }
+      tr.pg-flag-pair-start td {
+        border-bottom: none;
+      }
+      tr.pg-flag-pair-follow td {
+        border-top: none;
+      }
+      .pg-flag-paired tbody tr.pg-flag-stripe-0 td {
+        background: rgba(232, 250, 236, 0.72);
+      }
+      .pg-flag-paired tbody tr.pg-flag-stripe-1 td {
+        background: #ffffff;
+      }
+      .merged-figure-item {
+        display: grid;
+        gap: 6px;
+      }
+      .figure-subtitle {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .group-figure {
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: white;
+      }
+      .group-figure-link {
+        display: block;
+      }
+      a.pg-rdash-comp {
+        color: var(--accent);
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .group-search-wrap {
+        margin: 0 0 12px 0;
+      }
+      .group-search-label {
+        display: block;
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+      .group-search-input {
+        width: 100%;
+        max-width: 480px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        font-size: 14px;
+      }
+      .group-search-input:focus {
+        outline: 2px solid rgba(70, 214, 200, 0.45);
+        outline-offset: 1px;
+      }
+      .group-search-results {
+        margin-top: 8px;
+        max-height: 240px;
+        overflow-y: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.22);
+      }
+      .group-search-results[hidden] {
+        display: none !important;
+      }
+      .group-search-hit {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 8px 10px;
+        cursor: pointer;
+        border: none;
+        border-bottom: 1px solid var(--border);
+        background: transparent;
+        color: var(--text);
+        font: inherit;
+      }
+      .group-search-hit:last-child {
+        border-bottom: none;
+      }
+      .group-search-hit:hover {
+        background: rgba(70, 214, 200, 0.12);
+      }
+      .group-search-hit strong {
+        font-weight: 700;
+      }
+      .group-search-meta {
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 3px;
+      }
+      .group-search-selected {
+        margin-top: 8px;
+        padding: 8px 10px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: rgba(70, 214, 200, 0.1);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .group-search-selected[hidden] {
+        display: none !important;
+      }
+      .group-search-selected strong {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .group-search-selected .group-search-meta {
+        margin-top: 0;
+      }
+      .group-search-empty {
+        padding: 8px 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .empty { color: var(--muted); font-size: 13px; padding: 6px 0; }
+      @media (max-width: 1180px) {
+        .flag-grid { grid-template-columns: 1fr; }
+        .split { grid-template-columns: 1fr; }
+        .summary-grid { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Summer PriceGrouper Dashboard</h1>
+      <p>Top outlier summary plus per-group regional breakdowns and figures. History window: 2026-05-28 to 2026-07-28</p>
+    </header>
+    <main>
+      <section class="card instruction-card">
+        <h3>How PriceGrouper Works</h3>
+        <p>
+          PriceGrouper is a relative-value screen for basis markets. It groups components by how
+          their basis moves together versus Henry Hub, using roughly the last two years of daily
+          basis-correlation history and evaluating each season separately. That means the groups
+          reflect seasonal trading behavior, not just one all-year average relationship.
+        </p>
+        <p>
+          Season definitions are Winter = Dec-Feb, Spring = Mar-May, Summer = Jun-Aug, Autumn = Sep-Nov. The current month is July, so this dashboard is using the Summer seasonal grouping.
+        </p>
+        <ul class="instruction-list">
+          <li><strong>Anomaly detection:</strong> each selected Forward Marks + Balmo mark is checked against its own history and against a trust-gated peer view built from correlated subgroup or parent-group markets.</li>
+          <li><strong>Historical check:</strong> this is explanation-only and does not change the flag. Forward compares the transition from the current month actual-to-date basis into the next-month forward mark, for example July mark minus June actual-to-date median. Balmo compares the transition from the latest actual basis into the balance-of-month mark, for example June 20-30 Balmo mark minus June 19 actual basis. Each transition is compared with the same calendar setup in prior years. For weaker/stronger transitions, degree labels (slight, mild, moderate, strong, very strong) scale the magnitude gap by each component&apos;s own current-month daily basis standard deviation, falling back to that component&apos;s historical same-month standard deviation when current-month data is sparse.</li>
+          <li><strong>Strong outlier:</strong> a high-conviction dislocation. The market is stretched versus normal history and/or clearly out of line with trusted peers.</li>
+          <li><strong>Outlier:</strong> a real dislocation that is large enough to investigate and discuss, even if it is not the most extreme print on the page.</li>
+          <li><strong>Watch:</strong> an early warning signal. The market is starting to move away from its usual range or peer relationships, but the signal is not yet strong enough to call a full outlier.</li>
+        </ul>
+      </section>
+
+      <section class="summary-grid">
+        <div class="kpi"><div class="label">Total Components</div><div class="value"><div class="kpi-dual"><span class="kpi-src kpi-src--forward">Forward: 17</span><span class="kpi-src kpi-src--balmo">Balmo: 17</span></div></div></div><div class="kpi"><div class="label">Marks Avaliable</div><div class="value"><div class="kpi-dual"><span class="kpi-src kpi-src--forward">Forward: 15</span><span class="kpi-src kpi-src--balmo">Balmo: 1</span></div></div></div><div class="kpi"><div class="label">Strong Outlier</div><div class="value"><div class="kpi-dual"><span class="kpi-src kpi-src--forward">Forward: 1</span><span class="kpi-src kpi-src--balmo">Balmo: 0</span></div></div></div><div class="kpi"><div class="label">Outlier</div><div class="value"><div class="kpi-dual"><span class="kpi-src kpi-src--forward">Forward: 0</span><span class="kpi-src kpi-src--balmo">Balmo: 0</span></div></div></div><div class="kpi"><div class="label">Watch</div><div class="value"><div class="kpi-dual"><span class="kpi-src kpi-src--forward">Forward: 3</span><span class="kpi-src kpi-src--balmo">Balmo: 0</span></div></div></div>
+      </section>
+
+      <section class="flag-grid">
+        <div class="card flag-card"><h3>Strong Outlier</h3><div class="flag-scroll"><table class="table flagged-nav-table pg-flag-paired" border="0"><thead><tr><th>Component</th><th>Source</th><th>Price Region</th><th>Flag</th><th>Mark</th><th>Expected (peer)</th><th>Interpretation</th><th>Historical Check</th></tr></thead><tbody><tr class="pg-flag-stripe-0"><td><a href="#" class="pg-rdash-comp" data-price-region="West - California" data-component="PG&amp;E-Topock">PG&amp;E-Topock</a></td><td><span class="kpi-src kpi-src--forward">Forward</span></td><td>West - California</td><td>Strong outlier</td><td>0.5453</td><td>0.2330 (normal 0.0312 to 0.4348)</td><td><ul class="interpretation-list"><li>very far <strong>above</strong> own-history expected value | own z score=4.34 (very high)</li><li>moderately <strong>above</strong> peer-implied value | subgroup peers: 4</li><li>History/peer direction <strong>agree</strong>.</li><li>Strong: own-history |z| alone clears the strong tier (≥4)</li></ul></td><td><ul class="interpretation-list"><li>Pattern: <strong>moderate stronger than history</strong> July actual-to-date to August mark | stronger by 1.04 (1.19x component current-month sd), current +1.08 vs historical mean +0.04</li><li>actual-to-date z=-1.18, mark z=0.71, transition z=3.19, years=12</li></ul></td></tr></tbody></table></div></div>
+        <div class="card flag-card"><h3>Outlier</h3><div class="flag-scroll"><table class="table flagged-nav-table pg-flag-paired" border="0"><thead><tr><th>Component</th><th>Source</th><th>Price Region</th><th>Flag</th><th>Mark</th><th>Expected (peer)</th><th>Interpretation</th><th>Historical Check</th></tr></thead><tbody></tbody></table></div></div>
+        <div class="card flag-card"><h3>Watch</h3><div class="flag-scroll"><table class="table flagged-nav-table pg-flag-paired" border="0"><thead><tr><th>Component</th><th>Source</th><th>Price Region</th><th>Flag</th><th>Mark</th><th>Expected (peer)</th><th>Interpretation</th><th>Historical Check</th></tr></thead><tbody><tr class="pg-flag-stripe-0"><td><a href="#" class="pg-rdash-comp" data-price-region="West - California" data-component="KRGT-Del Pool">KRGT-Del Pool</a></td><td><span class="kpi-src kpi-src--forward">Forward</span></td><td>West - California</td><td>Watch</td><td>0.5453</td><td>0.4322 (normal 0.2423 to 0.6221)</td><td><ul class="interpretation-list"><li>moderately <strong>above</strong> own-history expected value | own z score=2.54 watch</li><li><strong>Higher</strong> than peer-implied value | subgroup peers: 4</li><li>History/peer direction <strong>agree</strong>.</li></ul></td><td><ul class="interpretation-list"><li>Pattern: <strong>mild stronger than history</strong> July actual-to-date to August mark | stronger by 0.86 (0.93x component current-month sd), current +0.95 vs historical mean +0.09</li><li>actual-to-date z=-1.20, mark z=0.20, transition z=2.44, years=20</li></ul></td></tr><tr class="pg-flag-stripe-1"><td><a href="#" class="pg-rdash-comp" data-price-region="Mountain - Rockies" data-component="CIG-Mainline">CIG-Mainline</a></td><td><span class="kpi-src kpi-src--forward">Forward</span></td><td>Mountain - Rockies</td><td>Watch</td><td>-0.4200</td><td>-0.3458 (normal -0.3989 to -0.2926)</td><td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>slightly <strong>below</strong> peer-implied value | parent peers: 11</li><li>History/peer direction <strong>disagree</strong>.</li></ul></td><td><ul class="interpretation-list"><li>Pattern: <strong>slight stronger than history</strong> July actual-to-date to August mark | stronger by 0.12 (0.15x component current-month sd), current +0.14 vs historical mean -0.01</li><li>actual-to-date z=-0.59, mark z=0.04, transition z=1.71, years=26</li></ul></td></tr><tr class="pg-flag-stripe-0"><td><a href="#" class="pg-rdash-comp" data-price-region="Mountain - WesTex" data-component="White River Hub">White River Hub</a></td><td><span class="kpi-src kpi-src--forward">Forward</span></td><td>Mountain - WesTex</td><td>Watch</td><td>-0.3900</td><td>-0.3240 (normal -0.3755 to -0.2724)</td><td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>slightly <strong>below</strong> peer-implied value | parent peers: 11</li><li>History/peer direction <strong>disagree</strong>.</li></ul></td><td><ul class="interpretation-list"><li>Pattern: <strong>slight stronger than history</strong> July actual-to-date to August mark | stronger by 0.16 (0.19x component current-month sd), current +0.16 vs historical mean -0.00</li><li>actual-to-date z=-2.02, mark z=-0.32, transition z=1.29, years=14</li></ul></td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="card"><h3>Groups</h3><div class="group-search-wrap">
+  <label class="group-search-label">Find component by name</label>
+  <input type="search" class="group-search-input" placeholder="Type a market component…" autocomplete="off" />
+  <div class="group-search-selected" hidden aria-live="polite"></div>
+  <div class="group-search-results" hidden></div>
+</div><div class="tabbar"><button class="tab-btn active" role="tab" aria-selected="true" data-target="groupTab0">Mountain-Opal</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab1">Mountain-Rockies</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab2">Mountain-WesTex</button><button class="tab-btn" role="tab" aria-selected="false" data-target="groupTab3">West-California</button></div></section><section id="groupTab0" class="tab-panel active" role="tabpanel" data-price-region-key="Mountain - Opal">
+              <div class="panel-head">
+                <h2>Mountain-Opal</h2>
+                <p class="subtitle">Includes groups: Group 2</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (Forward + Balmo segment, latest two months)</h3><a href="_subgroup_figs_priceGrouper_rockies/tab_0.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_rockies/tab_0.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <button type="button" class="pg-explain-toggle" aria-expanded="false" style="display:block;width:100%;text-align:left;padding:9px 11px;font-size:13px;font-weight:700;line-height:1.25;border:1px solid #d2dfed;border-radius:10px;background:#edf4fb;color:#244560;font-family:inherit;appearance:none;-webkit-appearance:none;box-shadow:none;cursor:pointer;">Price analysis explainations (click to expand)</button>
+                <div class="pg-explain-body" hidden>
+                  <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 2 | Global_G02 | Type: regular — Forward + Balmo</div><a href="figures/forward/Global_G02_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/forward/Global_G02_spring_basis_overlay.png" alt="Global_G02_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <div class="empty">No rows.</div>
+              </div>
+            </section><section id="groupTab1" class="tab-panel" role="tabpanel" data-price-region-key="Mountain - Rockies">
+              <div class="panel-head">
+                <h2>Mountain-Rockies</h2>
+                <p class="subtitle">Includes groups: Group 2</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (Forward + Balmo segment, latest two months)</h3><a href="_subgroup_figs_priceGrouper_rockies/tab_1.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_rockies/tab_1.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <button type="button" class="pg-explain-toggle" aria-expanded="false" style="display:block;width:100%;text-align:left;padding:9px 11px;font-size:13px;font-weight:700;line-height:1.25;border:1px solid #d2dfed;border-radius:10px;background:#edf4fb;color:#244560;font-family:inherit;appearance:none;-webkit-appearance:none;box-shadow:none;cursor:pointer;">Price analysis explainations (click to expand)</button>
+                <div class="pg-explain-body" hidden>
+                  <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 2 | Global_G02 | Type: regular — Forward + Balmo</div><a href="figures/forward/Global_G02_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/forward/Global_G02_spring_basis_overlay.png" alt="Global_G02_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <table class="table flagged-nav-table pg-flag-paired" border="0"><thead><tr><th>Component</th><th>Source</th><th>Flag</th><th>Price Region</th><th>Peer Level</th><th>Mark</th><th>Expected (peer)</th><th>Interpretation</th><th>Historical Check</th></tr></thead><tbody><tr class="pg-flag-pair-start pg-flag-stripe-0"><td rowspan="2"><a href="#" class="pg-rdash-comp" data-price-region="Mountain - Rockies" data-component="CIG-Mainline">CIG-Mainline</a></td><td><span class="kpi-src kpi-src--forward">Forward</span></td><td>Watch</td><td>Mountain - Rockies</td><td>Parent</td><td>-0.4200</td><td>-0.3458 (normal -0.3989 to -0.2926)</td><td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>slightly <strong>below</strong> peer-implied value | parent peers: 11</li><li>History/peer direction <strong>disagree</strong>.</li></ul></td><td><ul class="interpretation-list"><li>Pattern: <strong>slight stronger than history</strong> July actual-to-date to August mark | stronger by 0.12 (0.15x component current-month sd), current +0.14 vs historical mean -0.01</li><li>actual-to-date z=-0.59, mark z=0.04, transition z=1.71, years=26</li></ul></td></tr><tr class="pg-flag-pair-follow pg-flag-stripe-0"><td><span class="kpi-src kpi-src--balmo">Balmo</span></td><td>In-family</td><td>Mountain - Rockies</td><td>OwnHistoryOnly</td><td>-0.3925</td><td>n/a (peer untrusted)</td><td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li class="pg-cross-src-inline">Cross-source: Forward mark (-0.4200) is lower than the Balmo mark (-0.3925).</li></ul></td><td><ul class="interpretation-list"><li>Balmo transition: <strong>slight stronger than history</strong> July 28 actual to July 29-31 Balmo mark | stronger by 0.05 (0.06x component current-month sd), current -0.06 vs historical mean +0.02</li><li>latest actual z=0.26, mark z=-0.09, transition z=-0.64, years=26</li></ul></td></tr></tbody></table>
+              </div>
+            </section><section id="groupTab2" class="tab-panel" role="tabpanel" data-price-region-key="Mountain - WesTex">
+              <div class="panel-head">
+                <h2>Mountain-WesTex</h2>
+                <p class="subtitle">Includes groups: Group 2, Group 5</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (Forward + Balmo segment, latest two months)</h3><a href="_subgroup_figs_priceGrouper_rockies/tab_2.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_rockies/tab_2.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <button type="button" class="pg-explain-toggle" aria-expanded="false" style="display:block;width:100%;text-align:left;padding:9px 11px;font-size:13px;font-weight:700;line-height:1.25;border:1px solid #d2dfed;border-radius:10px;background:#edf4fb;color:#244560;font-family:inherit;appearance:none;-webkit-appearance:none;box-shadow:none;cursor:pointer;">Price analysis explainations (click to expand)</button>
+                <div class="pg-explain-body" hidden>
+                  <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 2 | Global_G02 | Type: regular — Forward + Balmo</div><a href="figures/forward/Global_G02_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/forward/Global_G02_spring_basis_overlay.png" alt="Global_G02_spring_basis_overlay.png" class="group-figure" /></a></div><div class="merged-figure-item"><div class="figure-subtitle">Group 5 | Global_G05 | Type: regular — Forward + Balmo</div><a href="figures/forward/Global_G05_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/forward/Global_G05_spring_basis_overlay.png" alt="Global_G05_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <table class="table flagged-nav-table pg-flag-paired" border="0"><thead><tr><th>Component</th><th>Source</th><th>Flag</th><th>Price Region</th><th>Peer Level</th><th>Mark</th><th>Expected (peer)</th><th>Interpretation</th><th>Historical Check</th></tr></thead><tbody><tr class="pg-flag-stripe-0"><td><a href="#" class="pg-rdash-comp" data-price-region="Mountain - WesTex" data-component="White River Hub">White River Hub</a></td><td><span class="kpi-src kpi-src--forward">Forward</span></td><td>Watch</td><td>Mountain - WesTex</td><td>Parent</td><td>-0.3900</td><td>-0.3240 (normal -0.3755 to -0.2724)</td><td><ul class="interpretation-list"><li><strong>Higher</strong> than own-history expected value</li><li>slightly <strong>below</strong> peer-implied value | parent peers: 11</li><li>History/peer direction <strong>disagree</strong>.</li></ul></td><td><ul class="interpretation-list"><li>Pattern: <strong>slight stronger than history</strong> July actual-to-date to August mark | stronger by 0.16 (0.19x component current-month sd), current +0.16 vs historical mean -0.00</li><li>actual-to-date z=-2.02, mark z=-0.32, transition z=1.29, years=14</li></ul></td></tr></tbody></table>
+              </div>
+            </section><section id="groupTab3" class="tab-panel" role="tabpanel" data-price-region-key="West - California">
+              <div class="panel-head">
+                <h2>West-California</h2>
+                <p class="subtitle">Includes groups: Group 5</p>
+              </div>
+              <div class="card"><h3>Subgroup basis and marks (Forward + Balmo segment, latest two months)</h3><a href="_subgroup_figs_priceGrouper_rockies/tab_3.png" target="_blank" rel="noopener" class="group-figure-link"><img src="_subgroup_figs_priceGrouper_rockies/tab_3.png" alt="Subgroup summary" class="group-figure" /></a></div>
+              <div class="card">
+                <button type="button" class="pg-explain-toggle" aria-expanded="false" style="display:block;width:100%;text-align:left;padding:9px 11px;font-size:13px;font-weight:700;line-height:1.25;border:1px solid #d2dfed;border-radius:10px;background:#edf4fb;color:#244560;font-family:inherit;appearance:none;-webkit-appearance:none;box-shadow:none;cursor:pointer;">Price analysis explainations (click to expand)</button>
+                <div class="pg-explain-body" hidden>
+                  <div class="figure-stack"><div class="merged-figure-item"><div class="figure-subtitle">Group 5 | Global_G05 | Type: regular — Forward + Balmo</div><a href="figures/forward/Global_G05_spring_basis_overlay.png" target="_blank" rel="noopener" class="group-figure-link"><img src="figures/forward/Global_G05_spring_basis_overlay.png" alt="Global_G05_spring_basis_overlay.png" class="group-figure" /></a></div></div>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Flagged Components and Interpretation</h3>
+                <table class="table flagged-nav-table pg-flag-paired" border="0"><thead><tr><th>Component</th><th>Source</th><th>Flag</th><th>Price Region</th><th>Peer Level</th><th>Mark</th><th>Expected (peer)</th><th>Interpretation</th><th>Historical Check</th></tr></thead><tbody><tr class="pg-flag-stripe-0"><td><a href="#" class="pg-rdash-comp" data-price-region="West - California" data-component="KRGT-Del Pool">KRGT-Del Pool</a></td><td><span class="kpi-src kpi-src--forward">Forward</span></td><td>Watch</td><td>West - California</td><td>Subgroup</td><td>0.5453</td><td>0.4322 (normal 0.2423 to 0.6221)</td><td><ul class="interpretation-list"><li>moderately <strong>above</strong> own-history expected value | own z score=2.54 watch</li><li><strong>Higher</strong> than peer-implied value | subgroup peers: 4</li><li>History/peer direction <strong>agree</strong>.</li></ul></td><td><ul class="interpretation-list"><li>Pattern: <strong>mild stronger than history</strong> July actual-to-date to August mark | stronger by 0.86 (0.93x component current-month sd), current +0.95 vs historical mean +0.09</li><li>actual-to-date z=-1.20, mark z=0.20, transition z=2.44, years=20</li></ul></td></tr><tr class="pg-flag-stripe-1"><td><a href="#" class="pg-rdash-comp" data-price-region="West - California" data-component="PG&amp;E-Topock">PG&amp;E-Topock</a></td><td><span class="kpi-src kpi-src--forward">Forward</span></td><td>Strong outlier</td><td>West - California</td><td>Subgroup</td><td>0.5453</td><td>0.2330 (normal 0.0312 to 0.4348)</td><td><ul class="interpretation-list"><li>very far <strong>above</strong> own-history expected value | own z score=4.34 (very high)</li><li>moderately <strong>above</strong> peer-implied value | subgroup peers: 4</li><li>History/peer direction <strong>agree</strong>.</li><li>Strong: own-history |z| alone clears the strong tier (≥4)</li></ul></td><td><ul class="interpretation-list"><li>Pattern: <strong>moderate stronger than history</strong> July actual-to-date to August mark | stronger by 1.04 (1.19x component current-month sd), current +1.08 vs historical mean +0.04</li><li>actual-to-date z=-1.18, mark z=0.71, transition z=3.19, years=12</li></ul></td></tr></tbody></table>
+              </div>
+            </section>
+    </main>
+    <script>
+      (function() {
+        const buttons = Array.from(document.querySelectorAll('.tab-btn'));
+        const panels = Array.from(document.querySelectorAll('.tab-panel'));
+        function activate(id) {
+          buttons.forEach((b) => {
+            const on = b.dataset.target === id;
+            b.classList.toggle('active', on);
+            b.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+          panels.forEach((p) => p.classList.toggle('active', p.id === id));
+        }
+        buttons.forEach((b) => b.addEventListener('click', () => activate(b.dataset.target)));
+        if (buttons.length > 0) activate(buttons[0].dataset.target);
+
+        const componentSearchIndex = [{"component": "KRGT-Rec Pool", "tabId": "groupTab1", "groupTitle": "Mountain-Rockies", "groupNumber": 2, "regionTitle": "Mountain - Rockies"}, {"component": "MountainWest-North", "tabId": "groupTab2", "groupTitle": "Mountain-WesTex", "groupNumber": 2, "regionTitle": "Mountain - WesTex"}, {"component": "NWP-Rocky Mtn", "tabId": "groupTab0", "groupTitle": "Mountain-Opal", "groupNumber": 2, "regionTitle": "Mountain - Opal"}, {"component": "NWP-Wyoming", "tabId": "groupTab2", "groupTitle": "Mountain-WesTex", "groupNumber": 2, "regionTitle": "Mountain - WesTex"}, {"component": "Ruby-Rec Pool", "tabId": "groupTab0", "groupTitle": "Mountain-Opal", "groupNumber": 2, "regionTitle": "Mountain - Opal"}, {"component": "EP-SJ Blanco Pool", "tabId": "groupTab2", "groupTitle": "Mountain-WesTex", "groupNumber": 2, "regionTitle": "Mountain - WesTex"}, {"component": "EP-SJ Bondad Stn", "tabId": "groupTab2", "groupTitle": "Mountain-WesTex", "groupNumber": 2, "regionTitle": "Mountain - WesTex"}, {"component": "TW-Blanco", "tabId": "groupTab2", "groupTitle": "Mountain-WesTex", "groupNumber": 2, "regionTitle": "Mountain - WesTex"}, {"component": "CIG-Mainline South", "tabId": "groupTab0", "groupTitle": "Mountain-Opal", "groupNumber": 2, "regionTitle": "Mountain - Opal"}, {"component": "Cheyenne", "tabId": "groupTab1", "groupTitle": "Mountain-Rockies", "groupNumber": 2, "regionTitle": "Mountain - Rockies"}, {"component": "REX Cheyenne Comp Pool", "tabId": "groupTab1", "groupTitle": "Mountain-Rockies", "groupNumber": 2, "regionTitle": "Mountain - Rockies"}, {"component": "CIG-Mainline", "tabId": "groupTab1", "groupTitle": "Mountain-Rockies", "groupNumber": 2, "regionTitle": "Mountain - Rockies"}, {"component": "White River Hub", "tabId": "groupTab2", "groupTitle": "Mountain-WesTex", "groupNumber": 2, "regionTitle": "Mountain - WesTex"}, {"component": "KRGT-Del Pool", "tabId": "groupTab3", "groupTitle": "West-California", "groupNumber": 5, "regionTitle": "West - California"}, {"component": "PG&E-Topock", "tabId": "groupTab3", "groupTitle": "West-California", "groupNumber": 5, "regionTitle": "West - California"}, {"component": "EP-S.Mainline", "tabId": "groupTab2", "groupTitle": "Mountain-WesTex", "groupNumber": 5, "regionTitle": "Mountain - WesTex"}, {"component": "Socal-Ehrenberg", "tabId": "groupTab3", "groupTitle": "West-California", "groupNumber": 5, "regionTitle": "West - California"}];
+        const input = document.querySelector('.group-search-input');
+        const outEl = document.querySelector('.group-search-results');
+        const selectedEl = document.querySelector('.group-search-selected');
+        if (input && outEl && Array.isArray(componentSearchIndex)) {
+          function formatSearchMeta(row) {
+            const metaParts = [];
+            const gn = row.groupNumber;
+            if (gn) metaParts.push('Group number: ' + gn);
+            else if (row.groupTitle) metaParts.push('Group: ' + row.groupTitle);
+            if (row.regionTitle) metaParts.push('Price region: ' + row.regionTitle);
+            return metaParts.join(' | ');
+          }
+          function showSelected(row) {
+            if (!selectedEl || !row) return;
+            selectedEl.innerHTML = '';
+            const title = document.createElement('strong');
+            title.textContent = row.component || '';
+            const meta = document.createElement('div');
+            meta.className = 'group-search-meta';
+            meta.textContent = formatSearchMeta(row);
+            selectedEl.appendChild(title);
+            selectedEl.appendChild(meta);
+            selectedEl.hidden = false;
+          }
+          function clearSelected() {
+            if (!selectedEl) return;
+            selectedEl.hidden = true;
+            selectedEl.innerHTML = '';
+          }
+          function renderSearch(q) {
+            const term = (q || '').trim().toLowerCase();
+            outEl.innerHTML = '';
+            if (!term) {
+              outEl.hidden = true;
+              clearSelected();
+              return;
+            }
+            if (!componentSearchIndex.length) {
+              outEl.hidden = false;
+              const empty = document.createElement('div');
+              empty.className = 'group-search-empty';
+              empty.textContent = 'Component search index is empty; regenerate PriceGrouper HTML.';
+              outEl.appendChild(empty);
+              return;
+            }
+            const scored = [];
+            for (const row of componentSearchIndex) {
+              const c = (row.component || '').toLowerCase();
+              if (!c.includes(term)) continue;
+              const starts = c.startsWith(term) ? 0 : 1;
+              scored.push({ starts, name: row.component, row });
+            }
+            scored.sort((a, b) => (a.starts - b.starts) || a.name.localeCompare(b.name));
+            const lim = scored.slice(0, 50);
+            if (lim.length === 0) {
+              outEl.hidden = false;
+              const empty = document.createElement('div');
+              empty.className = 'group-search-empty';
+              empty.textContent = 'No components match.';
+              outEl.appendChild(empty);
+              return;
+            }
+            outEl.hidden = false;
+            for (const { row } of lim) {
+              const hit = document.createElement('button');
+              hit.type = 'button';
+              hit.className = 'group-search-hit';
+              const strong = document.createElement('strong');
+              strong.textContent = row.component || '';
+              const meta = document.createElement('div');
+              meta.className = 'group-search-meta';
+              meta.textContent = formatSearchMeta(row);
+              hit.appendChild(strong);
+              hit.appendChild(meta);
+              hit.addEventListener('click', () => {
+                if (row.tabId) activate(row.tabId);
+                input.value = row.component || '';
+                showSelected(row);
+                outEl.hidden = true;
+                outEl.innerHTML = '';
+              });
+              outEl.appendChild(hit);
+            }
+          }
+          input.addEventListener('input', () => renderSearch(input.value));
+          input.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              outEl.hidden = true;
+              outEl.innerHTML = '';
+            }
+          });
+          document.addEventListener('click', (e) => {
+            const wrap = input.closest('.group-search-wrap');
+            if (wrap && !wrap.contains(e.target)) {
+              outEl.hidden = true;
+            }
+          });
+          input.addEventListener('change', () => {
+            const term = (input.value || '').trim().toLowerCase();
+            if (!term) {
+              clearSelected();
+              return;
+            }
+            const exact = componentSearchIndex.find(
+              (row) => (row.component || '').toLowerCase() === term
+            );
+            if (exact) showSelected(exact);
+          });
+        }
+      })();
+    </script>
+
+    <script>
+      (function() {
+        document.querySelectorAll('.pg-explain-toggle').forEach((btn) => {
+          const body = btn.nextElementSibling;
+          if (!body) return;
+          btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            body.hidden = expanded;
+            if (typeof postCompactHeight === 'function') {
+              setTimeout(postCompactHeight, 0);
+              setTimeout(postCompactHeight, 250);
+            } else if (window.parent && window.parent !== window) {
+              window.parent.postMessage({ type: 'price-grouper-resize' }, '*');
+            }
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      (function() {
+        const crit = "Rockies";
+        document.querySelectorAll("a.pg-rdash-comp").forEach((a) => {
+          a.addEventListener("click", (e) => {
+            e.preventDefault();
+            const pr = a.getAttribute("data-price-region") || "";
+            const comp = a.getAttribute("data-component") || "";
+            if (window.top) {
+              window.top.postMessage(
+                { type: "rdash-nav", criterion: crit, priceRegion: pr, component: comp },
+                "*"
+              );
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

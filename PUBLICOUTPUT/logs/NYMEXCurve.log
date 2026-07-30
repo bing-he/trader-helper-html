@@ -1,0 +1,26 @@
+Command: C:\Users\BHe\trader-helper-bing\.venv\Scripts\python.exe C:\Users\BHe\trader-helper-bing\CONUSDash\NYMEXCurve\run.py
+Started UTC: 2026-07-28T18:16:24.884235+00:00
+Finished UTC: 2026-07-28T18:18:19.072609+00:00
+Return code: 0
+
+=== STDOUT ===
+
+
+=== STDERR ===
+2026-07-28 13:16:27,505 INFO [NYMEXCurve] Loaded env from C:\Users\BHe\trader-helper-bing\.env | OPENAI_API_KEY=True OPENAI_PROJECT=False
+2026-07-28 13:16:27,506 INFO [NYMEXCurve] Removed prior report: C:\Users\BHe\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst.html
+2026-07-28 13:16:27,507 INFO [NYMEXCurve] Removed prior evidence pack: C:\Users\BHe\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\llm_evidence.json
+2026-07-28 13:16:27,522 INFO [NYMEXCurve] Removed 9 prior asset image(s) from C:\Users\BHe\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst_assets
+2026-07-28 13:16:27,523 INFO [NYMEXCurve] Repo root: C:\Users\BHe\trader-helper-bing
+2026-07-28 13:16:27,523 INFO [NYMEXCurve] INFO dir: C:\Users\BHe\trader-helper-bing\INFO
+2026-07-28 13:16:27,523 INFO [NYMEXCurve] Output dir: C:\Users\BHe\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT
+2026-07-28 13:16:27,523 INFO [NYMEXCurve] Cash enabled: True
+2026-07-28 13:16:27,523 INFO [NYMEXCurve] Cash prices path: C:\Users\BHe\trader-helper-bing\INFO\PRICES.csv
+2026-07-28 13:16:28,472 INFO [NYMEXCurve] Loaded absolute history with 4935 rows and 186 delivery-month columns.
+2026-07-28 13:16:28,482 INFO [NYMEXCurve] Loaded forward curve with 4935 rows (latest 2026-07-28).
+2026-07-28 13:16:28,621 INFO [NYMEXCurve] Loaded cash PRICES with 9706 rows (latest 2026-07-28).
+2026-07-28 13:18:11,765 WARNING [NYMEXCurve] OpenAI SDK unavailable; trying HTTPS fallback. (No module named 'openai')
+2026-07-28 13:18:17,102 WARNING [NYMEXCurve] LLM output failed the trader-note validator (best_trade_expression lacks numeric anchor); using deterministic fallback.
+2026-07-28 13:18:18,701 INFO [NYMEXCurve] Report written: C:\Users\BHe\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst.html
+2026-07-28 13:18:18,701 INFO [NYMEXCurve] Evidence pack written: C:\Users\BHe\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\llm_evidence.json
+2026-07-28 13:18:18,701 INFO [NYMEXCurve] Assets folder: C:\Users\BHe\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst_assets
