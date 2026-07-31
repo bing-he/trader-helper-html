@@ -1,11 +1,11 @@
 # Spring Basis Overlay Outputs (Balmo)
 
 - Season: Summer
-- History window: 2026-05-29 to 2026-07-29 (latest two months of available prices)
+- History window: 2026-05-31 to 2026-07-31 (latest two months of available prices)
 - Forward point date: 2026-08-01
 - Mark source file: balmo.csv
 - Parent-group figures written: 17
-- Flagged marks written to plot labels: 9
+- Flagged marks written to plot labels: 8
 - Components without selected marks: 88
 
 ## Plot Logic

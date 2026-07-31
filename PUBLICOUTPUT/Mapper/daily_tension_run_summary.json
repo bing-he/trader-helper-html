@@ -1,5 +1,5 @@
 {
-  "target_date": "2026-07-28",
+  "target_date": "2026-07-30",
   "mode": "production",
   "run_status": "UNGATED",
   "quality_gate_enabled": false,
@@ -23,36 +23,60 @@
   "backtest_metrics": [],
   "top_high_risk_edges_h1": [
     {
-      "GEOID_A": "OK|BECKHAM",
-      "GEOID_B": "OK|ROGER MILLS",
-      "Comp_A": "EGT-West",
-      "Comp_B": "ANR-SW",
-      "Tension_Score": 78,
-      "Signal_Percentile": 98.09
+      "GEOID_A": "LA|OUACHITA",
+      "GEOID_B": "LA|RICHLAND",
+      "Comp_A": "TGT-Mainline",
+      "Comp_B": "CG-Mainline",
+      "Tension_Score": 92,
+      "Signal_Percentile": 99.52
     },
     {
-      "GEOID_A": "OK|CUSTER",
-      "GEOID_B": "OK|WASHITA",
-      "Comp_A": "EGT-West",
-      "Comp_B": "NGPL-Midcont Pool",
-      "Tension_Score": 78,
-      "Signal_Percentile": 98.09
+      "GEOID_A": "LA|MOREHOUSE",
+      "GEOID_B": "LA|RICHLAND",
+      "Comp_A": "TGT-Mainline",
+      "Comp_B": "CG-Mainline",
+      "Tension_Score": 92,
+      "Signal_Percentile": 99.52
     },
     {
-      "GEOID_A": "OK|COMANCHE",
-      "GEOID_B": "OK|KIOWA",
-      "Comp_A": "EGT-West",
-      "Comp_B": "NGPL-Midcont Pool",
-      "Tension_Score": 78,
-      "Signal_Percentile": 98.09
+      "GEOID_A": "LA|CALDWELL",
+      "GEOID_B": "LA|FRANKLIN",
+      "Comp_A": "TGT-Mainline",
+      "Comp_B": "CG-Mainline",
+      "Tension_Score": 92,
+      "Signal_Percentile": 99.52
     },
     {
-      "GEOID_A": "OK|CADDO",
-      "GEOID_B": "OK|GRADY",
-      "Comp_A": "NGPL-Midcont Pool",
-      "Comp_B": "EGT-West",
-      "Tension_Score": 78,
-      "Signal_Percentile": 98.09
+      "GEOID_A": "LA|CALDWELL",
+      "GEOID_B": "LA|RICHLAND",
+      "Comp_A": "TGT-Mainline",
+      "Comp_B": "CG-Mainline",
+      "Tension_Score": 92,
+      "Signal_Percentile": 99.52
+    },
+    {
+      "GEOID_A": "LA|LAFAYETTE",
+      "GEOID_B": "LA|ST MARTIN",
+      "Comp_A": "TGT-SL",
+      "Comp_B": "Sonat-Z0 South",
+      "Tension_Score": 88,
+      "Signal_Percentile": 98.73
+    },
+    {
+      "GEOID_A": "LA|RICHLAND",
+      "GEOID_B": "LA|WEST CARROLL",
+      "Comp_A": "CG-Mainline",
+      "Comp_B": "Trunkline-Z1A",
+      "Tension_Score": 83,
+      "Signal_Percentile": 98.25
+    },
+    {
+      "GEOID_A": "LA|EAST CARROLL",
+      "GEOID_B": "LA|WEST CARROLL",
+      "Comp_A": "CG-Mainline",
+      "Comp_B": "Trunkline-Z1A",
+      "Tension_Score": 83,
+      "Signal_Percentile": 98.25
     },
     {
       "GEOID_A": "OK|JACKSON",
@@ -60,47 +84,23 @@
       "Comp_A": "EGT-West",
       "Comp_B": "NGPL-Midcont Pool",
       "Tension_Score": 78,
-      "Signal_Percentile": 98.09
+      "Signal_Percentile": 95.7
     },
     {
-      "GEOID_A": "OK|CADDO",
-      "GEOID_B": "OK|CUSTER",
-      "Comp_A": "NGPL-Midcont Pool",
+      "GEOID_A": "OK|ALFALFA",
+      "GEOID_B": "OK|GRANT",
+      "Comp_A": "southern star",
       "Comp_B": "EGT-West",
       "Tension_Score": 78,
-      "Signal_Percentile": 98.09
-    },
-    {
-      "GEOID_A": "OK|CADDO",
-      "GEOID_B": "OK|COMANCHE",
-      "Comp_A": "NGPL-Midcont Pool",
-      "Comp_B": "EGT-West",
-      "Tension_Score": 78,
-      "Signal_Percentile": 98.09
-    },
-    {
-      "GEOID_A": "OK|BLAINE",
-      "GEOID_B": "OK|CADDO",
-      "Comp_A": "EGT-West",
-      "Comp_B": "NGPL-Midcont Pool",
-      "Tension_Score": 78,
-      "Signal_Percentile": 98.09
+      "Signal_Percentile": 95.7
     },
     {
       "GEOID_A": "OK|BECKHAM",
-      "GEOID_B": "OK|WASHITA",
-      "Comp_A": "EGT-West",
-      "Comp_B": "NGPL-Midcont Pool",
-      "Tension_Score": 78,
-      "Signal_Percentile": 98.09
-    },
-    {
-      "GEOID_A": "OK|GREER",
       "GEOID_B": "OK|KIOWA",
       "Comp_A": "EGT-West",
       "Comp_B": "NGPL-Midcont Pool",
       "Tension_Score": 78,
-      "Signal_Percentile": 98.09
+      "Signal_Percentile": 95.7
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-28T18:24:15.754922+00:00",
+  "generated_utc": "2026-07-31T15:48:19.117981+00:00",
   "public_output_dir": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT",
   "dashboard_html": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CONUSDash.html",
   "run_order": [
@@ -17,8 +17,8 @@
         "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\run.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-07-28T18:16:24.884235+00:00",
-      "finished_utc": "2026-07-28T18:18:19.072609+00:00",
+      "started_utc": "2026-07-31T15:41:28.765717+00:00",
+      "finished_utc": "2026-07-31T15:44:20.734824+00:00",
       "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\NYMEXCurve.log"
     },
     {
@@ -29,8 +29,8 @@
         "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\Fundy\\run_dashboard.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-07-28T18:18:19.074609+00:00",
-      "finished_utc": "2026-07-28T18:20:58.651392+00:00",
+      "started_utc": "2026-07-31T15:44:20.735825+00:00",
+      "finished_utc": "2026-07-31T15:46:27.122917+00:00",
       "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\Fundy.log"
     },
     {
@@ -41,8 +41,8 @@
         "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\EuroWeekly\\run_euro_weekly.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-07-28T18:20:58.653578+00:00",
-      "finished_utc": "2026-07-28T18:24:02.480598+00:00",
+      "started_utc": "2026-07-31T15:46:27.125921+00:00",
+      "finished_utc": "2026-07-31T15:48:00.619357+00:00",
       "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\EuroWeekly.log"
     },
     {
@@ -53,8 +53,8 @@
         "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\CoT\\src\\run.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-07-28T18:24:02.482594+00:00",
-      "finished_utc": "2026-07-28T18:24:13.396162+00:00",
+      "started_utc": "2026-07-31T15:48:00.621354+00:00",
+      "finished_utc": "2026-07-31T15:48:14.628853+00:00",
       "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\CoT.log"
     }
   ],
