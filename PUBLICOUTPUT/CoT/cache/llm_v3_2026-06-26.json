@@ -8,10 +8,10 @@
     "message": "",
     "price_view": "Bearish",
     "pulse": "Managed Money positioning is light (MM_index 26 vs seasonal 52) and Producer index is neutral-mid (59). Storage is near normal but weather is milder, reducing demand. Prompt spread flipped negative, signaling weaker near-term price support.",
-    "risk_alert": "Risk bias is two-way due to mixed positioning and mild weather softening demand, increasing volatility risk.",
-    "historical_comparison": "No close historical analog; recent analogs show weak match and mixed price outcomes.",
-    "source": "openai_http",
-    "generated_at_utc": "2026-07-02T19:24:41.666229+00:00"
+    "risk_alert": "Risk bias is two-way due to mixed positioning and mild weather, increasing volatility risk without clear directional conviction.",
+    "historical_comparison": "No close historical analog; current price and positioning weaker than seasonal 5-year averages.",
+    "source": "openai",
+    "generated_at_utc": "2026-06-29T11:23:05.917987+00:00"
   },
   "payload": {
     "asof_date": "2026-06-26",
@@ -508,5 +508,5 @@
       "Analog quality/sample display excludes rows without complete 2w/4w/8w forward outcomes."
     ]
   },
-  "generated_at_utc": "2026-07-02T19:24:41.666229+00:00"
+  "generated_at_utc": "2026-06-29T11:23:05.917987+00:00"
 }

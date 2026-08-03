@@ -1,26 +1,26 @@
-Command: C:\Users\BHe\trader-helper-bing\.venv\Scripts\python.exe C:\Users\BHe\trader-helper-bing\CONUSDash\CoT\src\run.py
-Started UTC: 2026-07-31T15:48:00.621354+00:00
-Finished UTC: 2026-07-31T15:48:14.628853+00:00
+Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\src\run.py
+Started UTC: 2026-08-03T15:11:23.849794+00:00
+Finished UTC: 2026-08-03T15:11:27.526157+00:00
 Return code: 0
 
 === STDOUT ===
-[COT] Info directory: C:\Users\BHe\trader-helper-bing\INFO
-[COT] Output directory: C:\Users\BHe\trader-helper-bing\CONUSDash\CoT\OUTPUT
+[COT] Info directory: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO
+[COT] Output directory: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\OUTPUT
 [COT] OPENAI_API_KEY present: True
-[COT] OPENAI_PROJECT present: False
-[COT] COT signal artifacts complete in 0.29s
-[COT] Clean CSV: C:\Users\BHe\trader-helper-bing\INFO\NG_COT_Disagg_Clean.csv
-[COT] Signals CSV: C:\Users\BHe\trader-helper-bing\INFO\NG_COT_Disagg_Signals.csv
+[COT] OPENAI_PROJECT present: True
+[COT] COT signal artifacts complete in 0.10s
+[COT] Clean CSV: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\NG_COT_Disagg_Clean.csv
+[COT] Signals CSV: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\NG_COT_Disagg_Signals.csv
 [COT] rows written: 0
-[COT] asof_date range: 1990-04-12 to 2026-07-21
-[COT] missing/nonpositive Total_OI rows: 1823
-[COT] latest snapshot | MMoney_Net=-102756.0000 MMoney_Net_Pctl5y=10.0386 MMoney_d4w=-20034.0000 MMoney_d4w_Pctl5y=32.8185 ShortSqueezeRisk=NA
-[COT] Pipeline complete in 3.72s | research_rows=707 asof_rows=3525 weekly_rows=709
-[COT] Signal snapshot | triggered_regimes=1 near_regimes=0 analogs=9 analog_message='No close historical analog.'
-[COT] Narrative step complete in 3.68s | source=openai_http placeholder=False
-[COT] HTML render complete in 3.53s
-[COT] Report generated: C:\Users\BHe\trader-helper-bing\CONUSDash\CoT\OUTPUT\report.html
-[COT] Total runtime: 11.24s
+[COT] asof_date range: 1990-04-12 to 2026-07-28
+[COT] missing/nonpositive Total_OI rows: 1824
+[COT] latest snapshot | MMoney_Net=-105826.0000 MMoney_Net_Pctl5y=7.7220 MMoney_d4w=-41018.0000 MMoney_d4w_Pctl5y=20.0772 ShortSqueezeRisk=NA
+[COT] Pipeline complete in 1.73s | research_rows=708 asof_rows=3526 weekly_rows=709
+[COT] Signal snapshot | triggered_regimes=1 near_regimes=0 analogs=9 analog_message='Close historical analogs available.'
+[COT] Narrative step complete in 0.00s | source=cache placeholder=False
+[COT] HTML render complete in 0.79s
+[COT] Report generated: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\OUTPUT\report.html
+[COT] Total runtime: 2.63s
 
 
 === STDERR ===

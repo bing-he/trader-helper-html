@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Morning Briefing - 2026-06-10</title>
+  <style>
+    :root {
+      --bg: #081019;
+      --panel: #0c1620;
+      --panel-2: #0f1c28;
+      --panel-3: #132331;
+      --ink: #d5e3eb;
+      --muted: #8198a8;
+      --rule: #1d3446;
+      --accent: #55d8a8;
+      --accent-soft: rgba(85, 216, 168, 0.14);
+      --link: #7ed4ff;
+      --bull: #5df0b3;
+      --bear: #ff8f8f;
+      --shadow: 0 18px 52px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(rgba(18, 34, 48, 0.24) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 34, 48, 0.2) 1px, transparent 1px),
+        radial-gradient(circle at top right, rgba(83, 140, 181, 0.18), transparent 24%),
+        linear-gradient(180deg, #060c13 0%, var(--bg) 100%);
+      background-size: 18px 18px, 18px 18px, auto, auto;
+      color: var(--ink);
+      font-family: "IBM Plex Mono", "Cascadia Mono", "Consolas", "SFMono-Regular", monospace;
+      line-height: 1.55;
+    }
+    .page {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 16px 14px 28px;
+    }
+    .container {
+      background: linear-gradient(180deg, rgba(8, 16, 25, 0.96), rgba(10, 20, 31, 0.98));
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .report-header {
+      padding: 20px 24px 16px;
+      background:
+        linear-gradient(135deg, rgba(85, 216, 168, 0.12), rgba(126, 212, 255, 0.05) 42%, rgba(0, 0, 0, 0) 70%),
+        linear-gradient(180deg, rgba(15, 28, 40, 0.95) 0%, rgba(10, 20, 31, 0.98) 100%);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.02);
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+      max-width: 110ch;
+    }
+    .report-body {
+      padding: 14px 16px 18px;
+    }
+    .toc {
+      margin: 0 0 14px;
+      padding: 10px 12px;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(13, 24, 35, 0.94), rgba(11, 20, 29, 0.98));
+      position: sticky;
+      top: 10px;
+      z-index: 4;
+    }
+    .toc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px 10px;
+    }
+    .toc li {
+      margin: 0;
+      font-size: 0.8rem;
+    }
+    .toc a {
+      display: block;
+      padding: 7px 9px;
+      border-radius: 7px;
+      border: 1px solid rgba(43, 70, 91, 0.88);
+      background: rgba(16, 31, 43, 0.86);
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .toc a:hover {
+      color: var(--ink);
+      border-color: rgba(85, 216, 168, 0.42);
+      background: rgba(18, 37, 51, 0.98);
+    }
+    .report-section {
+      margin: 0 0 12px;
+      padding: 12px 14px 10px;
+      border: 1px solid var(--rule);
+      border-left: 3px solid rgba(85, 216, 168, 0.42);
+      border-radius: 10px;
+      background:
+        linear-gradient(180deg, rgba(14, 24, 35, 0.96), rgba(9, 18, 26, 0.99)),
+        linear-gradient(90deg, rgba(85, 216, 168, 0.05), rgba(0, 0, 0, 0));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.015);
+    }
+    .report-section:first-of-type {
+      margin-top: 0;
+      padding-top: 12px;
+    }
+    h1, h2, h3 {
+      color: var(--ink);
+      margin: 0;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 3vw, 2.45rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(85, 216, 168, 0.18);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+    h3 {
+      margin: 16px 0 8px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    p {
+      margin: 0 0 9px;
+      max-width: 118ch;
+      font-size: 0.88rem;
+    }
+    li {
+      margin: 0 0 5px;
+      color: var(--ink);
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .brief-list {
+      margin: 0;
+      padding-left: 1rem;
+      max-width: 124ch;
+    }
+    .brief-list li::marker {
+      color: var(--accent);
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 10px 0 4px;
+      font-size: 0.82rem;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(12, 22, 32, 0.98);
+    }
+    .table-wrap {
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 8px 10px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--rule);
+    }
+    th {
+      background: rgba(19, 35, 49, 0.98);
+      color: var(--accent);
+      text-align: left;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    tbody tr:nth-child(even) td {
+      background: rgba(16, 31, 43, 0.95);
+    }
+    tbody tr:hover td {
+      background: rgba(20, 39, 53, 1);
+    }
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+    code {
+      background: rgba(16, 31, 43, 0.96);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-size: 0.92em;
+      color: var(--accent);
+    }
+    .bullish { color: var(--bull); font-weight: 600; }
+    .bearish { color: var(--bear); font-weight: 600; }
+    @media (max-width: 780px) {
+      .page {
+        padding: 10px 8px 18px;
+      }
+      .report-header {
+        padding: 16px 14px 12px;
+      }
+      .report-body {
+        padding: 10px;
+      }
+      .toc ul {
+        grid-template-columns: 1fr;
+      }
+      p, li {
+        font-size: 0.84rem;
+      }
+    }
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+      .container {
+        border: 0;
+        box-shadow: none;
+      }
+      .toc {
+        break-inside: avoid;
+        position: static;
+      }
+      .report-section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header class="report-header"><p class="eyebrow">Platts NEWS Analyst</p><h1>Morning Briefing - 2026-06-10</h1><p class="subtitle">Daily news-only briefing for natural gas traders.</p></header><div class="report-body"><nav class="toc" aria-label="Report sections"><ul><li><a href="#overnight-snapshot">Overnight Snapshot</a></li><li><a href="#dominant-narrative-now">Dominant Narrative Now</a></li><li><a href="#top-5-narratives">Top 5 Narratives</a></li><li><a href="#watchlist-themes">Watchlist Themes</a></li><li><a href="#narrative-drift-last-10-days">Narrative Drift: Last 10 Days</a></li><li><a href="#global-spillover-watch">Global Spillover Watch</a></li><li><a href="#force-majeure-maintenance-compressor-outage-scan">Force Majeure / Maintenance / Compressor Outage Scan</a></li><li><a href="#infrastructure-watch">Infrastructure Watch</a></li></ul></nav><section class="report-section" id="overnight-snapshot"><h2>Overnight Snapshot</h2><p>Overnight direct gas flow was quiet. The latest run did not surface fresh direct US-linked gas catalysts.</p><ul class="brief-list"><li>6/10 | Engie limits renewables investments in the US amid regulatory uncertainty. Engie is reducing US renewables investment due to regulatory uncertainty, which could delay new gas infrastructure and impact regional supply-demand balances.</li><li>6/10 | US releases more funding to tackle growing inventory of abandoned oil and gas wells. The US is increasing funding to address abandoned oil and gas wells, potentially affecting storage site availability and future inventory management.</li><li>6/10 | US Northeast spot gas prices jump on higher demand, lower production. Northeast spot gas prices are rising on stronger demand and lower production, signaling tightening regional basis.</li><li>6/10 | Senate environment chair says permitting still ‘alive’ but worries over timeline. Permitting reform remains under debate in the Senate, raising concerns about the timeline for new gas infrastructure approvals in the Northeast.</li><li>6/10 | Nuclear developer X-energy says third plant announcement coming this year. X-energy plans to announce a third US nuclear plant this year, which could shift long-term gas demand expectations.</li><li>6/10 | US West gas moves higher following warmer temperature outlooks. Gas prices in the US West are climbing as warmer weather boosts demand, tightening regional basis.</li></ul></section><section class="report-section" id="dominant-narrative-now"><h2>Dominant Narrative Now</h2><p>Regulatory uncertainty is slowing renewables investment and raising questions about the pace of new gas infrastructure, particularly in the Northeast. Regional spot prices are tightening in both the Northeast and West as demand rises and production lags, while ongoing debates in Washington over permitting add further uncertainty to project timelines. Storage and inventory management remain in focus as the US allocates more funding to address legacy wells, potentially impacting future storage capacity. Nuclear development announcements could alter long-term gas demand, but near-term flows are dominated by weather and regulatory signals.</p></section><section class="report-section" id="top-5-narratives"><h2>Top 5 Narratives</h2><h3>1. Regulatory and project timing</h3><p>Regulatory delays and uncertainty are constraining infrastructure development and renewables investment, tightening the market outlook in key regions.</p><p>Engie&#x27;s pullback from US renewables highlights how regulatory risk is slowing capital deployment, while the Senate&#x27;s ongoing permitting debate signals continued delays for new gas projects. X-energy&#x27;s nuclear expansion introduces another variable for long-term demand, but the immediate effect is a more cautious approach to infrastructure investment. These factors are converging to limit new supply and reinforce regional tightness, especially in the Northeast.</p><p>A breakthrough in permitting reform or faster regulatory approvals would weaken this tightening narrative.</p><h3>2. Regional basis pressure</h3><p>Regional basis is tightening as demand outpaces supply in the Northeast and West, driving spot prices higher.</p><p>Spot prices in the Northeast are jumping on higher demand and lower production, while the West is seeing similar pressure from warmer weather. These moves reflect a broader pattern of regional imbalances, with basis differentials widening as local supply struggles to keep up. The trend is reinforced by multiple recent headlines and is likely to persist if weather-driven demand remains elevated.</p><p>A reversal in weather patterns or a surge in regional production would ease basis pressure.</p><h3>3. Production and supply trend</h3><p>Production trends are mixed, with recent evidence suggesting a loosening bias as new supply comes online, but regional tightness persists.</p><p>While the EIA projects production gains that could cap prices in the second half of 2026, current headlines point to lower output in the Northeast contributing to spot price strength. LNG project upgrades and resumed service are adding supply, but the immediate market impact is muted by regional constraints and demand spikes. The overall supply picture is improving, but not enough to offset localized shortages.</p><p>Sustained production declines or infrastructure setbacks would reverse the loosening supply narrative.</p><h3>4. Storage balance and inventory trajectory</h3><p>US storage dynamics are loosening as new funding targets abandoned wells and injections remain robust, but regional imbalances persist.</p><p>Federal funding for abandoned wells could free up storage capacity over time, while recent storage builds indicate a healthy inventory trajectory. However, weaker storage injections in the Northeast and <span class="bullish">Bullish</span> EIA reports suggest that not all regions are equally balanced. The national picture is one of resilience, but traders should watch for local shortages as summer demand ramps up.</p><p>Unexpected drawdowns or delays in storage site remediation would tighten the storage balance outlook.</p><h3>5. Pipeline constraints and maintenance</h3><p>Pipeline constraints remain a tightening force, with maintenance and regulatory delays limiting flow flexibility across key regions.</p><p>Recent maintenance at LNG facilities and ongoing project delays are restricting gas flows, particularly in the Northeast and Gulf Coast. These constraints are forcing reroutes and contributing to regional price volatility, as evidenced by basis moves and spot price jumps. The market remains sensitive to any further disruptions or slowdowns in pipeline approvals.</p><p>Rapid completion of maintenance or new pipeline approvals would ease constraint-driven tightness.</p></section><section class="report-section" id="watchlist-themes"><h2>Watchlist Themes</h2><ul class="brief-list"><li>Weather regime shift: The latest evidence has flipped the bias versus the prior 90-day read. Separate headlines are converging on the same thesis.</li><li>LNG feedgas and terminal pull: Separate headlines are converging on the same thesis.</li><li>Power burn and demand pull: 13 corroborating stories printed in the last 7 days. Separate headlines are converging on the same thesis.</li></ul></section><section class="report-section" id="narrative-drift-last-10-days"><h2>Narrative Drift: Last 10 Days</h2><ul class="brief-list"><li>Reversing: Production and supply trend. Recent story flow has flipped from tightening to loosening, replacing the prior 10-day read with a different directional tone.</li><li>Strengthening: Macro LNG spillover risk. Recent coverage accelerated and pushed beyond Gulf Coast, Northeast, Texas, and West Coast into Gulf Coast, Northeast, Rockies, Southeast, Texas, and West Coast.</li><li>Strengthening: Regulatory and project timing. Recent coverage accelerated and pushed beyond Appalachia, Gulf Coast, MidAtlantic, Midcon, Midwest, Northeast, and Texas into Appalachia, Gulf Coast, MidAtlantic, Midcon, Midwest, Northeast, Rockies, Southeast, Texas,...</li><li>Strengthening: LNG feedgas and terminal pull. Recent coverage accelerated and pushed beyond Gulf Coast, Northeast, and Texas into Gulf Coast, Midwest, Northeast, Southeast, Texas, and West Coast.</li><li>Strengthening: Regional basis pressure. Recent coverage accelerated and pushed beyond Appalachia, Gulf Coast, Midwest, Northeast, Southeast, Texas, and West Coast into Appalachia, Gulf Coast, Midwest, Northeast, Rockies, Southeast, Texas, and West Coast.</li></ul></section><section class="report-section" id="global-spillover-watch"><h2>Global Spillover Watch</h2><ul class="brief-list"><li>Daily Update on the War with Iran. The US gas path runs through shipping disruption can tighten global LNG flows and feed back into US gas pricing.</li><li>Argentina&#x27;s Vaca Muerta edges closer to global LNG market competition. The US gas path runs through shipping disruption can tighten global LNG flows and feed back into US gas pricing.</li><li>Argentina’s TGS plans NGL facility to remove bottleneck for Vaca Muerta oil growth. TGS plans NGL facility to remove bottleneck for Vaca Muerta oil growth. The US gas path runs through oil-market moves can spill into gas through energy-complex positioning and LNG competition.</li><li>Daily Update on the War with Iran. The US gas path runs through shipping disruption can tighten global LNG flows and feed back into US gas pricing.</li></ul></section><section class="report-section" id="force-majeure-maintenance-compressor-outage-scan"><h2>Force Majeure / Maintenance / Compressor Outage Scan</h2><div class="table-wrap"><table><thead><tr><th>Pipeline/Facility Name</th><th>Region</th><th>Start Date</th><th>End Date</th><th>Volume Impact (if stated)</th></tr></thead><tbody><tr><td>[2026-06-09] Elba Island LNG</td><td>Northeast Asia,Middle East,United States,Georgia,Elba Island,Georgia (U.S. St...</td><td>2026-06-09</td><td>-</td><td>0 Bcf eq</td></tr><tr><td>[2026-06-04] Cameron LNG</td><td>Global,Louisiana,Asia,Texas,EMEA,Americas,United States,US Gulf Coast,Northea...</td><td>2026-06-04</td><td>-</td><td>-</td></tr><tr><td>[2026-06-01] Tanggu LNG Terminal</td><td>South-eastern Asia</td><td>2026-06-01</td><td>2026-06-01</td><td>15 Bcf eq</td></tr><tr><td>[2026-05-26] Golden Pass LNG</td><td>Texas,Qatar,United States,Middle East,Northeast Asia,North West Europe,Strait...</td><td>2026-05-26</td><td>-</td><td>-</td></tr><tr><td>[2026-05-21] Waha Hub</td><td>Mexico</td><td>2026-05-21</td><td>2024-06-10</td><td>120 Bcf eq</td></tr><tr><td>[2026-05-20] Platts Locations Pipeline</td><td>United States,Texas Eastern, M-3,Tennessee, zone 6 delivered,GTN, Kingsgate,P...</td><td>2026-05-20</td><td>2024-06-13</td><td>0.5 Bcf eq</td></tr><tr><td>[2026-05-20] US LNG</td><td>Texas,Louisiana,United States,Middle East,Sabine Pass,Strait of Hormuz,Northe...</td><td>2026-05-20</td><td>-</td><td>-</td></tr><tr><td>[2026-05-19] US LNG</td><td>Texas,Louisiana,US Gulf Coast,US Lower 48,Sabine Pass,Middle East,Strait of H...</td><td>2026-05-19</td><td>-</td><td>-</td></tr><tr><td>[2026-05-19] Waha Hub</td><td>United States</td><td>2026-05-19</td><td>2024-06-10</td><td>150 Bcf eq</td></tr><tr><td>[2026-05-19] Freeport LNG</td><td>Europe,Middle East,Texas,Asia,North West Europe,United States,Permian Basin,M...</td><td>2026-05-19</td><td>2024-06-10</td><td>150 Bcf eq</td></tr><tr><td>[2026-05-18] Golden Pass LNG</td><td>United States,Texas,US Gulf Coast,US Lower 48,Georgia (U.S. State),India,Stra...</td><td>2026-05-18</td><td>-</td><td>-</td></tr><tr><td>[2026-05-13] Freeport LNG</td><td>Louisiana,Texas,United States,Gulf of Mexico,Middle East,Strait of Hormuz,Nor...</td><td>2026-05-13</td><td>-</td><td>-</td></tr></tbody></table></div></section><section class="report-section" id="infrastructure-watch"><h2>Infrastructure Watch</h2><div class="table-wrap"><table><thead><tr><th>Facility</th><th>Status</th><th>Persistence</th><th>Target Date</th><th>Drift (Days)</th></tr></thead><tbody><tr><td>Salt River Project</td><td>Watching</td><td>Watching</td><td>-</td><td>+0</td></tr><tr><td>X-energy Nuclear Plant (third plant, unspecified location)</td><td>Scheduled</td><td>Ongoing Outage</td><td>2024-06-01</td><td>+0</td></tr><tr><td>Katy Storage Facility</td><td>Scheduled</td><td>Ongoing Outage</td><td>2024-06-12</td><td>+0</td></tr><tr><td>Elba Island LNG</td><td>Watching</td><td>Watching</td><td>-</td><td>+0</td></tr><tr><td>Kern River Pipeline</td><td>Scheduled</td><td>Ongoing Outage</td><td>2024-06-09</td><td>-691</td></tr><tr><td>Port Arthur LNG</td><td>Watching</td><td>Watching</td><td>-</td><td>+0</td></tr><tr><td>US Power Generation Sector</td><td>Scheduled</td><td>Ongoing Outage</td><td>2024-06-10</td><td>+0</td></tr><tr><td>Dahej LNG Terminal</td><td>Scheduled</td><td>Ongoing Outage</td><td>2024-06-25</td><td>+0</td></tr><tr><td>Southeast gas pipe projects</td><td>Watching</td><td>Watching</td><td>-</td><td>+0</td></tr><tr><td>TTC gas pipe project</td><td>Watching</td><td>Watching</td><td>-</td><td>+0</td></tr><tr><td>Double E Pipeline</td><td>Watching</td><td>Watching</td><td>-</td><td>+0</td></tr><tr><td>Intersect Texas Data Center</td><td>Scheduled</td><td>Ongoing Outage</td><td>2024-06-01</td><td>+0</td></tr></tbody></table></div></section></div>
+    </div>
+  </div>
+</body>
+</html>

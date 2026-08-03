@@ -1,0 +1,347 @@
+{
+  "asof_date": "2026-05-26",
+  "model": "gpt-4.1-mini",
+  "prompt_version": "fundy_v4",
+  "payload_hash": "32522a8481b1ced46be94a0a7df167fca6b78a7f2055e8b864123876cb3429ee",
+  "payload": {
+    "asof_date": "2026-05-26",
+    "scope": {
+      "inputs": [
+        "Fundy.csv",
+        "FundyForecast.csv",
+        "PlattsCONUSFundamentalsHIST.csv",
+        "PRICES.csv"
+      ],
+      "pricing_restriction": "PRICES.csv Henry column only.",
+      "excluded_by_design": [
+        "COT",
+        "basis-hub",
+        "weather",
+        "forward-curve",
+        "storage path before EIA print"
+      ],
+      "storage_chart_source": "EIAtotals Lower48 weekly stock, forward-filled to daily."
+    },
+    "fundamentals": {
+      "platts_storage_change_bcfpd": 15804.0,
+      "criterion_storage_avg_bcfpd": 13724.819130000007,
+      "platts_regime": "surplus",
+      "criterion_regime": "surplus",
+      "alignment": "aligned",
+      "delta_7_bcfpd": null,
+      "delta_30_bcfpd": null
+    },
+    "price_and_regime": {
+      "henry_level": 2.935,
+      "henry_zscore": -0.2797360481259261,
+      "henry_realized_vol_annualized": 0.4261800817994455,
+      "regime_label": "PriceDown & FundDown (Confirmation Bearish)",
+      "regime_shift_count_60d": 23
+    },
+    "storage_context": {
+      "storage_percentile": 51.31578947368421,
+      "storage_zscore": 0.16341441682805505,
+      "days_cover": 28.18957962556817,
+      "weekly_storage_snapshot": {
+        "latest_date": "2026-05-15",
+        "current_bcf": 2391.0,
+        "same_week_5y_avg_bcf": 2292.8,
+        "delta_vs_5y_avg_bcf": 98.19999999999982,
+        "position_vs_5y_avg": "above_5y_avg"
+      }
+    },
+    "volatility_diagnostics": {
+      "criterion_storage_vol30_trend": "flat",
+      "prompt_vol30_trend": "flat",
+      "model_vs_market_vol_divergence": false,
+      "factor_lines": [
+        "Platts Storage Change: v5 1270.626 (falling), v30 2732.562 (falling), v60 3529.806 (falling)",
+        "Criterion Storage: v5 6224.856 (rising), v30 4610.448 (flat), v60 4626.059 (falling)",
+        "Criterion Power: v5 3264.418 (falling), v30 2597.859 (rising), v60 2439.535 (falling)",
+        "Criterion ResCom: v5 1118.524 (rising), v30 1824.501 (falling), v60 2716.671 (falling)",
+        "Criterion LNGexp: v5 189.673 (falling), v30 363.386 (flat), v60 361.035 (falling)"
+      ]
+    },
+    "high_low_states": [
+      {
+        "name": "Platts Storage Change",
+        "state": "rising",
+        "current": 15804.0,
+        "change_1step": -902.0,
+        "change_5step": 3871.0,
+        "step_days_5": 5,
+        "dist_to_30d_high": -4201.0,
+        "dist_to_30d_low": 9742.0,
+        "dist_to_90d_high": -4201.0,
+        "dist_to_90d_low": 41060.0,
+        "pct_of_30d_range": 0.6987018575629348,
+        "days_since_30d_high": 10,
+        "days_since_30d_low": 27
+      },
+      {
+        "name": "Criterion Storage",
+        "state": "rising",
+        "current": 12119.314,
+        "change_1step": -10369.395999999999,
+        "change_5step": 2579.446,
+        "step_days_5": 5,
+        "dist_to_30d_high": -10369.395999999999,
+        "dist_to_30d_low": 5778.8706,
+        "dist_to_90d_high": -10369.395999999999,
+        "dist_to_90d_low": 39313.726,
+        "pct_of_30d_range": 0.35786321486666567,
+        "days_since_30d_high": 1,
+        "days_since_30d_low": 29
+      },
+      {
+        "name": "Criterion Power",
+        "state": "falling",
+        "current": 30205.877,
+        "change_1step": -229.0550000000003,
+        "change_5step": -7848.934999999998,
+        "step_days_5": 5,
+        "dist_to_30d_high": -11423.139000000003,
+        "dist_to_30d_low": 3979.3539999999994,
+        "dist_to_90d_high": -11423.139000000003,
+        "dist_to_90d_low": 4743.487000000001,
+        "pct_of_30d_range": 0.2583577866258403,
+        "days_since_30d_high": 7,
+        "days_since_30d_low": 23
+      },
+      {
+        "name": "Criterion ResCom",
+        "state": "falling",
+        "current": 8809.907,
+        "change_1step": -2180.2805000000008,
+        "change_5step": -3337.6280000000006,
+        "step_days_5": 5,
+        "dist_to_30d_high": -12040.271,
+        "dist_to_30d_low": 440.71500000000015,
+        "dist_to_90d_high": -35513.527,
+        "dist_to_90d_low": 440.71500000000015,
+        "pct_of_30d_range": 0.03531091213466629,
+        "days_since_30d_high": 24,
+        "days_since_30d_low": 8
+      },
+      {
+        "name": "Criterion LNGexp",
+        "state": "rising",
+        "current": 18414.97,
+        "change_1step": -241.34599999999773,
+        "change_5step": 208.96000000000276,
+        "step_days_5": 5,
+        "dist_to_30d_high": -1019.5239999999976,
+        "dist_to_30d_low": 1683.5800000000017,
+        "dist_to_90d_high": -2411.214,
+        "dist_to_90d_low": 1683.5800000000017,
+        "pct_of_30d_range": 0.6228321218865431,
+        "days_since_30d_high": 29,
+        "days_since_30d_low": 7
+      },
+      {
+        "name": "Production",
+        "state": "rising",
+        "current": 111076.445,
+        "change_1step": -181.82099999999627,
+        "change_5step": 900.1650000000081,
+        "step_days_5": 5,
+        "dist_to_30d_high": -360.804999999993,
+        "dist_to_30d_low": 2187.3350000000064,
+        "dist_to_90d_high": -816.859999999986,
+        "dist_to_90d_low": 2925.545000000013,
+        "pct_of_30d_range": 0.8584045617587758,
+        "days_since_30d_high": 4,
+        "days_since_30d_low": 28
+      },
+      {
+        "name": "Storage (Weekly)",
+        "state": "breaking_high",
+        "current": 2391.0,
+        "change_1step": 101.0,
+        "change_5step": 186.0,
+        "step_days_5": 14,
+        "dist_to_30d_high": 0.0,
+        "dist_to_30d_low": 328.0,
+        "dist_to_90d_high": 0.0,
+        "dist_to_90d_low": 573.0,
+        "pct_of_30d_range": 1.0,
+        "days_since_30d_high": 0,
+        "days_since_30d_low": 28
+      },
+      {
+        "name": "Henry",
+        "state": "falling",
+        "current": 2.935,
+        "change_1step": 0.0,
+        "change_5step": -0.25,
+        "step_days_5": 5,
+        "dist_to_30d_high": -0.27,
+        "dist_to_30d_low": 0.40500000000000025,
+        "dist_to_90d_high": -0.3599999999999999,
+        "dist_to_90d_low": 0.40500000000000025,
+        "pct_of_30d_range": 0.6000000000000001,
+        "days_since_30d_high": 6,
+        "days_since_30d_low": 29
+      }
+    ],
+    "breadth_state": {
+      "n_series": 8,
+      "rising_count": 5,
+      "falling_count": 3,
+      "near_high_count": 2,
+      "near_low_count": 1,
+      "rising_pct": 0.625,
+      "falling_pct": 0.375,
+      "near_high_pct": 0.25,
+      "near_low_pct": 0.125
+    },
+    "analog_signal": {
+      "available": true,
+      "usable": false,
+      "no_close_analog": true,
+      "distance_metric": "mahalanobis",
+      "median_distance": 3.184538716730357,
+      "distance_threshold": 3.0,
+      "analog_count": 5,
+      "mean_seasonal_day_distance": 3.6,
+      "quality_flags": [
+        "distance_too_wide"
+      ],
+      "horizon_stats": {
+        "30": {
+          "count": 5,
+          "avg_return": 0.05517119263938901,
+          "median_return": 0.027070063694267565,
+          "hit_rate": 0.6,
+          "p25_return": -0.017751479289940808,
+          "p75_return": 0.09913043478260875
+        },
+        "60": {
+          "count": 5,
+          "avg_return": 0.1782681723732326,
+          "median_return": 0.13260869565217392,
+          "hit_rate": 0.8,
+          "p25_return": 0.03254437869822491,
+          "p75_return": 0.2834782608695652
+        },
+        "90": {
+          "count": 5,
+          "avg_return": 0.2395747503645728,
+          "median_return": 0.36347826086956525,
+          "hit_rate": 0.8,
+          "p25_return": 0.0652173913043479,
+          "p75_return": 0.41546762589928066
+        }
+      },
+      "top_analogs": [
+        {
+          "date": "2023-05-23",
+          "distance": 2.7090938350060263,
+          "seasonal_day_distance": 3.0
+        },
+        {
+          "date": "2025-05-29",
+          "distance": 2.9608182279780078,
+          "seasonal_day_distance": 3.0
+        },
+        {
+          "date": "2020-05-31",
+          "distance": 3.184538716730357,
+          "seasonal_day_distance": 5.0
+        },
+        {
+          "date": "2021-05-25",
+          "distance": 3.3028898480566165,
+          "seasonal_day_distance": 1.0
+        },
+        {
+          "date": "2021-05-20",
+          "distance": 3.3104118156330227,
+          "seasonal_day_distance": 6.0
+        }
+      ],
+      "notes": [
+        "Candidates restricted to seasonal +/-14 day window."
+      ]
+    },
+    "conflict_profile": {
+      "conflict_score": 15,
+      "conflict_level": "low",
+      "conviction_score": 85,
+      "components": [
+        {
+          "name": "regional_dispersion_high",
+          "score": 10
+        },
+        {
+          "name": "regime_break_flags",
+          "score": 5
+        }
+      ]
+    },
+    "change_vs_prior": {
+      "largest_moves_5step": [
+        {
+          "name": "Criterion Power",
+          "change_5step": -7848.934999999998,
+          "step_days_5": 5,
+          "state": "falling"
+        },
+        {
+          "name": "Platts Storage Change",
+          "change_5step": 3871.0,
+          "step_days_5": 5,
+          "state": "rising"
+        },
+        {
+          "name": "Criterion ResCom",
+          "change_5step": -3337.6280000000006,
+          "step_days_5": 5,
+          "state": "falling"
+        },
+        {
+          "name": "Criterion Storage",
+          "change_5step": 2579.446,
+          "step_days_5": 5,
+          "state": "rising"
+        }
+      ]
+    },
+    "alerts": []
+  },
+  "narrative": {
+    "placeholder": false,
+    "message": "",
+    "bias": "Bearish",
+    "confidence_context": "Storage is above 5-year average at 2391 bcf (+98 bcf), breaking 30-day highs with 28.2 days cover.",
+    "regime_call": "Bearish regime confirmed by price down and fundamentals down alignment, despite storage above average.",
+    "high_low_summary": "Weekly storage at 2391 bcf breaks 30-day high (0 days since high), +98 bcf vs 5-year avg.",
+    "desk_take": "Stay cautious bearish. Storage strength is supportive but price and demand proxies weakening. Watch for further price drops near 2.9. Avoid long exposure until price stabilizes above 3.0. Consider short opportunistically on rallies given regime and price confirmation.",
+    "trade_expression": "Look for short entries on rallies toward 3.0-3.1 with tight stops.",
+    "risk_watch": "Watch for sudden regime shifts or storage draw surprises.",
+    "invalidation_trigger": "Henry price closing above 3.1 with sustained rising storage change and demand indicators reversing to rising would invalidate bearish stance.",
+    "what_changed": "Storage broke 30-day high at 2391 bcf (+98 bcf vs 5-year avg), Platts storage change rose +3871 bcfpd over 5 days but still below 30-day high by 4201 bcfpd.",
+    "source": "openai",
+    "model": "gpt-4.1-mini",
+    "generated_at_utc": "2026-05-26T17:19:29.608202+00:00",
+    "brief_blocks": {
+      "bias": [
+        "Bearish bias.",
+        "Storage is above 5-year average at 2391 bcf (+98 bcf), breaking 30-day highs with 28.2 days cover."
+      ],
+      "setup": [
+        "Bearish regime confirmed by price down and fundamentals down alignment, despite storage above average.",
+        "Weekly storage at 2391 bcf breaks 30-day high (0 days since high), +98 bcf vs 5-year avg.",
+        "Storage broke 30-day high at 2391 bcf (+98 bcf vs 5-year avg), Platts storage change rose +3871 bcfpd over 5 days but still below 30-day high by 4201 bcfpd."
+      ],
+      "trade": [
+        "Look for short entries on rallies toward 3.0-3.1 with tight stops."
+      ],
+      "risks": [
+        "Watch for sudden regime shifts or storage draw surprises.",
+        "Henry price closing above 3.1 with sustained rising storage change and demand indicators reversing to rising would invalidate bearish stance."
+      ]
+    }
+  },
+  "generated_at_utc": "2026-05-26T17:19:29.608202+00:00"
+}

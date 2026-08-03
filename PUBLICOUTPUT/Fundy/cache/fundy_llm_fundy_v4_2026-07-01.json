@@ -312,34 +312,34 @@
     "message": "",
     "bias": "Bearish",
     "confidence_context": "Storage weekly at 2835 Bcf breaking 30d high (0 days ago), but daily storage changes falling sharply (-8882 in 5 days Platts, -6891 Criterion).",
-    "regime_call": "Surplus regime confirmed by aligned fundamentals and regime labels, but short-term storage change and production weakness suggest bearish near-term pressure.",
-    "high_low_summary": "Storage weekly breaking 30d high at 2835 Bcf (+112 vs 5y avg), but daily storage change falling sharply (-8882 Platts, -6891 Criterion in 5 days).",
-    "desk_take": "Despite strong weekly storage, daily storage change collapse and production weakness signal bearish near-term. Price near highs but volume and breadth weak. Expect price pressure if storage change and production continue falling. Watch for storage change to stabilize or reverse for bullish signal.",
-    "trade_expression": "Consider short or reduce longs on strength near 3.34 with tight stops.",
-    "risk_watch": "Watch for daily storage change to stop falling or production to rebound.",
-    "invalidation_trigger": "Sustained daily storage change recovery above -5000 Bcf in 5 days or production rising above 109000.",
-    "what_changed": "Daily storage change collapsed sharply (-8882 Platts, -6891 Criterion in 5 days) from prior flat trend.",
-    "source": "openai_http",
+    "regime_call": "Surplus regime confirmed by aligned Platts and Criterion data, but daily storage change collapse signals short-term bearish pressure despite surplus stocks.",
+    "high_low_summary": "Storage weekly at 100th percentile vs 30d high, but daily storage change near 30d low and falling fast.",
+    "desk_take": "Watch daily storage change closely; sharp fall signals faster withdrawals or weaker injections ahead. Production drop adds bearish supply pressure. Power demand strength may support price but overall storage and production trends dominate. Price likely capped near 3.34 with downside risk if storage change stays negative.",
+    "trade_expression": "Consider short exposure or put spreads targeting downside from 3.34 with tight stops above 3.35.",
+    "risk_watch": "If daily storage change reverses and rises above 1500 Bcfpd for 3+ days, or production rebounds above 110000 MMcf/d, bearish bias invalidated.",
+    "invalidation_trigger": "Sustained daily storage change > 1500 Bcfpd injection for 3+ days, production > 110000 MMcf/d, Henry price > 3.40 with confirmed volume.",
+    "what_changed": "Daily storage change collapsed -8882 Bcfpd in 5 days, Criterion storage broke 30d low, production dropped -1744 MMcf/d breaking 30d low.",
+    "source": "openai",
     "model": "gpt-4.1-mini",
-    "generated_at_utc": "2026-07-02T19:24:17.963898+00:00",
+    "generated_at_utc": "2026-07-01T15:20:14.311398+00:00",
     "brief_blocks": {
       "bias": [
         "Bearish bias.",
         "Storage weekly at 2835 Bcf breaking 30d high (0 days ago), but daily storage changes falling sharply (-8882 in 5 days Platts, -6891 Criterion)."
       ],
       "setup": [
-        "Surplus regime confirmed by aligned fundamentals and regime labels, but short-term storage change and production weakness suggest bearish near-term pressure.",
-        "Storage weekly breaking 30d high at 2835 Bcf (+112 vs 5y avg), but daily storage change falling sharply (-8882 Platts, -6891 Criterion in 5 days).",
-        "Daily storage change collapsed sharply (-8882 Platts, -6891 Criterion in 5 days) from prior flat trend."
+        "Surplus regime confirmed by aligned Platts and Criterion data, but daily storage change collapse signals short-term bearish pressure despite surplus stocks.",
+        "Storage weekly at 100th percentile vs 30d high, but daily storage change near 30d low and falling fast.",
+        "Daily storage change collapsed -8882 Bcfpd in 5 days, Criterion storage broke 30d low, production dropped -1744 MMcf/d breaking 30d low."
       ],
       "trade": [
-        "Consider short or reduce longs on strength near 3.34 with tight stops."
+        "Consider short exposure or put spreads targeting downside from 3.34 with tight stops above 3.35."
       ],
       "risks": [
-        "Watch for daily storage change to stop falling or production to rebound.",
-        "Sustained daily storage change recovery above -5000 Bcf in 5 days or production rising above 109000."
+        "If daily storage change reverses and rises above 1500 Bcfpd for 3+ days, or production rebounds above 110000 MMcf/d, bearish bias invalidated.",
+        "Sustained daily storage change > 1500 Bcfpd injection for 3+ days, production > 110000 MMcf/d, Henry price > 3.40 with confirmed volume."
       ]
     }
   },
-  "generated_at_utc": "2026-07-02T19:24:17.963898+00:00"
+  "generated_at_utc": "2026-07-01T15:20:14.311398+00:00"
 }

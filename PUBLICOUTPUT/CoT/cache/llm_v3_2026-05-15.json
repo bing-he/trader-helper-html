@@ -7,11 +7,11 @@
     "placeholder": false,
     "message": "",
     "price_view": "Bearish",
-    "pulse": "Managed Money is extremely short with a z-score below -2 and a very low MM index of 7.7 versus a seasonal average of 50.5, signaling strong bearish positioning. The market is in contango, reinforcing downward price pressure despite near-normal weather and storage close to 5-year norms.",
-    "risk_alert": "Risk bias is two-way as extreme short positioning favors downside but contango and near-normal fundamentals allow for potential pullbacks.",
-    "historical_comparison": "Current MM index is far below the seasonal 5-year average, indicating unusually bearish speculative positioning.",
-    "source": "openai_http",
-    "generated_at_utc": "2026-05-21T18:41:10.504447+00:00"
+    "pulse": "Managed Money is extremely short with a z-score below -2 and a very low MM index of 7.7, signaling strong bearish sentiment. The market is in contango, reinforcing downward price pressure despite near-normal weather and storage close to 5-year norms.",
+    "risk_alert": "Risk bias is two-way: downside pressure dominates but sharp rebounds remain possible due to extreme short positioning.",
+    "historical_comparison": "Current MM index is far below the seasonal 5-year average, indicating unusually bearish positioning.",
+    "source": "openai",
+    "generated_at_utc": "2026-05-18T15:20:13.943909+00:00"
   },
   "payload": {
     "asof_date": "2026-05-15",
@@ -524,5 +524,5 @@
       "Analog quality/sample display excludes rows without complete 2w/4w/8w forward outcomes."
     ]
   },
-  "generated_at_utc": "2026-05-21T18:41:10.504447+00:00"
+  "generated_at_utc": "2026-05-18T15:20:13.943909+00:00"
 }

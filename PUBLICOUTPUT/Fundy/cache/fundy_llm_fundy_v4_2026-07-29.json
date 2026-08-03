@@ -2,7 +2,7 @@
   "asof_date": "2026-07-29",
   "model": "gpt-4.1-mini",
   "prompt_version": "fundy_v4",
-  "payload_hash": "eabcef6cc901ad10c21f8f930cc5a99397d672fa86577283a87ee59e27127857",
+  "payload_hash": "b1619646cb324eb591d0c4103a867a6a2f269a886d3603ad6200b7c9f7e0ba75",
   "payload": {
     "asof_date": "2026-07-29",
     "scope": {
@@ -32,27 +32,27 @@
       "delta_30_bcfpd": null
     },
     "price_and_regime": {
-      "henry_level": 2.58,
-      "henry_zscore": -0.3710210821412758,
-      "henry_realized_vol_annualized": 0.4892673821147045,
+      "henry_level": 2.5819,
+      "henry_zscore": -0.37046467421070634,
+      "henry_realized_vol_annualized": 0.4887442600615914,
       "regime_label": "PriceDown & FundUp (Oversold Divergence)",
-      "regime_shift_count_60d": 19
+      "regime_shift_count_60d": 20
     },
     "storage_context": {
       "storage_percentile": 68.69565217391305,
-      "storage_zscore": 0.6121139816169034,
-      "days_cover": 33.27806098703343,
+      "storage_zscore": 0.524292898890464,
+      "days_cover": 32.975925543571385,
       "weekly_storage_snapshot": {
-        "latest_date": "2026-07-24",
-        "current_bcf": 3084.0,
-        "same_week_5y_avg_bcf": 2911.4,
-        "delta_vs_5y_avg_bcf": 172.5999999999999,
+        "latest_date": "2026-07-17",
+        "current_bcf": 3056.0,
+        "same_week_5y_avg_bcf": 2884.6,
+        "delta_vs_5y_avg_bcf": 171.4000000000001,
         "position_vs_5y_avg": "above_5y_avg"
       }
     },
     "volatility_diagnostics": {
       "criterion_storage_vol30_trend": "flat",
-      "prompt_vol30_trend": "flat",
+      "prompt_vol30_trend": "falling",
       "model_vs_market_vol_divergence": false,
       "factor_lines": [
         "Platts Storage Change: v5 1935.958 (falling), v30 2629.005 (falling), v60 2872.675 (falling)",
@@ -156,14 +156,14 @@
       {
         "name": "Storage (Weekly)",
         "state": "breaking_high",
-        "current": 3084.0,
-        "change_1step": 28.0,
-        "change_5step": 60.0,
+        "current": 3056.0,
+        "change_1step": 32.0,
+        "change_5step": 73.0,
         "step_days_5": 14,
         "dist_to_30d_high": 0.0,
-        "dist_to_30d_low": 162.0,
+        "dist_to_30d_low": 221.0,
         "dist_to_90d_high": 0.0,
-        "dist_to_90d_low": 879.0,
+        "dist_to_90d_low": 914.0,
         "pct_of_30d_range": 1.0,
         "days_since_30d_high": 0,
         "days_since_30d_low": 28
@@ -171,13 +171,13 @@
       {
         "name": "Henry",
         "state": "breaking_low",
-        "current": 2.58,
-        "change_1step": -0.10999999999999988,
-        "change_5step": -0.31000000000000005,
+        "current": 2.5819,
+        "change_1step": -0.10809999999999986,
+        "change_5step": -0.30810000000000004,
         "step_days_5": 5,
-        "dist_to_30d_high": -0.77,
+        "dist_to_30d_high": -0.7681,
         "dist_to_30d_low": 0.0,
-        "dist_to_90d_high": -0.77,
+        "dist_to_90d_high": -0.7681,
         "dist_to_90d_low": 0.0,
         "pct_of_30d_range": 0.0,
         "days_since_30d_high": 29,
@@ -200,7 +200,7 @@
       "usable": true,
       "no_close_analog": false,
       "distance_metric": "mahalanobis",
-      "median_distance": 1.9745003186567465,
+      "median_distance": 1.957651213289475,
       "distance_threshold": 3.0,
       "analog_count": 5,
       "mean_seasonal_day_distance": 2.2,
@@ -234,27 +234,27 @@
       "top_analogs": [
         {
           "date": "2023-07-28",
-          "distance": 1.8538502775260737,
+          "distance": 1.8344389533442258,
           "seasonal_day_distance": 1.0
         },
         {
           "date": "2023-08-02",
-          "distance": 1.8592489567596941,
+          "distance": 1.8363309193515038,
           "seasonal_day_distance": 4.0
         },
         {
           "date": "2023-08-01",
-          "distance": 1.9745003186567465,
+          "distance": 1.957651213289475,
           "seasonal_day_distance": 3.0
         },
         {
           "date": "2023-07-31",
-          "distance": 2.2825243868442837,
+          "distance": 2.2665156321413438,
           "seasonal_day_distance": 2.0
         },
         {
           "date": "2021-07-28",
-          "distance": 2.4025980901735133,
+          "distance": 2.34731942604997,
           "seasonal_day_distance": 1.0
         }
       ],
@@ -315,35 +315,35 @@
     "placeholder": false,
     "message": "",
     "bias": "Bearish",
-    "confidence_context": "Storage at 3084 Bcf is above 5-year avg by 173 Bcf (69th percentile), but Platts and Criterion storage changes are falling sharply (-2884 and -1152 over 5 days).",
-    "regime_call": "Surplus regime persists with storage build slowing.",
-    "high_low_summary": "Weekly storage just hit 30-day high (3084 Bcf), but storage change metrics are falling from recent highs by 7041 and 12081 units respectively.",
-    "desk_take": "Expect continued downside pressure near term as falling storage injections and breaking price lows dominate. Watch for storage change to stabilize before considering bullish entries. Current oversold divergence may offer short-term bounce but risk remains to downside.",
-    "trade_expression": "Lean short on Henry with tight stops above 2.7.",
-    "risk_watch": "Watch for storage change to stop falling and turn positive; a 5-day rise above 2000 Bcfpd would invalidate bearish bias.",
-    "invalidation_trigger": "Platts storage change rising above 2000 Bcfpd for 3 consecutive days or Henry price closing above 2.7 on strong volume.",
-    "what_changed": "Storage change metrics fell sharply over last 5 days (-2884 Platts, -1152 Criterion).",
-    "source": "openai_http",
+    "confidence_context": "Storage at 3056 Bcf is above 5-year avg by 171 Bcf (68.7 percentile), but Platts and Criterion storage changes are falling sharply (-2884 and -1152 over 5 days).",
+    "regime_call": "Surplus regime confirmed by Fundy and Criterion data, but price down and fundamentals up divergence signals oversold conditions.",
+    "high_low_summary": "Storage weekly at 30-day high (3056 Bcf), 0 days since high, 221 Bcf above 30-day low.",
+    "desk_take": "Expect continued short-term price pressure due to falling storage injections and breaking Henry lows. Watch for potential medium-term bounce as analogs suggest 10.6% avg return over 60 days and 26.8% over 90 days. Storage remains supportive but momentum fading. Stay cautious on longs until storage change stabilizes.",
+    "trade_expression": "Lean short on prompt Henry given falling storage change (-2884 over 5 days) and breaking lows at 2.58.",
+    "risk_watch": "Watch for storage change to stop falling and turn positive; a 5-day reversal above -1000 Bcfpd would invalidate short bias.",
+    "invalidation_trigger": "Platts storage change rising above -1000 Bcfpd over 5 days or Henry price reclaiming 2.68 level.",
+    "what_changed": "Platts storage change dropped sharply by 2884 Bcfpd over 5 days, pushing storage injection momentum down.",
+    "source": "openai",
     "model": "gpt-4.1-mini",
-    "generated_at_utc": "2026-07-31T15:46:26.635895+00:00",
+    "generated_at_utc": "2026-07-29T15:48:10.360772+00:00",
     "brief_blocks": {
       "bias": [
         "Bearish bias.",
-        "Storage at 3084 Bcf is above 5-year avg by 173 Bcf (69th percentile), but Platts and Criterion storage changes are falling sharply (-2884 and -1152 over 5 days)."
+        "Storage at 3056 Bcf is above 5-year avg by 171 Bcf (68.7 percentile), but Platts and Criterion storage changes are falling sharply (-2884 and -1152 over 5 days)."
       ],
       "setup": [
-        "Surplus regime persists with storage build slowing.",
-        "Weekly storage just hit 30-day high (3084 Bcf), but storage change metrics are falling from recent highs by 7041 and 12081 units respectively.",
-        "Storage change metrics fell sharply over last 5 days (-2884 Platts, -1152 Criterion)."
+        "Surplus regime confirmed by Fundy and Criterion data, but price down and fundamentals up divergence signals oversold conditions.",
+        "Storage weekly at 30-day high (3056 Bcf), 0 days since high, 221 Bcf above 30-day low.",
+        "Platts storage change dropped sharply by 2884 Bcfpd over 5 days, pushing storage injection momentum down."
       ],
       "trade": [
-        "Lean short on Henry with tight stops above 2.7."
+        "Lean short on prompt Henry given falling storage change (-2884 over 5 days) and breaking lows at 2.58."
       ],
       "risks": [
-        "Watch for storage change to stop falling and turn positive; a 5-day rise above 2000 Bcfpd would invalidate bearish bias.",
-        "Platts storage change rising above 2000 Bcfpd for 3 consecutive days or Henry price closing above 2.7 on strong volume."
+        "Watch for storage change to stop falling and turn positive; a 5-day reversal above -1000 Bcfpd would invalidate short bias.",
+        "Platts storage change rising above -1000 Bcfpd over 5 days or Henry price reclaiming 2.68 level."
       ]
     }
   },
-  "generated_at_utc": "2026-07-31T15:46:26.635895+00:00"
+  "generated_at_utc": "2026-07-29T15:48:10.360772+00:00"
 }

@@ -1,0 +1,29 @@
+Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\Fundy\run_dashboard.py
+Started UTC: 2026-07-13T10:55:58.241278+00:00
+Finished UTC: 2026-07-13T10:55:58.332573+00:00
+Return code: 1
+
+=== STDOUT ===
+
+
+=== STDERR ===
+Error processing line 1 of C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\distutils-precedence.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 206, in addpackage
+    File "<string>", line 1, in <module>
+  ModuleNotFoundError: No module named '_distutils_hack'
+
+Remainder of file ignored
+Error processing line 1 of C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\distutils-precedence.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 206, in addpackage
+    File "<string>", line 1, in <module>
+  ModuleNotFoundError: No module named '_distutils_hack'
+
+Remainder of file ignored
+Traceback (most recent call last):
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\Fundy\run_dashboard.py", line 10, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'

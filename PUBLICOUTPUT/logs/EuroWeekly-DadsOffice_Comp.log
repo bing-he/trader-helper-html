@@ -1,0 +1,48 @@
+Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\run_euro_weekly.py
+Started UTC: 2026-07-13T10:55:58.334079+00:00
+Finished UTC: 2026-07-13T10:55:58.494976+00:00
+Return code: 1
+
+=== STDOUT ===
+
+
+=== STDERR ===
+Error processing line 1 of C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\distutils-precedence.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 206, in addpackage
+    File "<string>", line 1, in <module>
+  ModuleNotFoundError: No module named '_distutils_hack'
+
+Remainder of file ignored
+Error processing line 1 of C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\distutils-precedence.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 206, in addpackage
+    File "<string>", line 1, in <module>
+  ModuleNotFoundError: No module named '_distutils_hack'
+
+Remainder of file ignored
+Traceback (most recent call last):
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\matplotlib\cbook.py", line 27, in <module>
+    from numpy.exceptions import VisibleDeprecationWarning  # numpy >= 1.25
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'numpy.exceptions'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\run_euro_weekly.py", line 8, in <module>
+    from euro_weekly.pipeline import run_pipeline
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\euro_weekly\__init__.py", line 3, in <module>
+    from .pipeline import run_pipeline  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\euro_weekly\pipeline.py", line 12, in <module>
+    from . import report
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\euro_weekly\report.py", line 12, in <module>
+    import matplotlib
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\matplotlib\__init__.py", line 161, in <module>
+    from . import _api, _version, cbook, _docstring, rcsetup
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\matplotlib\cbook.py", line 29, in <module>
+    from numpy import VisibleDeprecationWarning
+ImportError: cannot import name 'VisibleDeprecationWarning' from 'numpy' (unknown location)

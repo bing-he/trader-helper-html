@@ -311,35 +311,35 @@
     "placeholder": false,
     "message": "",
     "bias": "Bearish",
-    "confidence_context": "Storage weekly at 2922 Bcf breaks 30d high (0 days ago), but Criterion Storage down 7320 Bcf in 5 days; Platts Storage Change rising off lows at 4619",
-    "regime_call": "Surplus regime confirmed by aligned Fundy and Criterion data; price down while fundamentals up signals oversold divergence.",
-    "high_low_summary": "Storage weekly at 100% of 30d range, breaking highs; Platts Storage Change 23% into 30d range rising off lows; Criterion Storage 15% into 30d range falling; Henry price 25% into 30d range falling; Criterion",
-    "desk_take": "Despite storage strength and rising Platts Storage Change, sharp drop in Criterion Storage and falling price suggest bearish near-term pressure. Oversold price divergence may offer short-term bounce but overall risk skewed to downside. Lean short with tight stops.",
-    "trade_expression": "Initiate short exposure targeting Henry below 3.10 if Criterion Storage continues falling past -7300 Bcf in 5 days; monitor storage weekly for support above 2900 Bcf; watch for price to breach 3.00 for confirmation.",
-    "risk_watch": "Watch for reversal in Criterion Storage decline or sustained price bounce above 3.20; analogs show 60-day returns negative with 0% hit rate, invalidating bearish bias if price rallies strongly.",
-    "invalidation_trigger": "Criterion Storage stabilizes or rises >+3000 Bcf in 5 days; Henry price closes above 3.20 with volume; analog 60-day returns turn positive with >50% hit",
-    "what_changed": "Platts Storage Change surged +2199 Bcfpd in 5 days from lows; Criterion Storage dropped -7320 Bcf in 5 days; Henry price fell -0.15 in 5 days; storage weekly broke 30d",
-    "source": "openai_http",
+    "confidence_context": "Storage weekly at 2922 Bcf breaks 30d high, +87 Bcf last step, +163 Bcf last 14 days, but Platts storage change rising off lows at 4619 Bcfpd, +2199",
+    "regime_call": "Current regime is surplus with aligned fundamentals but price down and fund up divergence signals oversold conditions.",
+    "high_low_summary": "Weekly storage at 2922 Bcf breaks 30d high (0 days since high), +151 Bcf above 5y avg.",
+    "desk_take": "Storage gains supportive but Criterion Storage drop and price weakness dominate. Watch for further Criterion Storage declines and Henry price below 3.10 to confirm bearish bias. Analog suggests possible bounce after 60 days but risk remains to downside short term.",
+    "trade_expression": "Lean short on prompt Henry below 3.10 with tight stops above 3.25.",
+    "risk_watch": "Risk if Criterion Storage stabilizes or reverses higher, or if weekly storage fails to hold above 2900 Bcf.",
+    "invalidation_trigger": "Sustained Henry price above 3.25 with Criterion Storage rising above 3500 Bcfpd and weekly storage dropping below 2900 Bcf would invalidate bearish bias.",
+    "what_changed": "Platts Storage Change surged +2199 Bcfpd last 5 days rising off lows, but Criterion Storage fell -7321 Bcfpd last 5 days.",
+    "source": "openai",
     "model": "gpt-4.1-mini",
-    "generated_at_utc": "2026-07-09T15:56:25.489744+00:00",
+    "generated_at_utc": "2026-07-08T15:37:13.887921+00:00",
     "brief_blocks": {
       "bias": [
         "Bearish bias.",
-        "Storage weekly at 2922 Bcf breaks 30d high (0 days ago), but Criterion Storage down 7320 Bcf in 5 days; Platts Storage Change rising off lows at 4619"
+        "Storage weekly at 2922 Bcf breaks 30d high, +87 Bcf last step, +163 Bcf last 14 days, but Platts storage change rising off lows at 4619 Bcfpd, +2199"
       ],
       "setup": [
-        "Surplus regime confirmed by aligned Fundy and Criterion data; price down while fundamentals up signals oversold divergence.",
-        "Storage weekly at 100% of 30d range, breaking highs; Platts Storage Change 23% into 30d range rising off lows; Criterion Storage 15% into 30d range falling; Henry price 25% into 30d range falling; Criterion",
-        "Platts Storage Change surged +2199 Bcfpd in 5 days from lows; Criterion Storage dropped -7320 Bcf in 5 days; Henry price fell -0.15 in 5 days; storage weekly broke 30d"
+        "Current regime is surplus with aligned fundamentals but price down and fund up divergence signals oversold conditions.",
+        "Weekly storage at 2922 Bcf breaks 30d high (0 days since high), +151 Bcf above 5y avg.",
+        "Platts Storage Change surged +2199 Bcfpd last 5 days rising off lows, but Criterion Storage fell -7321 Bcfpd last 5 days."
       ],
       "trade": [
-        "Initiate short exposure targeting Henry below 3.10 if Criterion Storage continues falling past -7300 Bcf in 5 days; monitor storage weekly for support above 2900 Bcf; watch for price to breach 3.00 for confirmation."
+        "Lean short on prompt Henry below 3.10 with tight stops above 3.25."
       ],
       "risks": [
-        "Watch for reversal in Criterion Storage decline or sustained price bounce above 3.20; analogs show 60-day returns negative with 0% hit rate, invalidating bearish bias if price rallies strongly.",
-        "Criterion Storage stabilizes or rises >+3000 Bcf in 5 days; Henry price closes above 3.20 with volume; analog 60-day returns turn positive with >50% hit"
+        "Risk if Criterion Storage stabilizes or reverses higher, or if weekly storage fails to hold above 2900 Bcf.",
+        "Sustained Henry price above 3.25 with Criterion Storage rising above 3500 Bcfpd and weekly storage dropping below 2900 Bcf would invalidate bearish bias."
       ]
     }
   },
-  "generated_at_utc": "2026-07-09T15:56:25.489744+00:00"
+  "generated_at_utc": "2026-07-08T15:37:13.887921+00:00"
 }

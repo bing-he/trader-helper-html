@@ -2,16 +2,16 @@
   "asof_date": "2026-05-22",
   "model": "gpt-4.1-mini",
   "prompt_version": "v3",
-  "payload_hash": "7d6e57a1bdd885e4d6857944b1ca90dd88abb372d83781040b92e9a0a78a8960",
+  "payload_hash": "ec0149145324292cb38bd907f3aa0a8ab25ca58b2f22ab1ad7efd4eed2861398",
   "narrative": {
     "placeholder": false,
     "message": "",
     "price_view": "Bearish",
-    "pulse": "Current prompt spread is in contango with Managed Money heavily short (MM index 18 vs seasonal 50). EIA storage is 95 bcf above 5-year average, indicating looser supply; weather demand is near normal.",
-    "risk_alert": "Risk bias is bearish due to extreme Managed Money short positioning and loose supply despite some upside pressure.",
-    "historical_comparison": "Current MM index and prompt spread are well below seasonal averages, signaling bearish positioning and structure.",
-    "source": "openai_http",
-    "generated_at_utc": "2026-06-01T14:48:26.625144+00:00"
+    "pulse": "Prompt spread is in contango with Managed Money net short at an extreme low index (18), signaling bearish pressure. Storage is near 5-year norm and weather demand is near normal, offering no bullish support.",
+    "risk_alert": "Risk bias is bearish due to crowded Managed Money short positioning and contango structure, though pullback risk remains elevated.",
+    "historical_comparison": "Current MM index (18) is well below seasonal average (50), indicating unusually bearish speculative positioning.",
+    "source": "openai",
+    "generated_at_utc": "2026-05-26T17:21:53.287019+00:00"
   },
   "payload": {
     "asof_date": "2026-05-22",
@@ -25,9 +25,9 @@
       "Prod_index": 71.7948717948718,
       "Price_4w_return": 0.11902113459399333,
       "MM_vs_Prod_index_spread": -53.84615384615385,
-      "Lower48": 2483.0,
-      "EIA_vs_5y_bcf": 95.0,
-      "EIA_balance_label": "higher",
+      "Lower48": 2391.0,
+      "EIA_vs_5y_bcf": 3.0,
+      "EIA_balance_label": "closer",
       "weather_intensity_dev": 0.9812798873610834,
       "Weather_vs_normal_label": "near normal"
     },
@@ -158,8 +158,8 @@
         "MM_index": 17.94871794871795,
         "Prod_index": 71.7948717948718,
         "Price_4w_return": 0.11902113459399333,
-        "EIA_vs_5y_bcf": 95.0,
-        "EIA_balance_label": "higher",
+        "EIA_vs_5y_bcf": 3.0,
+        "EIA_balance_label": "closer",
         "weather_intensity_dev": 0.9812798873610834,
         "Weather_vs_normal_label": "near normal"
       }
@@ -167,7 +167,7 @@
     "analog_weeks": [
       {
         "Date": "2019-04-26",
-        "distance": 2.605033887534833,
+        "distance": 2.670455188647367,
         "FWD_00": 2.514,
         "MM_z": -1.989581329402265,
         "Prod_z": -0.1698469335022097,
@@ -179,7 +179,7 @@
       },
       {
         "Date": "2015-05-22",
-        "distance": 3.566484007142807,
+        "distance": 3.6367955874117865,
         "FWD_00": 2.949,
         "MM_z": -0.9925694260854673,
         "Prod_z": -1.0220510451745757,
@@ -191,7 +191,7 @@
       },
       {
         "Date": "2019-05-31",
-        "distance": 4.3327501173424166,
+        "distance": 4.391188621575604,
         "FWD_00": 2.547,
         "MM_z": -2.347016629436915,
         "Prod_z": -0.35476560715186406,
@@ -203,7 +203,7 @@
       },
       {
         "Date": "2016-05-27",
-        "distance": 4.641755099178443,
+        "distance": 4.695303888112453,
         "FWD_00": 1.963,
         "MM_z": 0.7100316428365299,
         "Prod_z": 0.8842571945529161,
@@ -215,7 +215,7 @@
       },
       {
         "Date": "2024-04-26",
-        "distance": 5.3036813437273045,
+        "distance": 5.35959481586516,
         "FWD_00": 1.638,
         "MM_z": -0.7269862486574116,
         "Prod_z": 0.657539354839486,
@@ -227,7 +227,7 @@
       },
       {
         "Date": "2020-06-19",
-        "distance": 5.932669175316184,
+        "distance": 5.977038791992198,
         "FWD_00": 1.638,
         "MM_z": 0.9485508005356049,
         "Prod_z": 0.8248678923451701,
@@ -239,7 +239,7 @@
       },
       {
         "Date": "2020-05-15",
-        "distance": 6.270140632626537,
+        "distance": 6.311203780306557,
         "FWD_00": 1.681,
         "MM_z": 1.6363361275809165,
         "Prod_z": 0.273989573903957,
@@ -251,7 +251,7 @@
       },
       {
         "Date": "2015-06-19",
-        "distance": 7.265951755035257,
+        "distance": 7.297691269674077,
         "FWD_00": 2.777,
         "MM_z": -1.7159188310018827,
         "Prod_z": -0.30331554782010844,
@@ -263,7 +263,7 @@
       },
       {
         "Date": "2015-04-24",
-        "distance": 8.3801107500806,
+        "distance": 8.412651456293784,
         "FWD_00": 2.531,
         "MM_z": -2.1438926464921066,
         "Prod_z": 0.19639427997612272,
@@ -281,7 +281,7 @@
       {
         "rank": 1,
         "Date": "2019-04-26",
-        "distance": 2.605033887534833,
+        "distance": 2.670455188647367,
         "start_price": 2.514,
         "end_price_8w": 2.185,
         "move_2w": 0.0810000000000004,
@@ -293,7 +293,7 @@
       {
         "rank": 2,
         "Date": "2015-05-22",
-        "distance": 3.566484007142807,
+        "distance": 3.6367955874117865,
         "start_price": 2.949,
         "end_price_8w": 2.854,
         "move_2w": -0.32299999999999995,
@@ -305,7 +305,7 @@
       {
         "rank": 3,
         "Date": "2019-05-31",
-        "distance": 4.3327501173424166,
+        "distance": 4.391188621575604,
         "start_price": 2.547,
         "end_price_8w": 2.244,
         "move_2w": -0.22199999999999998,
@@ -317,7 +317,7 @@
       {
         "rank": 4,
         "Date": "2016-05-27",
-        "distance": 4.641755099178443,
+        "distance": 4.695303888112453,
         "start_price": 1.963,
         "end_price_8w": 2.692,
         "move_2w": 0.6539999999999999,
@@ -329,7 +329,7 @@
       {
         "rank": 5,
         "Date": "2024-04-26",
-        "distance": 5.3036813437273045,
+        "distance": 5.35959481586516,
         "start_price": 1.638,
         "end_price_8w": 2.741,
         "move_2w": 0.6630000000000003,
@@ -341,7 +341,7 @@
       {
         "rank": 6,
         "Date": "2020-06-19",
-        "distance": 5.932669175316184,
+        "distance": 5.977038791992198,
         "start_price": 1.638,
         "end_price_8w": 2.182,
         "move_2w": 0.09600000000000009,
@@ -353,7 +353,7 @@
       {
         "rank": 7,
         "Date": "2020-05-15",
-        "distance": 6.270140632626537,
+        "distance": 6.311203780306557,
         "start_price": 1.681,
         "end_price_8w": 1.779,
         "move_2w": 0.1459999999999999,
@@ -365,7 +365,7 @@
       {
         "rank": 8,
         "Date": "2015-06-19",
-        "distance": 7.265951755035257,
+        "distance": 7.297691269674077,
         "start_price": 2.777,
         "end_price_8w": 2.787,
         "move_2w": 0.04499999999999993,
@@ -377,7 +377,7 @@
       {
         "rank": 9,
         "Date": "2015-04-24",
-        "distance": 8.3801107500806,
+        "distance": 8.412651456293784,
         "start_price": 2.531,
         "end_price_8w": 2.777,
         "move_2w": 0.20299999999999985,
@@ -457,9 +457,9 @@
     ],
     "feature_states": {
       "eia": {
-        "label": "higher",
-        "interpretation": "Supply is looser versus the 5-year norm.",
-        "delta_bcf": 95.0
+        "label": "closer",
+        "interpretation": "Storage is close to the 5-year norm.",
+        "delta_bcf": 3.0
       },
       "weather": {
         "label": "near normal",
@@ -517,5 +517,5 @@
       "Analog quality/sample display excludes rows without complete 2w/4w/8w forward outcomes."
     ]
   },
-  "generated_at_utc": "2026-06-01T14:48:26.625144+00:00"
+  "generated_at_utc": "2026-05-26T17:21:53.287019+00:00"
 }

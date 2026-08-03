@@ -7,11 +7,11 @@
     "placeholder": false,
     "message": "",
     "price_view": "Bearish",
-    "pulse": "Prompt spread is in contango with Managed Money heavily short (MM_z -1.61), near crowded short territory. Storage is close to 5-year norm and weather demand is near normal, limiting bullish catalysts.",
-    "risk_alert": "Risk bias is bearish due to strong Managed Money short positioning and contango structure, though short squeeze spikes remain possible.",
-    "historical_comparison": "Current MM index (15) is well below seasonal average (38), signaling elevated short pressure versus typical May conditions.",
-    "source": "openai_http",
-    "generated_at_utc": "2026-05-05T15:43:51.397240+00:00"
+    "pulse": "Prompt spread is in contango with Managed Money heavily short (MM index 15, z -1.61), near crowded short territory. Storage is close to normal and weather demand near normal, limiting bullish fundamental support.",
+    "risk_alert": "Risk bias is bearish due to strong Managed Money short positioning and contango structure, though squeeze spikes remain possible.",
+    "historical_comparison": "Current MM short positioning and contango are more extreme than seasonal averages, signaling downside pressure.",
+    "source": "openai",
+    "generated_at_utc": "2026-05-04T15:19:29.576737+00:00"
   },
   "payload": {
     "asof_date": "2026-05-01",
@@ -522,5 +522,5 @@
       "Analog quality/sample display excludes rows without complete 2w/4w/8w forward outcomes."
     ]
   },
-  "generated_at_utc": "2026-05-05T15:43:51.397240+00:00"
+  "generated_at_utc": "2026-05-04T15:19:29.576737+00:00"
 }

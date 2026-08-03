@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-31T15:48:19.117981+00:00",
-  "public_output_dir": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT",
-  "dashboard_html": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CONUSDash.html",
+  "generated_utc": "2026-08-03T15:11:29.457083+00:00",
+  "public_output_dir": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT",
+  "dashboard_html": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CONUSDash.html",
   "run_order": [
     "NYMEXCurve",
     "Fundy",
@@ -13,79 +13,79 @@
       "module": "NYMEXCurve",
       "label": "NYMEX Curve Analyst",
       "command": [
-        "C:\\Users\\BHe\\trader-helper-bing\\.venv\\Scripts\\python.exe",
-        "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\run.py"
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\run.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-07-31T15:41:28.765717+00:00",
-      "finished_utc": "2026-07-31T15:44:20.734824+00:00",
-      "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\NYMEXCurve.log"
+      "started_utc": "2026-08-03T15:08:24.140410+00:00",
+      "finished_utc": "2026-08-03T15:09:45.289418+00:00",
+      "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\NYMEXCurve.log"
     },
     {
       "module": "Fundy",
       "label": "Fundy Dashboard",
       "command": [
-        "C:\\Users\\BHe\\trader-helper-bing\\.venv\\Scripts\\python.exe",
-        "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\Fundy\\run_dashboard.py"
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\Fundy\\run_dashboard.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-07-31T15:44:20.735825+00:00",
-      "finished_utc": "2026-07-31T15:46:27.122917+00:00",
-      "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\Fundy.log"
+      "started_utc": "2026-08-03T15:09:45.290419+00:00",
+      "finished_utc": "2026-08-03T15:11:17.362176+00:00",
+      "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\Fundy.log"
     },
     {
       "module": "EuroWeekly",
       "label": "Euro Weekly",
       "command": [
-        "C:\\Users\\BHe\\trader-helper-bing\\.venv\\Scripts\\python.exe",
-        "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\EuroWeekly\\run_euro_weekly.py"
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\EuroWeekly\\run_euro_weekly.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-07-31T15:46:27.125921+00:00",
-      "finished_utc": "2026-07-31T15:48:00.619357+00:00",
-      "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\EuroWeekly.log"
+      "started_utc": "2026-08-03T15:11:17.363667+00:00",
+      "finished_utc": "2026-08-03T15:11:23.848791+00:00",
+      "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\EuroWeekly.log"
     },
     {
       "module": "CoT",
       "label": "COT",
       "command": [
-        "C:\\Users\\BHe\\trader-helper-bing\\.venv\\Scripts\\python.exe",
-        "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\CoT\\src\\run.py"
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\CoT\\src\\run.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-07-31T15:48:00.621354+00:00",
-      "finished_utc": "2026-07-31T15:48:14.628853+00:00",
-      "log_path": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\CoT.log"
+      "started_utc": "2026-08-03T15:11:23.849794+00:00",
+      "finished_utc": "2026-08-03T15:11:27.526157+00:00",
+      "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\CoT.log"
     }
   ],
   "copy_results": [
     {
       "module": "NYMEXCurve",
       "copied": true,
-      "source": "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\OUTPUT",
-      "dest": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\NYMEXCurve",
-      "copy_mode": "replace"
+      "source": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\OUTPUT",
+      "dest": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\NYMEXCurve",
+      "copy_mode": "merge"
     },
     {
       "module": "Fundy",
       "copied": true,
-      "source": "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\Fundy\\OUTPUT",
-      "dest": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\Fundy",
-      "copy_mode": "replace"
+      "source": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\Fundy\\OUTPUT",
+      "dest": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\Fundy",
+      "copy_mode": "merge"
     },
     {
       "module": "EuroWeekly",
       "copied": true,
-      "source": "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\EuroWeekly\\OUTPUT",
-      "dest": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\EuroWeekly",
-      "copy_mode": "replace"
+      "source": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\EuroWeekly\\OUTPUT",
+      "dest": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\EuroWeekly",
+      "copy_mode": "merge"
     },
     {
       "module": "CoT",
       "copied": true,
-      "source": "C:\\Users\\BHe\\trader-helper-bing\\CONUSDash\\CoT\\OUTPUT",
-      "dest": "C:\\Users\\BHe\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CoT",
-      "copy_mode": "replace"
+      "source": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\CoT\\OUTPUT",
+      "dest": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CoT",
+      "copy_mode": "merge"
     }
   ],
   "panel_order": [

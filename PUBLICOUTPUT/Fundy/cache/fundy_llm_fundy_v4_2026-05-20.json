@@ -2,7 +2,7 @@
   "asof_date": "2026-05-20",
   "model": "gpt-4.1-mini",
   "prompt_version": "fundy_v4",
-  "payload_hash": "a9c1b55b87bc2a0f015091d3105964ddc27221d80797a910beb6d69eb9bffeb3",
+  "payload_hash": "af2cf4b1aef2e7cde48f138bd807aab6a15fa6283ad8a64310ff0a045b712b16",
   "payload": {
     "asof_date": "2026-05-20",
     "scope": {
@@ -23,7 +23,7 @@
       "storage_chart_source": "EIAtotals Lower48 weekly stock, forward-filled to daily."
     },
     "fundamentals": {
-      "platts_storage_change_bcfpd": 12354.0,
+      "platts_storage_change_bcfpd": 8750.0,
       "criterion_storage_avg_bcfpd": 14533.602000000004,
       "platts_regime": "surplus",
       "criterion_regime": "surplus",
@@ -41,7 +41,7 @@
     "storage_context": {
       "storage_percentile": 51.30434782608696,
       "storage_zscore": 0.15112215712828783,
-      "days_cover": 26.820108083630156,
+      "days_cover": 26.81668180258219,
       "weekly_storage_snapshot": {
         "latest_date": "2026-05-08",
         "current_bcf": 2290.0,
@@ -55,28 +55,28 @@
       "prompt_vol30_trend": "flat",
       "model_vs_market_vol_divergence": false,
       "factor_lines": [
-        "Platts Storage Change: v5 2240.649 (flat), v30 2915.010 (falling), v60 4500.186 (falling)",
+        "Platts Storage Change: v5 2145.467 (rising), v30 2951.808 (falling), v60 4462.341 (falling)",
         "Criterion Storage: v5 5421.104 (rising), v30 3893.573 (falling), v60 4654.379 (falling)",
         "Criterion Power: v5 2745.396 (rising), v30 2019.884 (falling), v60 2155.337 (falling)",
         "Criterion ResCom: v5 1875.360 (flat), v30 2084.973 (falling), v60 3310.068 (falling)",
-        "Criterion LNGexp: v5 689.728 (rising), v30 379.818 (flat), v60 370.533 (falling)"
+        "Criterion LNGexp: v5 689.728 (rising), v30 380.504 (flat), v60 370.885 (falling)"
       ]
     },
     "high_low_states": [
       {
         "name": "Platts Storage Change",
         "state": "falling",
-        "current": 12354.0,
-        "change_1step": -625.0,
-        "change_5step": -3845.0,
+        "current": 8750.0,
+        "change_1step": -1471.0,
+        "change_5step": -8316.0,
         "step_days_5": 5,
-        "dist_to_30d_high": -6341.0,
-        "dist_to_30d_low": 6790.0,
-        "dist_to_90d_high": -6979.0,
-        "dist_to_90d_low": 42863.0,
-        "pct_of_30d_range": 0.5170969461579469,
-        "days_since_30d_high": 3,
-        "days_since_30d_low": 29
+        "dist_to_30d_high": -10074.0,
+        "dist_to_30d_low": 2688.0,
+        "dist_to_90d_high": -10583.0,
+        "dist_to_90d_low": 39259.0,
+        "pct_of_30d_range": 0.21062529384109074,
+        "days_since_30d_high": 4,
+        "days_since_30d_low": 21
       },
       {
         "name": "Criterion Storage",
@@ -280,16 +280,16 @@
     "change_vs_prior": {
       "largest_moves_5step": [
         {
+          "name": "Platts Storage Change",
+          "change_5step": -8316.0,
+          "step_days_5": 5,
+          "state": "falling"
+        },
+        {
           "name": "Criterion Power",
           "change_5step": 5832.336000000003,
           "step_days_5": 5,
           "state": "rising"
-        },
-        {
-          "name": "Platts Storage Change",
-          "change_5step": -3845.0,
-          "step_days_5": 5,
-          "state": "falling"
         },
         {
           "name": "Criterion ResCom",
@@ -313,15 +313,15 @@
     "bias": "Bearish",
     "confidence_context": "Guardrail active: aligned surplus regime with conflict 15/100 keeps bearish bias despite mixed secondary signals.",
     "regime_call": "Aligned surplus across Platts and Criterion keeps physical bias bearish despite mixed price-regime confirmation.",
-    "high_low_summary": "Platts storage change falling but still mid-range at 12354 Mcf/d, 3 days from 30d high.",
+    "high_low_summary": "Platts storage change down 8316 over 5 days but still 2688 above 30d low; Criterion storage down 2613 over 5 days; weekly storage breaking 30d high at 2290 Bcf; Henry price breaking 30d high",
     "desk_take": "Respect aligned surplus physicals; keep bearish expression while conflict stays <=45 and alignment holds.",
     "trade_expression": "Lean short rallies while aligned surplus persists; reduce size only if alignment breaks.",
     "risk_watch": "Watch for alignment break between Platts and Criterion storage or a storage trend reversal toward surplus conditions.",
     "invalidation_trigger": "Invalidate on aligned regime flip away from surplus and storage recovery above same-week 5y average (current delta 96.59999999999991 Bcf).",
-    "what_changed": "Weekly storage broke 30d high at 2290 Bcf (+85 Bcf 1d, +148 Bcf 14d).",
-    "source": "openai_http",
+    "what_changed": "Weekly storage broke 30d high at 2290 Bcf (+96 Bcf vs 5y avg); Henry price broke 30d high at 3.205 (+0.40 over 5d); storage change fell sharply -8316 Bcfpd over",
+    "source": "openai",
     "model": "gpt-4.1-mini",
-    "generated_at_utc": "2026-05-21T18:40:26.854573+00:00",
+    "generated_at_utc": "2026-05-20T16:51:02.792940+00:00",
     "brief_blocks": {
       "bias": [
         "Bearish bias.",
@@ -329,8 +329,8 @@
       ],
       "setup": [
         "Aligned surplus across Platts and Criterion keeps physical bias bearish despite mixed price-regime confirmation.",
-        "Platts storage change falling but still mid-range at 12354 Mcf/d, 3 days from 30d high.",
-        "Weekly storage broke 30d high at 2290 Bcf (+85 Bcf 1d, +148 Bcf 14d)."
+        "Platts storage change down 8316 over 5 days but still 2688 above 30d low; Criterion storage down 2613 over 5 days; weekly storage breaking 30d high at 2290 Bcf; Henry price breaking 30d high",
+        "Weekly storage broke 30d high at 2290 Bcf (+96 Bcf vs 5y avg); Henry price broke 30d high at 3.205 (+0.40 over 5d); storage change fell sharply -8316 Bcfpd over"
       ],
       "trade": [
         "Lean short rallies while aligned surplus persists; reduce size only if alignment breaks."
@@ -341,5 +341,5 @@
       ]
     }
   },
-  "generated_at_utc": "2026-05-21T18:40:26.854573+00:00"
+  "generated_at_utc": "2026-05-20T16:51:02.792940+00:00"
 }

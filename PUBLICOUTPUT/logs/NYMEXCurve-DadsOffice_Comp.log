@@ -1,0 +1,43 @@
+Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\run.py
+Started UTC: 2026-07-13T10:55:58.066186+00:00
+Finished UTC: 2026-07-13T10:55:58.241278+00:00
+Return code: 1
+
+=== STDOUT ===
+
+
+=== STDERR ===
+Error processing line 1 of C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\distutils-precedence.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 206, in addpackage
+    File "<string>", line 1, in <module>
+  ModuleNotFoundError: No module named '_distutils_hack'
+
+Remainder of file ignored
+Error processing line 1 of C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\distutils-precedence.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 206, in addpackage
+    File "<string>", line 1, in <module>
+  ModuleNotFoundError: No module named '_distutils_hack'
+
+Remainder of file ignored
+Traceback (most recent call last):
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\matplotlib\cbook.py", line 27, in <module>
+    from numpy.exceptions import VisibleDeprecationWarning  # numpy >= 1.25
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'numpy.exceptions'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\run.py", line 8, in <module>
+    from run_nymex_curve_analyst import main as run_dashboard
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\run_nymex_curve_analyst.py", line 12, in <module>
+    import matplotlib
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\matplotlib\__init__.py", line 161, in <module>
+    from . import _api, _version, cbook, _docstring, rcsetup
+  File "C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Lib\site-packages\matplotlib\cbook.py", line 29, in <module>
+    from numpy import VisibleDeprecationWarning
+ImportError: cannot import name 'VisibleDeprecationWarning' from 'numpy' (unknown location)

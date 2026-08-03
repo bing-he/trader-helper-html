@@ -1,0 +1,51 @@
+2026-08-03 11:00:08,004 - INFO - === Updating PRICES.csv ===
+2026-08-03 11:00:08,015 - INFO - Config loaded: 108 Platts | 254 ICE fixed | 226 ICE GDA
+2026-08-03 11:00:08,015 - WARNING - Config: 129 GDA markets have no GasDaily reference and will not be fetched: ['AGT-CG', 'AGT-CG (non-G)', 'ANR-SE', 'ANR-SE-T', 'ANR-SW', 'CG-Mainline', 'CG-Onshore', 'CIG-Mainline', 'Carthage', 'Cheyenne', 'Consumers', 'Cove Point']
+2026-08-03 11:00:08,021 - INFO - Timing: configuration=0.015s
+2026-08-03 11:00:08,106 - INFO - Loaded history: rows=9712 cols=240
+2026-08-03 11:00:08,106 - INFO - Timing: history_read=0.085s
+2026-08-03 11:00:08,114 - INFO - Update mode: cutoff=2026-07-19 | platts_start=2026-07-12 | ice_start=2026-07-02
+2026-08-03 11:00:09,030 - INFO - Platts: fetching history from 2026-07-12 for 108 markets / 106 unique symbols with 6 workers...
+2026-08-03 11:00:10,228 - INFO - Platts progress: 25/106 ok=24 empty=1 err=0
+2026-08-03 11:00:11,124 - INFO - Platts progress: 50/106 ok=47 empty=3 err=0
+2026-08-03 11:00:12,228 - INFO - Platts progress: 75/106 ok=72 empty=3 err=0
+2026-08-03 11:00:13,068 - INFO - Platts progress: 100/106 ok=96 empty=4 err=0
+2026-08-03 11:00:13,344 - INFO - Platts done: ok_syms=101 empty_syms=5 err_syms=0 rows=2282
+2026-08-03 11:00:13,354 - INFO - Timing: platts_fetch=5.241s
+2026-08-03 11:00:13,354 - INFO - ICE Fixed: fetching from 2026-07-02 to 2026-08-03 for 254 symbols...
+2026-08-03 11:00:47,637 - INFO - ICE Fixed progress: 25/254 ok=9 empty=16 err=0
+2026-08-03 11:01:22,449 - INFO - ICE Fixed progress: 50/254 ok=24 empty=26 err=0
+2026-08-03 11:01:55,908 - INFO - ICE Fixed progress: 75/254 ok=40 empty=35 err=0
+2026-08-03 11:03:05,157 - INFO - ICE Fixed progress: 125/254 ok=68 empty=57 err=0
+2026-08-03 11:03:38,913 - INFO - ICE Fixed progress: 150/254 ok=87 empty=63 err=0
+2026-08-03 11:04:45,516 - INFO - ICE Fixed progress: 200/254 ok=114 empty=86 err=0
+2026-08-03 11:05:20,890 - INFO - ICE Fixed progress: 225/254 ok=133 empty=92 err=0
+2026-08-03 11:05:55,107 - INFO - ICE Fixed progress: 250/254 ok=152 empty=98 err=0
+2026-08-03 11:05:59,574 - INFO - ICE Fixed done: ok_syms=154 empty_syms=100 err_syms=0
+2026-08-03 11:05:59,648 - INFO - Timing: ice_fixed_fetch=346.294s
+2026-08-03 11:05:59,649 - INFO - ICE GDA: fetching from 2026-07-02 to 2026-08-03 for 97 symbols...
+2026-08-03 11:06:37,013 - INFO - ICE GDA progress: 25/97 ok=10 empty=15 err=0
+2026-08-03 11:07:49,030 - INFO - ICE GDA progress: 75/97 ok=32 empty=43 err=0
+2026-08-03 11:08:20,567 - INFO - ICE GDA done: ok_syms=38 empty_syms=59 err_syms=0
+2026-08-03 11:08:20,584 - INFO - Timing: ice_gda_fetch=140.935s
+2026-08-03 11:08:20,584 - INFO - Platts(flow): shape=(23, 103) | index=[2026-07-12 00:00:00 .. 2026-08-03 00:00:00]
+2026-08-03 11:08:20,584 - INFO - Platts(flow): cols sample=['AGT-CG (non-G)', 'ANR-Joliet Hub', 'ANR-SE-T', 'ANR-SW', 'APC-ACE', 'Agua Dulce Hub', 'CG-Mainline', 'CG-Onshore'] (+95 more)
+2026-08-03 11:08:20,584 - INFO - ICE fixed(trade): shape=(23, 154) | index=[2026-07-02 00:00:00 .. 2026-08-03 00:00:00]
+2026-08-03 11:08:20,584 - INFO - ICE fixed(trade): cols sample=['AB Pool (inter)', 'AGT-CG (non-G)', 'Agua Dulce Hub', 'ANR-SE-T', 'ANR-SW', 'APC-ACE', 'Atmos Zone 3', 'Banquete Hub'] (+146 more)
+2026-08-03 11:08:20,584 - INFO - ICE gda(trade): shape=(23, 38) | index=[2026-07-02 00:00:00 .. 2026-08-03 00:00:00]
+2026-08-03 11:08:20,584 - INFO - ICE gda(trade): cols sample=['AB Pool (inter)', 'Agua Dulce Hub', 'APC-ACE', 'Atmos Zone 3', 'Bennington', 'CIG-Mainline South', 'EGT-Flex', 'EGT-North'] (+30 more)
+2026-08-03 11:08:20,584 - INFO - Anchors present: Platts=['Henry', 'CG-Mainline', 'TETCO-WLA'] | ICE=['Henry', 'CG-Mainline', 'TETCO-WLA'] | BOTH=['Henry', 'CG-Mainline', 'TETCO-WLA']
+2026-08-03 11:08:20,585 - INFO - Alignment anchors: ['Henry', 'CG-Mainline', 'TETCO-WLA'] | tol=0.003 | lookback_days=10
+2026-08-03 11:08:20,598 - INFO - Alignment: matched 20/23 flow dates explicitly; one_anchor_fallbacks=0 monotonic_rejections=0
+2026-08-03 11:08:20,598 - INFO - Date map: non-null=23/23 | first=2026-07-12 00:00:00 | last=2026-08-03 00:00:00
+2026-08-03 11:08:20,599 - INFO - ICE unmapped TradeDate 2026-07-31 -> FlowDates ['2026-08-01', '2026-08-02', '2026-08-03']
+2026-08-03 11:08:20,599 - INFO - ICE unmapped TradeDate 2026-08-03 -> FlowDates ['2026-08-04']
+2026-08-03 11:08:20,600 - INFO - Publication window: 17/24 flow dates on/after cutoff
+2026-08-03 11:08:20,600 - INFO - Timing: alignment=0.015s
+2026-08-03 11:08:20,700 - INFO - Derived calc: values=511, GDA-over-outright overrides=164
+2026-08-03 11:08:20,700 - INFO - Timing: merge=0.098s
+2026-08-03 11:08:20,736 - INFO - QA: index unique=True | monotonic_desc=True
+2026-08-03 11:08:20,737 - INFO - QA: anchor NaN counts: {'Henry': 14, 'CG-Mainline': 1, 'TETCO-WLA': 42}
+2026-08-03 11:08:20,985 - INFO - Final: rows=9713 cols=240 writing C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\PRICES.csv
+2026-08-03 11:08:21,728 - INFO - Timing: publication=0.743s
+2026-08-03 11:08:21,730 - INFO - SUCCESS in 493.724s

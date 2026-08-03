@@ -1,0 +1,32 @@
+Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\run_euro_weekly.py
+Started UTC: 2026-07-13T15:15:17.393627+00:00
+Finished UTC: 2026-07-13T15:15:57.237931+00:00
+Return code: 0
+
+=== STDOUT ===
+EuroWeekly run complete
+HTML: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\OUTPUT\EuroWeekly.html
+Bootstrap files copied: 0
+Download summary: downloaded=0, skipped=20, not_available=4
+History update: processed_images=0, new_records=0
+Render assets: copied_images=20, chart_images=5
+
+
+=== STDERR ===
+2026-07-13 11:15:18,538 | INFO | euro_weekly_pipeline | Bootstrap history complete. Copied 0 files into C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\DATA
+2026-07-13 11:15:18,876 | INFO | euro_weekly_pipeline | Downloading/updating ECMWF images (weeks=6, backfill=3, force=False)
+2026-07-13 11:15:19,887 | INFO | root | Discovered base=2026-07-12T00:00:00Z valid=2026-07-13T00:00:00Z
+2026-07-13 11:15:19,887 | INFO | root | Backfill enabled: Checking last 3 days from 2026-07-12T00:00:00Z
+2026-07-13 11:15:19,887 | INFO | root | Requesting base=2026-07-12T00:00:00Z valid=2026-07-13T00:00:00Z
+2026-07-13 11:15:20,588 | INFO | root | Status: 404
+2026-07-13 11:15:20,590 | INFO | root | Requesting base=2026-07-11T00:00:00Z valid=2026-07-13T00:00:00Z
+2026-07-13 11:15:21,297 | INFO | root | Status: 404
+2026-07-13 11:15:21,299 | INFO | root | Requesting base=2026-07-10T00:00:00Z valid=2026-07-13T00:00:00Z
+2026-07-13 11:15:22,019 | INFO | root | Status: 404
+2026-07-13 11:15:22,025 | INFO | root | Requesting base=2026-07-09T00:00:00Z valid=2026-07-13T00:00:00Z
+2026-07-13 11:15:22,652 | INFO | root | Status: 404
+2026-07-13 11:15:22,655 | INFO | root | Finished | Downloaded=0 | Skipped=20 | Not Available=4
+2026-07-13 11:15:22,656 | INFO | euro_weekly_pipeline | Updating forecast history table (image scoring).
+2026-07-13 11:15:23,314 | INFO | root | No new images to process. Everything is up to date.
+2026-07-13 11:15:23,314 | INFO | euro_weekly_pipeline | Rendering standalone EuroWeekly HTML report.
+2026-07-13 11:15:57,117 | INFO | euro_weekly_pipeline | Rendered standalone report: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\OUTPUT\EuroWeekly.html
