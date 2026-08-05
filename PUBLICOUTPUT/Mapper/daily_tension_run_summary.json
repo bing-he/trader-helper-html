@@ -1,5 +1,5 @@
 {
-  "target_date": "2026-08-04",
+  "target_date": "2026-08-05",
   "mode": "production",
   "run_status": "UNGATED",
   "quality_gate_enabled": false,
@@ -27,80 +27,80 @@
       "GEOID_B": "LA|VERMILION",
       "Comp_A": "ANR-SE-T",
       "Comp_B": "Henry",
-      "Tension_Score": 95,
+      "Tension_Score": 87,
       "Signal_Percentile": 100.0
-    },
-    {
-      "GEOID_A": "LA|JEFFERSON DAVIS",
-      "GEOID_B": "LA|VERMILION",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Henry",
-      "Tension_Score": 89,
-      "Signal_Percentile": 99.15
-    },
-    {
-      "GEOID_A": "LA|LAFAYETTE",
-      "GEOID_B": "LA|VERMILION",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Henry",
-      "Tension_Score": 89,
-      "Signal_Percentile": 99.15
-    },
-    {
-      "GEOID_A": "LA|LAFAYETTE",
-      "GEOID_B": "LA|ST MARTIN",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Sonat-Z0 South",
-      "Tension_Score": 89,
-      "Signal_Percentile": 99.15
-    },
-    {
-      "GEOID_A": "LA|ACADIA",
-      "GEOID_B": "LA|VERMILION",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Henry",
-      "Tension_Score": 89,
-      "Signal_Percentile": 99.15
     },
     {
       "GEOID_A": "LA|ST MARTIN",
       "GEOID_B": "LA|ST MARY",
       "Comp_A": "Sonat-Z0 South",
       "Comp_B": "ANR-SE-T",
-      "Tension_Score": 86,
-      "Signal_Percentile": 98.14
+      "Tension_Score": 82,
+      "Signal_Percentile": 99.66
+    },
+    {
+      "GEOID_A": "KS|HARPER",
+      "GEOID_B": "KS|SUMNER",
+      "Comp_A": "Panhandle",
+      "Comp_B": "EGT-West",
+      "Tension_Score": 80,
+      "Signal_Percentile": 98.98
+    },
+    {
+      "GEOID_A": "KS|HARPER",
+      "GEOID_B": "OK|GRANT",
+      "Comp_A": "Panhandle",
+      "Comp_B": "EGT-West",
+      "Tension_Score": 80,
+      "Signal_Percentile": 98.98
+    },
+    {
+      "GEOID_A": "KS|KINGMAN",
+      "GEOID_B": "KS|SUMNER",
+      "Comp_A": "Panhandle",
+      "Comp_B": "EGT-West",
+      "Tension_Score": 80,
+      "Signal_Percentile": 98.98
     },
     {
       "GEOID_A": "LA|LAFOURCHE",
       "GEOID_B": "LA|ST JAMES",
       "Comp_A": "TETCO-ELA",
       "Comp_B": "Transco-65",
-      "Tension_Score": 86,
-      "Signal_Percentile": 98.14
-    },
-    {
-      "GEOID_A": "WV|MARSHALL",
-      "GEOID_B": "WV|WETZEL",
-      "Comp_A": "TETCO-M2 (receipt)",
-      "Comp_B": "Eastern Gas South",
-      "Tension_Score": 81,
-      "Signal_Percentile": 97.63
-    },
-    {
-      "GEOID_A": "LA|EAST FELICIANA",
-      "GEOID_B": "LA|ST HELENA",
-      "Comp_A": "TETCO-ELA",
-      "Comp_B": "FGT-Z3",
       "Tension_Score": 79,
-      "Signal_Percentile": 96.95
+      "Signal_Percentile": 98.31
     },
     {
-      "GEOID_A": "OK|DEWEY",
-      "GEOID_B": "OK|ROGER MILLS",
-      "Comp_A": "Panhandle",
-      "Comp_B": "ANR-SW",
-      "Tension_Score": 79,
-      "Signal_Percentile": 96.95
+      "GEOID_A": "OK|BECKHAM",
+      "GEOID_B": "OK|WASHITA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 95.42
+    },
+    {
+      "GEOID_A": "LA|LAFAYETTE",
+      "GEOID_B": "LA|VERMILION",
+      "Comp_A": "TGT-SL",
+      "Comp_B": "Henry",
+      "Tension_Score": 78,
+      "Signal_Percentile": 95.42
+    },
+    {
+      "GEOID_A": "OK|BLAINE",
+      "GEOID_B": "OK|CADDO",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 95.42
+    },
+    {
+      "GEOID_A": "OK|CADDO",
+      "GEOID_B": "OK|CUSTER",
+      "Comp_A": "NGPL-Midcont Pool",
+      "Comp_B": "EGT-West",
+      "Tension_Score": 78,
+      "Signal_Percentile": 95.42
     }
   ]
 }

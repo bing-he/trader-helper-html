@@ -1,7 +1,7 @@
 # Flag Reference
 
 - Mark source: Forward
-- History window: 2026-06-05 to 2026-08-05 (latest two months of available prices)
+- History window: 2026-06-06 to 2026-08-06 (latest two months of available prices)
 - Forward point date: 2026-09-01 (ForwardMarks.csv -> Final Mark)
 
 ## Main Fields
@@ -77,9 +77,9 @@
 ## Counts
 
 - `Strong outlier`: 2
-- `Outlier`: 9
-- `Watch`: 11
-- `In-family`: 84
+- `Outlier`: 6
+- `Watch`: 8
+- `In-family`: 90
 - `No forward mark`: 28
 
 ## Files
