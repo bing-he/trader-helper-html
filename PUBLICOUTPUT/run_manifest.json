@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-05T15:11:06.654086+00:00",
+  "generated_utc": "2026-08-06T14:59:15.124992+00:00",
   "public_output_dir": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT",
   "dashboard_html": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\CONUSDash.html",
   "run_order": [
@@ -17,8 +17,8 @@
         "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\NYMEXCurve\\run.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-08-05T15:01:33.768900+00:00",
-      "finished_utc": "2026-08-05T15:06:19.303971+00:00",
+      "started_utc": "2026-08-06T14:53:24.790324+00:00",
+      "finished_utc": "2026-08-06T14:56:59.675916+00:00",
       "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\NYMEXCurve.log"
     },
     {
@@ -29,8 +29,8 @@
         "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\Fundy\\run_dashboard.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-08-05T15:06:19.304971+00:00",
-      "finished_utc": "2026-08-05T15:09:25.213546+00:00",
+      "started_utc": "2026-08-06T14:56:59.676912+00:00",
+      "finished_utc": "2026-08-06T14:58:39.906887+00:00",
       "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\Fundy.log"
     },
     {
@@ -41,8 +41,8 @@
         "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\EuroWeekly\\run_euro_weekly.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-08-05T15:09:25.217551+00:00",
-      "finished_utc": "2026-08-05T15:10:56.838837+00:00",
+      "started_utc": "2026-08-06T14:58:39.906887+00:00",
+      "finished_utc": "2026-08-06T14:59:07.711306+00:00",
       "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\EuroWeekly.log"
     },
     {
@@ -53,8 +53,8 @@
         "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\CONUSDash\\CoT\\src\\run.py"
       ],
       "return_code": 0,
-      "started_utc": "2026-08-05T15:10:56.839891+00:00",
-      "finished_utc": "2026-08-05T15:11:02.902301+00:00",
+      "started_utc": "2026-08-06T14:59:07.712808+00:00",
+      "finished_utc": "2026-08-06T14:59:12.342070+00:00",
       "log_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PUBLICOUTPUT\\logs\\CoT.log"
     }
   ],

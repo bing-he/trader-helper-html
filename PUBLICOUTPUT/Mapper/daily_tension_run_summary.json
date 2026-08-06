@@ -1,15 +1,15 @@
 {
-  "target_date": "2026-08-05",
+  "target_date": "2026-08-06",
   "mode": "production",
   "run_status": "UNGATED",
   "quality_gate_enabled": false,
   "emit_trader_outputs": true,
   "total_edges": 355,
   "flags": {
-    "Imputed_P": 110,
-    "Full": 95,
+    "Imputed_P": 107,
+    "Full": 86,
     "Imputed_WP": 80,
-    "Missing_N": 60,
+    "Missing_N": 72,
     "Imputed_W": 10
   },
   "dropped_edge_reasons": {
@@ -27,16 +27,32 @@
       "GEOID_B": "LA|VERMILION",
       "Comp_A": "ANR-SE-T",
       "Comp_B": "Henry",
-      "Tension_Score": 87,
+      "Tension_Score": 84,
       "Signal_Percentile": 100.0
     },
     {
-      "GEOID_A": "LA|ST MARTIN",
-      "GEOID_B": "LA|ST MARY",
-      "Comp_A": "Sonat-Z0 South",
-      "Comp_B": "ANR-SE-T",
+      "GEOID_A": "LA|ACADIA",
+      "GEOID_B": "LA|VERMILION",
+      "Comp_A": "TGT-SL",
+      "Comp_B": "Henry",
       "Tension_Score": 82,
-      "Signal_Percentile": 99.66
+      "Signal_Percentile": 99.29
+    },
+    {
+      "GEOID_A": "LA|JEFFERSON DAVIS",
+      "GEOID_B": "LA|VERMILION",
+      "Comp_A": "TGT-SL",
+      "Comp_B": "Henry",
+      "Tension_Score": 82,
+      "Signal_Percentile": 99.29
+    },
+    {
+      "GEOID_A": "LA|LAFAYETTE",
+      "GEOID_B": "LA|VERMILION",
+      "Comp_A": "TGT-SL",
+      "Comp_B": "Henry",
+      "Tension_Score": 82,
+      "Signal_Percentile": 99.29
     },
     {
       "GEOID_A": "KS|HARPER",
@@ -44,7 +60,7 @@
       "Comp_A": "Panhandle",
       "Comp_B": "EGT-West",
       "Tension_Score": 80,
-      "Signal_Percentile": 98.98
+      "Signal_Percentile": 98.23
     },
     {
       "GEOID_A": "KS|HARPER",
@@ -52,7 +68,7 @@
       "Comp_A": "Panhandle",
       "Comp_B": "EGT-West",
       "Tension_Score": 80,
-      "Signal_Percentile": 98.98
+      "Signal_Percentile": 98.23
     },
     {
       "GEOID_A": "KS|KINGMAN",
@@ -60,47 +76,31 @@
       "Comp_A": "Panhandle",
       "Comp_B": "EGT-West",
       "Tension_Score": 80,
-      "Signal_Percentile": 98.98
+      "Signal_Percentile": 98.23
     },
     {
-      "GEOID_A": "LA|LAFOURCHE",
-      "GEOID_B": "LA|ST JAMES",
-      "Comp_A": "TETCO-ELA",
-      "Comp_B": "Transco-65",
+      "GEOID_A": "PA|CENTRE",
+      "GEOID_B": "PA|CLINTON",
+      "Comp_A": "TETCO-M3",
+      "Comp_B": "Leidy-Transco",
       "Tension_Score": 79,
-      "Signal_Percentile": 98.31
+      "Signal_Percentile": 97.35
     },
     {
-      "GEOID_A": "OK|BECKHAM",
-      "GEOID_B": "OK|WASHITA",
-      "Comp_A": "EGT-West",
-      "Comp_B": "NGPL-Midcont Pool",
-      "Tension_Score": 78,
-      "Signal_Percentile": 95.42
+      "GEOID_A": "PA|BUCKS",
+      "GEOID_B": "PA|NORTHAMPTON",
+      "Comp_A": "TETCO-M3",
+      "Comp_B": "Leidy-Transco",
+      "Tension_Score": 79,
+      "Signal_Percentile": 97.35
     },
     {
-      "GEOID_A": "LA|LAFAYETTE",
-      "GEOID_B": "LA|VERMILION",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Henry",
+      "GEOID_A": "IL|EDGAR",
+      "GEOID_B": "IN|VERMILLION",
+      "Comp_A": "REX E-MidW",
+      "Comp_B": "TETCO-M2 (receipt)",
       "Tension_Score": 78,
-      "Signal_Percentile": 95.42
-    },
-    {
-      "GEOID_A": "OK|BLAINE",
-      "GEOID_B": "OK|CADDO",
-      "Comp_A": "EGT-West",
-      "Comp_B": "NGPL-Midcont Pool",
-      "Tension_Score": 78,
-      "Signal_Percentile": 95.42
-    },
-    {
-      "GEOID_A": "OK|CADDO",
-      "GEOID_B": "OK|CUSTER",
-      "Comp_A": "NGPL-Midcont Pool",
-      "Comp_B": "EGT-West",
-      "Tension_Score": 78,
-      "Signal_Percentile": 95.42
+      "Signal_Percentile": 94.52
     }
   ]
 }
