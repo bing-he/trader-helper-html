@@ -1,5 +1,5 @@
 {
-  "target_date": "2026-08-06",
+  "target_date": "2026-08-10",
   "mode": "production",
   "run_status": "UNGATED",
   "quality_gate_enabled": false,
@@ -23,84 +23,84 @@
   "backtest_metrics": [],
   "top_high_risk_edges_h1": [
     {
-      "GEOID_A": "LA|CAMERON",
-      "GEOID_B": "LA|VERMILION",
-      "Comp_A": "ANR-SE-T",
-      "Comp_B": "Henry",
-      "Tension_Score": 84,
-      "Signal_Percentile": 100.0
-    },
-    {
-      "GEOID_A": "LA|ACADIA",
-      "GEOID_B": "LA|VERMILION",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Henry",
-      "Tension_Score": 82,
-      "Signal_Percentile": 99.29
-    },
-    {
-      "GEOID_A": "LA|JEFFERSON DAVIS",
-      "GEOID_B": "LA|VERMILION",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Henry",
-      "Tension_Score": 82,
-      "Signal_Percentile": 99.29
-    },
-    {
-      "GEOID_A": "LA|LAFAYETTE",
-      "GEOID_B": "LA|VERMILION",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Henry",
-      "Tension_Score": 82,
-      "Signal_Percentile": 99.29
-    },
-    {
-      "GEOID_A": "KS|HARPER",
-      "GEOID_B": "KS|SUMNER",
-      "Comp_A": "Panhandle",
+      "GEOID_A": "OK|CADDO",
+      "GEOID_B": "OK|COMANCHE",
+      "Comp_A": "NGPL-Midcont Pool",
       "Comp_B": "EGT-West",
-      "Tension_Score": 80,
-      "Signal_Percentile": 98.23
-    },
-    {
-      "GEOID_A": "KS|HARPER",
-      "GEOID_B": "OK|GRANT",
-      "Comp_A": "Panhandle",
-      "Comp_B": "EGT-West",
-      "Tension_Score": 80,
-      "Signal_Percentile": 98.23
-    },
-    {
-      "GEOID_A": "KS|KINGMAN",
-      "GEOID_B": "KS|SUMNER",
-      "Comp_A": "Panhandle",
-      "Comp_B": "EGT-West",
-      "Tension_Score": 80,
-      "Signal_Percentile": 98.23
-    },
-    {
-      "GEOID_A": "PA|CENTRE",
-      "GEOID_B": "PA|CLINTON",
-      "Comp_A": "TETCO-M3",
-      "Comp_B": "Leidy-Transco",
-      "Tension_Score": 79,
-      "Signal_Percentile": 97.35
-    },
-    {
-      "GEOID_A": "PA|BUCKS",
-      "GEOID_B": "PA|NORTHAMPTON",
-      "Comp_A": "TETCO-M3",
-      "Comp_B": "Leidy-Transco",
-      "Tension_Score": 79,
-      "Signal_Percentile": 97.35
-    },
-    {
-      "GEOID_A": "IL|EDGAR",
-      "GEOID_B": "IN|VERMILLION",
-      "Comp_A": "REX E-MidW",
-      "Comp_B": "TETCO-M2 (receipt)",
       "Tension_Score": 78,
-      "Signal_Percentile": 94.52
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|JACKSON",
+      "GEOID_B": "OK|KIOWA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|GREER",
+      "GEOID_B": "OK|KIOWA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|CUSTER",
+      "GEOID_B": "OK|WASHITA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|CUSTER",
+      "GEOID_B": "OK|ROGER MILLS",
+      "Comp_A": "EGT-West",
+      "Comp_B": "ANR-SW",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|COMANCHE",
+      "GEOID_B": "OK|KIOWA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|ALFALFA",
+      "GEOID_B": "OK|GRANT",
+      "Comp_A": "southern star",
+      "Comp_B": "EGT-West",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|BECKHAM",
+      "GEOID_B": "OK|KIOWA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|BECKHAM",
+      "GEOID_B": "OK|ROGER MILLS",
+      "Comp_A": "EGT-West",
+      "Comp_B": "ANR-SW",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
+    },
+    {
+      "GEOID_A": "OK|BECKHAM",
+      "GEOID_B": "OK|WASHITA",
+      "Comp_A": "EGT-West",
+      "Comp_B": "NGPL-Midcont Pool",
+      "Tension_Score": 78,
+      "Signal_Percentile": 97.88
     }
   ]
 }
