@@ -1,23 +1,23 @@
 {
   "status": "success",
-  "finished_at": "2026-08-10T11:38:13.623742",
-  "rows": 9720,
+  "finished_at": "2026-08-12T11:13:25.444405",
+  "rows": 9722,
   "columns": 240,
-  "newest_flow_date": "2026-08-11",
+  "newest_flow_date": "2026-08-13",
   "refresh_days": 15,
   "platts_markets": 108,
   "ice_fixed_markets": 254,
   "ice_gda_configured": 226,
   "ice_gda_actionable": 97,
   "timings_seconds": {
-    "configuration": 0.015,
-    "history_read": 0.093,
-    "platts_fetch": 6.146,
-    "ice_fixed_fetch": 325.623,
-    "ice_gda_fetch": 133.492,
-    "alignment": 0.088,
-    "merge": 0.555,
-    "publication": 2.177,
-    "total": 469.49
+    "configuration": 0.036,
+    "history_read": 0.111,
+    "platts_fetch": 5.371,
+    "ice_fixed_fetch": 328.698,
+    "ice_gda_fetch": 131.691,
+    "alignment": 0.018,
+    "merge": 0.102,
+    "publication": 0.65,
+    "total": 466.995
   }
 }
