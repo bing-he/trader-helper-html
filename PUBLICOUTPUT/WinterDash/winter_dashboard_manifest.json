@@ -1,100 +1,105 @@
 {
-  "generated_at": "2026-08-12T11:13:26.126134",
-  "asof_date": "2026-08-12",
+  "generated_at": "2026-08-16T19:02:27.080776",
+  "asof_date": "2026-08-16",
   "anchor_date": "2026-04-01",
   "row_count": 98,
-  "mark_count": 73,
+  "mark_count": 13,
   "current_source_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\ICE_Winter_Strip_Prices.csv",
   "prices_source_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PRICES.csv",
   "weekly_snapshots": [
     {
-      "label": "5-Aug",
-      "snapshot_date": "2026-08-05",
+      "label": "7-Aug",
+      "snapshot_date": "2026-08-07",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "29-Jul",
-      "snapshot_date": "2026-07-29",
+      "label": "31-Jul",
+      "snapshot_date": "2026-07-31",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "22-Jul",
-      "snapshot_date": "2026-07-22",
+      "label": "24-Jul",
+      "snapshot_date": "2026-07-24",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "15-Jul",
-      "snapshot_date": "2026-07-15",
+      "label": "17-Jul",
+      "snapshot_date": "2026-07-17",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "8-Jul",
-      "snapshot_date": "2026-07-08",
+      "label": "10-Jul",
+      "snapshot_date": "2026-07-10",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "1-Jul",
-      "snapshot_date": "2026-07-01",
+      "label": "3-Jul",
+      "snapshot_date": "2026-07-03",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "24-Jun",
-      "snapshot_date": "2026-06-24",
+      "label": "26-Jun",
+      "snapshot_date": "2026-06-26",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "17-Jun",
-      "snapshot_date": "2026-06-17",
+      "label": "19-Jun",
+      "snapshot_date": "2026-06-19",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "10-Jun",
-      "snapshot_date": "2026-06-10",
+      "label": "12-Jun",
+      "snapshot_date": "2026-06-12",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "3-Jun",
-      "snapshot_date": "2026-06-03",
+      "label": "5-Jun",
+      "snapshot_date": "2026-06-05",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "27-May",
-      "snapshot_date": "2026-05-27",
+      "label": "29-May",
+      "snapshot_date": "2026-05-29",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "20-May",
-      "snapshot_date": "2026-05-20",
+      "label": "22-May",
+      "snapshot_date": "2026-05-22",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "13-May",
-      "snapshot_date": "2026-05-13",
+      "label": "15-May",
+      "snapshot_date": "2026-05-15",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "6-May",
-      "snapshot_date": "2026-05-06",
+      "label": "8-May",
+      "snapshot_date": "2026-05-08",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "29-Apr",
-      "snapshot_date": "2026-04-29",
+      "label": "1-May",
+      "snapshot_date": "2026-05-01",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "22-Apr",
-      "snapshot_date": "2026-04-22",
+      "label": "24-Apr",
+      "snapshot_date": "2026-04-24",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "15-Apr",
-      "snapshot_date": "2026-04-15",
+      "label": "17-Apr",
+      "snapshot_date": "2026-04-17",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {
-      "label": "8-Apr",
-      "snapshot_date": "2026-04-08",
+      "label": "10-Apr",
+      "snapshot_date": "2026-04-10",
+      "source": "ICE_Winter_Strip_History.csv"
+    },
+    {
+      "label": "2-Apr",
+      "snapshot_date": "2026-04-02",
       "source": "ICE_Winter_Strip_History.csv"
     },
     {

@@ -1,26 +1,26 @@
 Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\run.py
-Started UTC: 2026-08-12T15:13:28.082918+00:00
-Finished UTC: 2026-08-12T15:14:49.766420+00:00
+Started UTC: 2026-08-16T23:02:27.586428+00:00
+Finished UTC: 2026-08-16T23:03:49.524337+00:00
 Return code: 0
 
 === STDOUT ===
 
 
 === STDERR ===
-2026-08-12 11:13:34,780 INFO [NYMEXCurve] Loaded env from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.env | OPENAI_API_KEY=True OPENAI_PROJECT=True
-2026-08-12 11:13:34,781 INFO [NYMEXCurve] Removed prior report: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst.html
-2026-08-12 11:13:34,782 INFO [NYMEXCurve] Removed prior evidence pack: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\llm_evidence.json
-2026-08-12 11:13:34,789 INFO [NYMEXCurve] Removed 9 prior asset image(s) from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst_assets
-2026-08-12 11:13:34,789 INFO [NYMEXCurve] Repo root: C:\Users\patri\OneDrive\Desktop\trader-helper-bing
-2026-08-12 11:13:34,789 INFO [NYMEXCurve] INFO dir: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO
-2026-08-12 11:13:34,789 INFO [NYMEXCurve] Output dir: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT
-2026-08-12 11:13:34,789 INFO [NYMEXCurve] Cash enabled: True
-2026-08-12 11:13:34,789 INFO [NYMEXCurve] Cash prices path: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\PRICES.csv
-2026-08-12 11:13:35,502 INFO [NYMEXCurve] Loaded absolute history with 4949 rows and 187 delivery-month columns.
-2026-08-12 11:13:35,502 INFO [NYMEXCurve] Loaded forward curve with 4949 rows (latest 2026-08-13).
-2026-08-12 11:13:35,622 INFO [NYMEXCurve] Loaded cash PRICES with 9722 rows (latest 2026-08-13).
-2026-08-12 11:14:48,011 INFO [NYMEXCurve] HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
-2026-08-12 11:14:48,107 WARNING [NYMEXCurve] LLM output failed the trader-note validator (best_trade_expression lacks numeric anchor); using deterministic fallback.
-2026-08-12 11:14:49,477 INFO [NYMEXCurve] Report written: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst.html
-2026-08-12 11:14:49,478 INFO [NYMEXCurve] Evidence pack written: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\llm_evidence.json
-2026-08-12 11:14:49,478 INFO [NYMEXCurve] Assets folder: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst_assets
+2026-08-16 19:02:31,310 INFO [NYMEXCurve] Loaded env from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.env | OPENAI_API_KEY=True OPENAI_PROJECT=True
+2026-08-16 19:02:31,312 INFO [NYMEXCurve] Removed prior report: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst.html
+2026-08-16 19:02:31,312 INFO [NYMEXCurve] Removed prior evidence pack: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\llm_evidence.json
+2026-08-16 19:02:31,321 INFO [NYMEXCurve] Removed 9 prior asset image(s) from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst_assets
+2026-08-16 19:02:31,321 INFO [NYMEXCurve] Repo root: C:\Users\patri\OneDrive\Desktop\trader-helper-bing
+2026-08-16 19:02:31,321 INFO [NYMEXCurve] INFO dir: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO
+2026-08-16 19:02:31,321 INFO [NYMEXCurve] Output dir: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT
+2026-08-16 19:02:31,321 INFO [NYMEXCurve] Cash enabled: True
+2026-08-16 19:02:31,322 INFO [NYMEXCurve] Cash prices path: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\PRICES.csv
+2026-08-16 19:02:32,073 INFO [NYMEXCurve] Loaded absolute history with 4952 rows and 187 delivery-month columns.
+2026-08-16 19:02:32,073 INFO [NYMEXCurve] Loaded forward curve with 4952 rows (latest 2026-08-17).
+2026-08-16 19:02:32,217 INFO [NYMEXCurve] Loaded cash PRICES with 9726 rows (latest 2026-08-17).
+2026-08-16 19:03:47,664 INFO [NYMEXCurve] HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2026-08-16 19:03:47,852 WARNING [NYMEXCurve] LLM output failed the trader-note validator (anomaly_ids contains unsupported anomaly); using deterministic fallback.
+2026-08-16 19:03:49,172 INFO [NYMEXCurve] Report written: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst.html
+2026-08-16 19:03:49,172 INFO [NYMEXCurve] Evidence pack written: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\llm_evidence.json
+2026-08-16 19:03:49,172 INFO [NYMEXCurve] Assets folder: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\NYMEXCurve\OUTPUT\nymex_curve_analyst_assets
