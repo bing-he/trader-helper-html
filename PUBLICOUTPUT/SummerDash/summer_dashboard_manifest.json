@@ -1,0 +1,197 @@
+{
+  "generated_at": "2026-08-18T17:30:30.281595",
+  "asof_date": "2026-08-18",
+  "anchor_date": "2026-04-01",
+  "target_season": "Summer 2027",
+  "row_count": 100,
+  "mark_count": 72,
+  "current_source_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\ICE_Summer_Strip_Prices.csv",
+  "prices_source_path": "C:\\Users\\patri\\OneDrive\\Desktop\\trader-helper-bing\\INFO\\PRICES.csv",
+  "weekly_snapshots": [
+    {
+      "label": "11-Aug",
+      "snapshot_date": "2026-08-11",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "4-Aug",
+      "snapshot_date": "2026-08-04",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "28-Jul",
+      "snapshot_date": "2026-07-28",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "21-Jul",
+      "snapshot_date": "2026-07-21",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "14-Jul",
+      "snapshot_date": "2026-07-14",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "7-Jul",
+      "snapshot_date": "2026-07-07",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "30-Jun",
+      "snapshot_date": "2026-06-30",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "23-Jun",
+      "snapshot_date": "2026-06-23",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "16-Jun",
+      "snapshot_date": "2026-06-16",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "9-Jun",
+      "snapshot_date": "2026-06-09",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "2-Jun",
+      "snapshot_date": "2026-06-02",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "26-May",
+      "snapshot_date": "2026-05-26",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "19-May",
+      "snapshot_date": "2026-05-19",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "12-May",
+      "snapshot_date": "2026-05-12",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "5-May",
+      "snapshot_date": "2026-05-05",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "28-Apr",
+      "snapshot_date": "2026-04-28",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "21-Apr",
+      "snapshot_date": "2026-04-21",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "14-Apr",
+      "snapshot_date": "2026-04-14",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "7-Apr",
+      "snapshot_date": "2026-04-07",
+      "source": "ICE_Summer_Strip_History.csv"
+    },
+    {
+      "label": "1-Apr",
+      "snapshot_date": "2026-04-01",
+      "source": "ICE_Summer_Strip_History.csv"
+    }
+  ],
+  "summer_windows": [
+    {
+      "label": "Sum25",
+      "start_date": "2025-04-01",
+      "end_date": "2025-10-31"
+    },
+    {
+      "label": "Sum24",
+      "start_date": "2024-04-01",
+      "end_date": "2024-10-31"
+    },
+    {
+      "label": "Sum23",
+      "start_date": "2023-04-01",
+      "end_date": "2023-10-31"
+    },
+    {
+      "label": "Sum22",
+      "start_date": "2022-04-01",
+      "end_date": "2022-10-31"
+    },
+    {
+      "label": "Sum21",
+      "start_date": "2021-04-01",
+      "end_date": "2021-10-31"
+    }
+  ],
+  "aliased_components": {
+    "ANR-SE": "ANR-SE-T",
+    "APC-NGPL": "Chicago",
+    "CIG-Mainline Pool": "CIG-Mainline",
+    "EGT-Perryville Hub": "CG-Mainline",
+    "NGPL-AM Stor": "NGPL-Midcont Pool"
+  },
+  "methodology_version": "2.0.0",
+  "methodology_config": {
+    "methodology_version": "2.0.0",
+    "forward_lookbacks": [
+      20,
+      40
+    ],
+    "min_full_forward_dates": 40,
+    "min_pair_overlap": 0.8,
+    "min_abs_robust_z": 1.5,
+    "tail_percentile": 10.0,
+    "min_directional_breadth": 0.6,
+    "min_confirming_peers": 2,
+    "min_economic_dislocation": 0.01,
+    "min_structural_dislocation": 0.05,
+    "min_structural_robust_z": 1.0,
+    "backtest_horizons": [
+      5,
+      10,
+      20
+    ],
+    "backtest_lookback": 40,
+    "min_independent_events": 8,
+    "mark_stale_business_days": 2,
+    "min_structural_summers": 3,
+    "min_summer_coverage": 0.9
+  },
+  "forward_history": {
+    "row_count": 6138,
+    "trade_date_count": 99,
+    "symbol_count": 62,
+    "start_date": "2026-04-01",
+    "end_date": "2026-08-18"
+  },
+  "regional_verdict_counts": {
+    "rich": 5,
+    "cheap": 5,
+    "neutral": 29,
+    "mixed": 2,
+    "insufficient_data": 0
+  },
+  "qualified_pair_count": 16,
+  "rejected_pair_count": 51,
+  "pair_rejection_reason_counts": {
+    "below_anomaly_or_materiality_gate": 51
+  },
+  "quality_flag_counts": {
+    "forward_proxy_used": 20,
+    "insufficient_backtest_events": 41,
+    "shared_forward_symbol": 13
+  }
+}

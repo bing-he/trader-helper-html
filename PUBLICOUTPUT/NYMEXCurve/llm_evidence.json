@@ -2,14 +2,14 @@
   "analogs": {
     "hit_rate_down_10d": 0.7,
     "hit_rate_down_20d": 0.4,
-    "hit_rate_down_40d": 0.4,
-    "iqr_40d": 0.3187500000000001,
-    "median_move_10d": -0.10299999999999976,
+    "hit_rate_down_40d": 0.30000000000000004,
+    "iqr_40d": 0.2989999999999998,
+    "median_move_10d": -0.10249999999999981,
     "median_move_20d": 0.01650000000000018,
-    "median_move_40d": 0.09350000000000014,
+    "median_move_40d": 0.08699999999999997,
     "n": 10,
     "quality_label": "weak",
-    "strength_score": 46.01388888888889
+    "strength_score": 49.72222222222223
   },
   "anomaly_watchlist": [
     {
@@ -27,59 +27,59 @@
       "title": "Localized Shape Unwind Setup"
     },
     {
-      "detail": "Analog fragility: the directional lean is leaning on only weak analog quality with strength 46/100.",
+      "detail": "Analog fragility: the directional lean is leaning on only weak analog quality with strength 50/100.",
       "id": "analog_fragility",
       "label": "analog fragility",
       "priority": 78,
       "title": "Analog Fragility"
     }
   ],
-  "as_of_date": "2026-08-19",
+  "as_of_date": "2026-08-21",
   "cash_confirmation": {
     "actionable": false,
-    "basis0_z": -0.062367766394305676,
-    "basis12_z": -0.07936712901638332,
+    "basis0_z": -0.06090616364215546,
+    "basis12_z": -0.0760344433352385,
     "lead_lag_best": 0,
     "lead_lag_best_2m": 0,
-    "lead_lag_corr": 0.30193886272959974,
-    "lead_lag_corr_2m": 0.5421428936773405,
-    "reason": "Cash mixed / weak confirmation: basis is -0.06z and cash/curve correlation is +0.30. Recent ~2m link is as strong or stronger (r +0.54 vs longer-run +0.30).",
+    "lead_lag_corr": 0.32401215162121727,
+    "lead_lag_corr_2m": 0.5806137286395131,
+    "reason": "Cash mixed / weak confirmation: basis is -0.06z and cash/curve correlation is +0.32. Recent ~2m link is as strong or stronger (r +0.58 vs longer-run +0.32).",
     "signal": "two-way",
     "status": "not adding"
   },
   "cash_curve_link": {
     "actionable": false,
-    "basis0_z": -0.062367766394305676,
-    "basis12_z": -0.07936712901638332,
+    "basis0_z": -0.06090616364215546,
+    "basis12_z": -0.0760344433352385,
     "lead_lag_best": 0,
     "lead_lag_best_2m": 0,
-    "lead_lag_corr": 0.30193886272959974,
-    "lead_lag_corr_2m": 0.5421428936773405
+    "lead_lag_corr": 0.32401215162121727,
+    "lead_lag_corr_2m": 0.5806137286395131
   },
   "confidence": {
-    "dispersion_bucket": "moderate",
+    "dispersion_bucket": "tight",
     "label": "low",
     "signal_agreement": "mixed"
   },
   "curve_translation": {
     "bias_hint": "bearish",
-    "current_curvature": 0.5943333333333327,
-    "current_slope": 0.2693333333333334,
+    "current_curvature": 0.5806666666666662,
+    "current_slope": 0.2736666666666667,
     "expression": "play flattening",
-    "hit_rate_10d": 0.5548109143130685,
+    "hit_rate_10d": 0.5547846889952153,
     "median_10d_change": -0.04400000000000048,
     "message": "The front of the curve is softening versus the back. Base case is another -4.4c of flattening over 10d, with a 55% hit rate.",
     "shape": "flattening",
     "shape_alignment": "aligned",
     "transition_active": false,
     "transition_days": 0,
-    "transition_speed_pctile": 0.23013698630136986
+    "transition_speed_pctile": 0.5205479452054794
   },
   "dashboard_answers": {
     "bottom_line": {
       "confidence": "low",
       "display_label": "Mild bullish lean, low conviction",
-      "risk": "Meaningful downside tail still exists if prompt breaks support. Invalidation cue: prompt below 2.664 for 2 straight sessions.",
+      "risk": "Meaningful downside tail still exists if prompt breaks support. Invalidation cue: prompt above 2.814 for 2 straight sessions.",
       "stance": "mild_bullish",
       "why": [
         "Short-horizon odds ~50% up (5d)",
@@ -91,12 +91,12 @@
       "display_label": "Nearby balanced / no prompt stress",
       "evidence": [
         "Front3/Back3 spread z -0.29 (rolling) | pctile 30",
-        "Henry/Front3 ratio 1.0056",
-        "Front3/Back3 level ratio 0.8466",
-        "Henry vs Front3 gap (basis/front) +0.0347",
+        "Henry/Front3 ratio 1.0091",
+        "Front3/Back3 level ratio 0.8469",
+        "Henry vs Front3 gap (basis/front) +0.0362",
         "Cash confirmation score +0.0",
         "Seasonal spread z -0.42",
-        "Front3 5d -3.1c vs Back3 5d -4.0c"
+        "Front3 5d -4.0c vs Back3 5d -4.8c"
       ],
       "implication": "No urgent nearby tightness or looseness signal.",
       "label": "balanced",
@@ -106,8 +106,8 @@
       "display_label": "Curve broadly balanced",
       "evidence": [
         "Prompt seasonal z -0.40",
-        "Deferred (Back3) seasonal z -0.29",
-        "12M strip rolling z -1.82 (365d window diagnostic)",
+        "Deferred (Back3) seasonal z -0.31",
+        "12M strip rolling z -1.83 (365d window diagnostic)",
         "Composite market state, recent move 1d"
       ],
       "implication": "Curve scope is balanced; neither a pure front shock nor a deferred-only drift dominates.",
@@ -117,7 +117,7 @@
     "step3_seasonality": {
       "display_label": "Seasonally normal",
       "evidence": [
-        "Front (prompt) same-calendar-date pctile 46",
+        "Front (prompt) same-calendar-date pctile 38",
         "12M strip same-calendar-date pctile 54",
         "Prompt vs seasonal template z -0.40"
       ],
@@ -128,9 +128,9 @@
     "step4_velocity": {
       "display_label": "Localized shape move",
       "evidence": [
-        "Score outright 68 | flatten 58 | steepen 58 | local shape 90",
-        "Curve delta 5d +1.0c | Front3 5d -3.1c",
-        "10d stack slope -0.0633 | curvature -0.1183 | shape z +2.46",
+        "Score outright 85 | flatten 57 | steepen 57 | local shape 90",
+        "Curve delta 5d +0.9c | Front3 5d -4.0c",
+        "10d stack slope +0.0490 | curvature -0.1010 | shape z +2.31",
         "10d shape median -4.4c | hit 55%",
         "Shape alignment: aligned",
         "velocity market state=flat"
@@ -139,10 +139,10 @@
       "label": "localized_shape_move",
       "question": "What is the market actually trading?",
       "velocity_scores": {
-        "flattening": 58.29166666666643,
+        "flattening": 56.993055555554136,
         "localized_shape_move": 89.99999999999999,
-        "outright_move": 67.94791666666686,
-        "steepening": 58.29166666666643
+        "outright_move": 84.55208333333371,
+        "steepening": 56.993055555554136
       }
     },
     "step5_analogs": {
@@ -150,9 +150,9 @@
       "direction": "higher",
       "display_label": "Analogs lean higher, but confidence is weak",
       "evidence": [
-        "10d historical-range median -10.3c",
+        "10d historical-range median -10.2c",
         "20d historical-range median +1.7c",
-        "Historical range wide historical range"
+        "Historical range moderate historical range"
       ],
       "implication": "Upside path shows up in history but with wide outcomes.",
       "label": "higher_weak",
@@ -161,10 +161,10 @@
     "step6_cash": {
       "display_label": "Cash mixed / weak confirmation",
       "evidence": [
-        "Cash mixed / weak confirmation: basis is -0.06z and cash/curve correlation is +0.30. Recent ~2m link is as strong or stronger (r +0.54 vs longer-run +0.30).",
+        "Cash mixed / weak confirmation: basis is -0.06z and cash/curve correlation is +0.32. Recent ~2m link is as strong or stronger (r +0.58 vs longer-run +0.32).",
         "Cash lead-lag relationship not decisive",
-        "Correlation +0.30 | basis0 z -0.06",
-        "~2m rolling r +0.54 (6m r +0.30)"
+        "Correlation +0.32 | basis0 z -0.06",
+        "~2m rolling r +0.58 (6m r +0.32)"
       ],
       "implication": "Do not over-commit to the futures signal without stronger physical confirmation.",
       "label": "cash_mixed",
@@ -172,29 +172,29 @@
     }
   },
   "invalidation": {
-    "price_direction": "below",
+    "price_direction": "above",
     "probability_neutral_band": [
       0.48,
       0.52
     ],
     "prompt_sessions": 2,
-    "prompt_threshold": 2.6639999999999997,
+    "prompt_threshold": 2.814,
     "shape_direction": "above",
     "slope_reversal_threshold": 0.12
   },
   "primary_bias": {
     "agreement_state": "leaning",
-    "analog_40d_median": 0.09350000000000014,
+    "analog_40d_median": 0.08699999999999997,
     "bearish_votes": 0,
     "bias": "bullish",
     "bullish_votes": 2,
     "confidence": "low",
     "flat_votes": 3,
-    "forecast_4w_p50": 0.0087165363729882,
-    "forecast_8w_p50": 0.11012653351143811,
+    "forecast_4w_p50": 0.00737415235047803,
+    "forecast_8w_p50": 0.10220527906364352,
     "horizon": "2-8 weeks",
-    "legacy_bias": "two-way",
-    "tactical_prob_up": 0.5002563813304807,
+    "legacy_bias": "bearish",
+    "tactical_prob_up": 0.49581924351848283,
     "vote_map": {
       "4w": "two-way",
       "5d_prompt": "two-way",
@@ -210,10 +210,10 @@
       "upper_pct": 52
     },
     "prompt": {
-      "direction": "below",
+      "direction": "above",
       "sessions": 2,
-      "text": "prompt below 2.664 for 2 straight sessions.",
-      "threshold": 2.6639999999999997
+      "text": "prompt above 2.814 for 2 straight sessions.",
+      "threshold": 2.814
     },
     "shape": {
       "direction": "above",
@@ -227,7 +227,7 @@
     "signal_rank_2_name": "Kink stretch",
     "signal_rank_2_strength": 70.0,
     "signal_rank_3_name": "Analog downside asymmetry",
-    "signal_rank_3_strength": 44.505000000000024
+    "signal_rank_3_strength": 66.00999999999998
   },
   "signal_location": {
     "curvature": "strong",
@@ -236,35 +236,35 @@
   },
   "spread_change": {
     "direction": "tighten",
-    "hit_rate_oos": 0.5548109143130685,
+    "hit_rate_oos": 0.5547846889952153,
     "median_change": -0.04400000000000048
   },
   "state": {
-    "curvature": 0.5943333333333327,
-    "curvature_pct": 0.5698630136986301,
-    "delta10_slope": -0.06333333333333302,
-    "delta5_slope": -0.025333333333333652,
-    "level": 3.087916666666666,
-    "slope": 0.2693333333333334,
-    "slope_pct": 0.40821917808219177,
-    "spread_z_season": -0.42212939854718756,
-    "strip_pct": 0.005479452054794521,
-    "strip_z_season": -0.4694051778669854
+    "curvature": 0.5806666666666662,
+    "curvature_pct": 0.5753424657534246,
+    "delta10_slope": 0.04900000000000038,
+    "delta5_slope": -0.011999999999999567,
+    "level": 3.077,
+    "slope": 0.2736666666666667,
+    "slope_pct": 0.4246575342465753,
+    "spread_z_season": -0.41930341914205194,
+    "strip_pct": 0.0027397260273972603,
+    "strip_z_season": -0.47878732980371164
   },
   "swing_10d": {
-    "iqr": 0.2404999999999996,
-    "median_move": -0.08050000000000002,
-    "p_large_down": 0.4,
-    "p_large_up": 0.25
+    "iqr": 0.1449999999999998,
+    "median_move": -0.11299999999999999,
+    "p_large_down": 0.55,
+    "p_large_up": 0.125
   },
   "tactical_5d": {
-    "brier_score_oos": 0.2575855983713547,
+    "brier_score_oos": 0.2575863291795933,
     "calibration_bucket": "poor",
-    "expected_down_move": -0.0366393000198381,
-    "expected_up_move": 0.04351116702805793,
-    "hit_rate_oos": 0.5016714422158548,
-    "p_down": 0.49974361866951933,
-    "p_up": 0.5002563813304807
+    "expected_down_move": -0.05044098608132204,
+    "expected_up_move": 0.03991313764813921,
+    "hit_rate_oos": 0.5011933174224343,
+    "p_down": 0.5041807564815172,
+    "p_up": 0.49581924351848283
   },
   "trade_expression": {
     "expression": "play flattening",
@@ -273,7 +273,7 @@
   "transition": {
     "active": false,
     "days_since_start": 0,
-    "speed_pctile": 0.23013698630136986,
-    "type": "flattening"
+    "speed_pctile": 0.5205479452054794,
+    "type": "level_shift"
   }
 }
