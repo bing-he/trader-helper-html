@@ -1,12 +1,12 @@
 # Spring Basis Overlay Outputs (Forward)
 
 - Season: Summer
-- History window: 2026-06-21 to 2026-08-21 (latest two months of available prices)
+- History window: 2026-06-24 to 2026-08-24 (latest two months of available prices)
 - Forward point date: 2026-09-01
 - Mark source file: ForwardMarks.csv
-- Parent-group figures written: 20
-- Flagged marks written to plot labels: 24
-- Components without selected marks: 27
+- Parent-group figures written: 19
+- Flagged marks written to plot labels: 30
+- Components without selected marks: 28
 
 ## Plot Logic
 

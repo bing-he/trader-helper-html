@@ -1,6 +1,6 @@
 Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\src\run.py
-Started UTC: 2026-08-20T15:43:03.947533+00:00
-Finished UTC: 2026-08-20T15:43:09.007235+00:00
+Started UTC: 2026-08-24T00:28:09.202774+00:00
+Finished UTC: 2026-08-24T00:28:20.026132+00:00
 Return code: 0
 
 === STDOUT ===
@@ -8,19 +8,19 @@ Return code: 0
 [COT] Output directory: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\OUTPUT
 [COT] OPENAI_API_KEY present: True
 [COT] OPENAI_PROJECT present: True
-[COT] COT signal artifacts complete in 0.12s
+[COT] COT signal artifacts complete in 0.11s
 [COT] Clean CSV: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\NG_COT_Disagg_Clean.csv
 [COT] Signals CSV: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\NG_COT_Disagg_Signals.csv
 [COT] rows written: 0
-[COT] asof_date range: 1990-04-12 to 2026-08-11
-[COT] missing/nonpositive Total_OI rows: 1826
-[COT] latest snapshot | MMoney_Net=-110630.0000 MMoney_Net_Pctl5y=6.9498 MMoney_d4w=-4921.0000 MMoney_d4w_Pctl5y=51.3514 ShortSqueezeRisk=NA
-[COT] Pipeline complete in 1.68s | research_rows=710 asof_rows=3537 weekly_rows=711
-[COT] Signal snapshot | triggered_regimes=1 near_regimes=0 analogs=9 analog_message='Close historical analogs available.'
-[COT] Narrative step complete in 0.01s | source=cache placeholder=False
-[COT] HTML render complete in 2.07s
+[COT] asof_date range: 1990-04-12 to 2026-08-18
+[COT] missing/nonpositive Total_OI rows: 1827
+[COT] latest snapshot | MMoney_Net=-100080.0000 MMoney_Net_Pctl5y=12.3552 MMoney_d4w=2676.0000 MMoney_d4w_Pctl5y=56.7568 ShortSqueezeRisk=NA
+[COT] Pipeline complete in 1.58s | research_rows=711 asof_rows=3538 weekly_rows=712
+[COT] Signal snapshot | triggered_regimes=0 near_regimes=1 analogs=9 analog_message='No close historical analog.'
+[COT] Narrative step complete in 6.69s | source=openai placeholder=False
+[COT] HTML render complete in 1.24s
 [COT] Report generated: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\OUTPUT\report.html
-[COT] Total runtime: 3.88s
+[COT] Total runtime: 9.62s
 
 
 === STDERR ===
