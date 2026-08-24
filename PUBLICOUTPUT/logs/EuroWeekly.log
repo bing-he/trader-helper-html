@@ -1,119 +1,32 @@
 Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\run_euro_weekly.py
-Started UTC: 2026-08-24T00:26:06.121581+00:00
-Finished UTC: 2026-08-24T00:28:09.200748+00:00
+Started UTC: 2026-08-24T15:16:34.081901+00:00
+Finished UTC: 2026-08-24T15:16:42.969512+00:00
 Return code: 0
 
 === STDOUT ===
-Appended 20 new records to forecast_history.csv
 EuroWeekly run complete
 HTML: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\OUTPUT\EuroWeekly.html
 Bootstrap files copied: 0
-Download summary: downloaded=20, skipped=0, not_available=4
-History update: processed_images=20, new_records=20
+Download summary: downloaded=0, skipped=20, not_available=4
+History update: processed_images=0, new_records=0
 Render assets: copied_images=20, chart_images=5
 
 
 === STDERR ===
-2026-08-23 20:26:06,915 | INFO | euro_weekly_pipeline | Bootstrap history complete. Copied 0 files into C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\DATA
-2026-08-23 20:26:07,239 | INFO | euro_weekly_pipeline | Downloading/updating ECMWF images (weeks=6, backfill=3, force=False)
-2026-08-23 20:26:08,359 | INFO | root | Discovered base=2026-08-23T00:00:00Z valid=2026-08-24T00:00:00Z
-2026-08-23 20:26:08,359 | INFO | root | Backfill enabled: Checking last 3 days from 2026-08-23T00:00:00Z
-2026-08-23 20:26:08,360 | INFO | root | Requesting base=2026-08-23T00:00:00Z valid=2026-08-24T00:00:00Z
-2026-08-23 20:26:08,979 | INFO | root | Status: 404
-2026-08-23 20:26:08,981 | INFO | root | Requesting base=2026-08-23T00:00:00Z valid=2026-08-31T00:00:00Z
-2026-08-23 20:26:09,835 | INFO | root | Status: 200
-2026-08-23 20:26:12,275 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202608310000.png
-2026-08-23 20:26:12,777 | INFO | root | Requesting base=2026-08-23T00:00:00Z valid=2026-09-07T00:00:00Z
-2026-08-23 20:26:13,985 | INFO | root | Status: 200
-2026-08-23 20:26:15,942 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202609070000.png
-2026-08-23 20:26:16,443 | INFO | root | Requesting base=2026-08-23T00:00:00Z valid=2026-09-14T00:00:00Z
-2026-08-23 20:26:17,580 | INFO | root | Status: 200
-2026-08-23 20:26:19,775 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202609140000.png
-2026-08-23 20:26:20,275 | INFO | root | Requesting base=2026-08-23T00:00:00Z valid=2026-09-21T00:00:00Z
-2026-08-23 20:26:21,708 | INFO | root | Status: 200
-2026-08-23 20:26:23,324 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202609210000.png
-2026-08-23 20:26:23,826 | INFO | root | Requesting base=2026-08-23T00:00:00Z valid=2026-09-28T00:00:00Z
-2026-08-23 20:26:24,890 | INFO | root | Status: 200
-2026-08-23 20:26:27,038 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202609280000.png
-2026-08-23 20:26:27,539 | INFO | root | Requesting base=2026-08-22T00:00:00Z valid=2026-08-24T00:00:00Z
-2026-08-23 20:26:28,223 | INFO | root | Status: 404
-2026-08-23 20:26:28,225 | INFO | root | Requesting base=2026-08-22T00:00:00Z valid=2026-08-31T00:00:00Z
-2026-08-23 20:26:30,286 | INFO | root | Status: 200
-2026-08-23 20:26:32,263 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202608310000.png
-2026-08-23 20:26:32,764 | INFO | root | Requesting base=2026-08-22T00:00:00Z valid=2026-09-07T00:00:00Z
-2026-08-23 20:26:33,796 | INFO | root | Status: 200
-2026-08-23 20:26:35,627 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202609070000.png
-2026-08-23 20:26:36,128 | INFO | root | Requesting base=2026-08-22T00:00:00Z valid=2026-09-14T00:00:00Z
-2026-08-23 20:26:37,297 | INFO | root | Status: 200
-2026-08-23 20:26:39,009 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202609140000.png
-2026-08-23 20:26:39,511 | INFO | root | Requesting base=2026-08-22T00:00:00Z valid=2026-09-21T00:00:00Z
-2026-08-23 20:26:40,615 | INFO | root | Status: 200
-2026-08-23 20:26:42,616 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202609210000.png
-2026-08-23 20:26:43,117 | INFO | root | Requesting base=2026-08-22T00:00:00Z valid=2026-09-28T00:00:00Z
-2026-08-23 20:26:44,182 | INFO | root | Status: 200
-2026-08-23 20:26:46,160 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202609280000.png
-2026-08-23 20:26:46,661 | INFO | root | Requesting base=2026-08-21T00:00:00Z valid=2026-08-24T00:00:00Z
-2026-08-23 20:26:47,463 | INFO | root | Status: 404
-2026-08-23 20:26:47,467 | INFO | root | Requesting base=2026-08-21T00:00:00Z valid=2026-08-31T00:00:00Z
-2026-08-23 20:26:48,336 | INFO | root | Status: 200
-2026-08-23 20:26:49,980 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202608310000.png
-2026-08-23 20:26:50,481 | INFO | root | Requesting base=2026-08-21T00:00:00Z valid=2026-09-07T00:00:00Z
-2026-08-23 20:26:51,892 | INFO | root | Status: 200
-2026-08-23 20:26:53,815 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202609070000.png
-2026-08-23 20:26:54,318 | INFO | root | Requesting base=2026-08-21T00:00:00Z valid=2026-09-14T00:00:00Z
-2026-08-23 20:26:55,405 | INFO | root | Status: 200
-2026-08-23 20:26:57,372 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202609140000.png
-2026-08-23 20:26:57,872 | INFO | root | Requesting base=2026-08-21T00:00:00Z valid=2026-09-21T00:00:00Z
-2026-08-23 20:26:58,920 | INFO | root | Status: 200
-2026-08-23 20:27:00,832 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202609210000.png
-2026-08-23 20:27:01,332 | INFO | root | Requesting base=2026-08-21T00:00:00Z valid=2026-09-28T00:00:00Z
-2026-08-23 20:27:02,375 | INFO | root | Status: 200
-2026-08-23 20:27:04,324 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202609280000.png
-2026-08-23 20:27:04,825 | INFO | root | Requesting base=2026-08-20T00:00:00Z valid=2026-08-24T00:00:00Z
-2026-08-23 20:27:05,602 | INFO | root | Retryable status 429. Backing off 1s. URL=https://charts.ecmwf.int/opencharts-api/v1/products/extended-anomaly-2t/?base_time=2026-08-20T00%3A00%3A00Z&valid_time=2026-08-24T00%3A00%3A00Z&projection=opencharts_north_america
-2026-08-23 20:27:07,195 | INFO | root | Retryable status 429. Backing off 2s. URL=https://charts.ecmwf.int/opencharts-api/v1/products/extended-anomaly-2t/?base_time=2026-08-20T00%3A00%3A00Z&valid_time=2026-08-24T00%3A00%3A00Z&projection=opencharts_north_america
-2026-08-23 20:27:09,779 | INFO | root | Retryable status 429. Backing off 4s. URL=https://charts.ecmwf.int/opencharts-api/v1/products/extended-anomaly-2t/?base_time=2026-08-20T00%3A00%3A00Z&valid_time=2026-08-24T00%3A00%3A00Z&projection=opencharts_north_america
-2026-08-23 20:27:14,403 | INFO | root | Retryable status 429. Backing off 8s. URL=https://charts.ecmwf.int/opencharts-api/v1/products/extended-anomaly-2t/?base_time=2026-08-20T00%3A00%3A00Z&valid_time=2026-08-24T00%3A00%3A00Z&projection=opencharts_north_america
-2026-08-23 20:27:23,019 | INFO | root | Retryable status 429. Backing off 16s. URL=https://charts.ecmwf.int/opencharts-api/v1/products/extended-anomaly-2t/?base_time=2026-08-20T00%3A00%3A00Z&valid_time=2026-08-24T00%3A00%3A00Z&projection=opencharts_north_america
-2026-08-23 20:27:39,667 | INFO | root | Status: 404
-2026-08-23 20:27:39,673 | INFO | root | Requesting base=2026-08-20T00:00:00Z valid=2026-08-31T00:00:00Z
-2026-08-23 20:27:40,950 | INFO | root | Status: 200
-2026-08-23 20:27:42,931 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202608310000.png
-2026-08-23 20:27:43,438 | INFO | root | Requesting base=2026-08-20T00:00:00Z valid=2026-09-07T00:00:00Z
-2026-08-23 20:27:44,460 | INFO | root | Status: 200
-2026-08-23 20:27:47,066 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202609070000.png
-2026-08-23 20:27:47,566 | INFO | root | Requesting base=2026-08-20T00:00:00Z valid=2026-09-14T00:00:00Z
-2026-08-23 20:27:48,664 | INFO | root | Status: 200
-2026-08-23 20:27:51,035 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202609140000.png
-2026-08-23 20:27:51,536 | INFO | root | Requesting base=2026-08-20T00:00:00Z valid=2026-09-21T00:00:00Z
-2026-08-23 20:27:52,879 | INFO | root | Status: 200
-2026-08-23 20:27:55,535 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202609210000.png
-2026-08-23 20:27:56,037 | INFO | root | Requesting base=2026-08-20T00:00:00Z valid=2026-09-28T00:00:00Z
-2026-08-23 20:27:57,137 | INFO | root | Status: 200
-2026-08-23 20:27:59,226 | INFO | root | Saved: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202609280000.png
-2026-08-23 20:27:59,730 | INFO | root | Finished | Downloaded=20 | Skipped=0 | Not Available=4
-2026-08-23 20:27:59,730 | INFO | euro_weekly_pipeline | Updating forecast history table (image scoring).
-2026-08-23 20:28:00,168 | INFO | root | Found 20 new images to process.
-2026-08-23 20:28:00,173 | INFO | ForecastExtractor | Generating state masks (one-time setup)...
-2026-08-23 20:28:01,094 | INFO | root | Processing [1/20]: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202608310000.png
-2026-08-23 20:28:01,440 | INFO | root | Processing [2/20]: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202609070000.png
-2026-08-23 20:28:01,777 | INFO | root | Processing [3/20]: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202609140000.png
-2026-08-23 20:28:02,152 | INFO | root | Processing [4/20]: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202609210000.png
-2026-08-23 20:28:02,507 | INFO | root | Processing [5/20]: extended-anomaly-2t__opencharts_north_america__base_202608200000__valid_202609280000.png
-2026-08-23 20:28:02,856 | INFO | root | Processing [6/20]: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202608310000.png
-2026-08-23 20:28:03,189 | INFO | root | Processing [7/20]: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202609070000.png
-2026-08-23 20:28:03,533 | INFO | root | Processing [8/20]: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202609140000.png
-2026-08-23 20:28:03,866 | INFO | root | Processing [9/20]: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202609210000.png
-2026-08-23 20:28:04,198 | INFO | root | Processing [10/20]: extended-anomaly-2t__opencharts_north_america__base_202608210000__valid_202609280000.png
-2026-08-23 20:28:04,556 | INFO | root | Processing [11/20]: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202608310000.png
-2026-08-23 20:28:04,958 | INFO | root | Processing [12/20]: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202609070000.png
-2026-08-23 20:28:05,302 | INFO | root | Processing [13/20]: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202609140000.png
-2026-08-23 20:28:05,646 | INFO | root | Processing [14/20]: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202609210000.png
-2026-08-23 20:28:05,995 | INFO | root | Processing [15/20]: extended-anomaly-2t__opencharts_north_america__base_202608220000__valid_202609280000.png
-2026-08-23 20:28:06,327 | INFO | root | Processing [16/20]: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202608310000.png
-2026-08-23 20:28:06,669 | INFO | root | Processing [17/20]: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202609070000.png
-2026-08-23 20:28:07,004 | INFO | root | Processing [18/20]: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202609140000.png
-2026-08-23 20:28:07,380 | INFO | root | Processing [19/20]: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202609210000.png
-2026-08-23 20:28:07,732 | INFO | root | Processing [20/20]: extended-anomaly-2t__opencharts_north_america__base_202608230000__valid_202609280000.png
-2026-08-23 20:28:08,078 | INFO | euro_weekly_pipeline | Rendering standalone EuroWeekly HTML report.
-2026-08-23 20:28:09,072 | INFO | euro_weekly_pipeline | Rendered standalone report: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\OUTPUT\EuroWeekly.html
+2026-08-24 11:16:34,903 | INFO | euro_weekly_pipeline | Bootstrap history complete. Copied 0 files into C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\DATA
+2026-08-24 11:16:35,219 | INFO | euro_weekly_pipeline | Downloading/updating ECMWF images (weeks=6, backfill=3, force=False)
+2026-08-24 11:16:36,069 | INFO | root | Discovered base=2026-08-23T00:00:00Z valid=2026-08-24T00:00:00Z
+2026-08-24 11:16:36,069 | INFO | root | Backfill enabled: Checking last 3 days from 2026-08-23T00:00:00Z
+2026-08-24 11:16:36,070 | INFO | root | Requesting base=2026-08-23T00:00:00Z valid=2026-08-24T00:00:00Z
+2026-08-24 11:16:36,690 | INFO | root | Status: 404
+2026-08-24 11:16:36,695 | INFO | root | Requesting base=2026-08-22T00:00:00Z valid=2026-08-24T00:00:00Z
+2026-08-24 11:16:37,354 | INFO | root | Status: 404
+2026-08-24 11:16:37,364 | INFO | root | Requesting base=2026-08-21T00:00:00Z valid=2026-08-24T00:00:00Z
+2026-08-24 11:16:38,485 | INFO | root | Status: 404
+2026-08-24 11:16:38,494 | INFO | root | Requesting base=2026-08-20T00:00:00Z valid=2026-08-24T00:00:00Z
+2026-08-24 11:16:39,454 | INFO | root | Status: 404
+2026-08-24 11:16:39,460 | INFO | root | Finished | Downloaded=0 | Skipped=20 | Not Available=4
+2026-08-24 11:16:39,460 | INFO | euro_weekly_pipeline | Updating forecast history table (image scoring).
+2026-08-24 11:16:40,401 | INFO | root | No new images to process. Everything is up to date.
+2026-08-24 11:16:40,401 | INFO | euro_weekly_pipeline | Rendering standalone EuroWeekly HTML report.
+2026-08-24 11:16:42,779 | INFO | euro_weekly_pipeline | Rendered standalone report: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\EuroWeekly\OUTPUT\EuroWeekly.html
