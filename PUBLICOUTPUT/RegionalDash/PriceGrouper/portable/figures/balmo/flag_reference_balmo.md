@@ -1,7 +1,7 @@
 # Flag Reference
 
 - Mark source: Balmo
-- History window: 2026-06-30 to 2026-08-31 (latest two months of available prices)
+- History window: 2026-07-01 to 2026-09-01 (latest two months of available prices)
 - Forward point date: 2026-09-01 (balmo.csv -> Final Mark)
 
 ## Main Fields
@@ -76,11 +76,11 @@
 
 ## Counts
 
-- `Strong outlier`: 0
+- `Strong outlier`: 1
 - `Outlier`: 0
-- `Watch`: 0
-- `In-family`: 1
-- `No forward mark`: 133
+- `Watch`: 1
+- `In-family`: 13
+- `No forward mark`: 119
 
 ## Files
 
