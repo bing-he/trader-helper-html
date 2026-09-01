@@ -1,5 +1,5 @@
 {
-  "target_date": "2026-08-31",
+  "target_date": "2026-09-01",
   "mode": "production",
   "run_status": "UNGATED",
   "quality_gate_enabled": false,
@@ -7,9 +7,9 @@
   "total_edges": 355,
   "flags": {
     "Imputed_P": 107,
-    "Full": 86,
-    "Imputed_WP": 79,
-    "Missing_N": 70,
+    "Full": 91,
+    "Imputed_WP": 80,
+    "Missing_N": 64,
     "Imputed_W": 13
   },
   "dropped_edge_reasons": {
@@ -27,7 +27,7 @@
       "GEOID_B": "TN|WAYNE",
       "Comp_A": "TGP-Z1 100L",
       "Comp_B": "TGP-500L",
-      "Tension_Score": 86,
+      "Tension_Score": 100,
       "Signal_Percentile": 99.72
     },
     {
@@ -35,7 +35,7 @@
       "GEOID_B": "TN|WAYNE",
       "Comp_A": "TETCO-M1 30",
       "Comp_B": "TGP-500L",
-      "Tension_Score": 86,
+      "Tension_Score": 100,
       "Signal_Percentile": 99.72
     },
     {
@@ -43,64 +43,64 @@
       "GEOID_B": "TN|WAYNE",
       "Comp_A": "TGP-Z1 100L",
       "Comp_B": "TGP-500L",
-      "Tension_Score": 86,
+      "Tension_Score": 100,
       "Signal_Percentile": 99.72
     },
     {
-      "GEOID_A": "KS|HARPER",
-      "GEOID_B": "KS|SUMNER",
-      "Comp_A": "Panhandle",
-      "Comp_B": "EGT-West",
-      "Tension_Score": 85,
-      "Signal_Percentile": 98.73
+      "GEOID_A": "LA|EAST FELICIANA",
+      "GEOID_B": "LA|ST HELENA",
+      "Comp_A": "TETCO-ELA",
+      "Comp_B": "FGT-Z3",
+      "Tension_Score": 99,
+      "Signal_Percentile": 98.31
     },
     {
-      "GEOID_A": "KS|HARPER",
-      "GEOID_B": "OK|GRANT",
-      "Comp_A": "Panhandle",
-      "Comp_B": "EGT-West",
-      "Tension_Score": 85,
-      "Signal_Percentile": 98.73
+      "GEOID_A": "LA|ST MARTIN",
+      "GEOID_B": "LA|ST MARY",
+      "Comp_A": "Sonat-Z0 South",
+      "Comp_B": "ANR-SE-T",
+      "Tension_Score": 99,
+      "Signal_Percentile": 98.31
     },
     {
-      "GEOID_A": "KS|KINGMAN",
-      "GEOID_B": "KS|SUMNER",
-      "Comp_A": "Panhandle",
-      "Comp_B": "EGT-West",
-      "Tension_Score": 85,
-      "Signal_Percentile": 98.73
+      "GEOID_A": "LA|POINTE COUPEE",
+      "GEOID_B": "LA|ST MARTIN",
+      "Comp_A": "TETCO-ELA",
+      "Comp_B": "Sonat-Z0 South",
+      "Tension_Score": 99,
+      "Signal_Percentile": 98.31
     },
     {
-      "GEOID_A": "IL|DOUGLAS",
-      "GEOID_B": "IL|MOULTRIE",
-      "Comp_A": "REX E-Trunk",
-      "Comp_B": "REX E-NGPL",
-      "Tension_Score": 85,
-      "Signal_Percentile": 98.73
+      "GEOID_A": "LA|LAFOURCHE",
+      "GEOID_B": "LA|ST JAMES",
+      "Comp_A": "TETCO-ELA",
+      "Comp_B": "Transco-65",
+      "Tension_Score": 99,
+      "Signal_Percentile": 98.31
     },
     {
-      "GEOID_A": "IL|DOUGLAS",
-      "GEOID_B": "IL|EDGAR",
-      "Comp_A": "REX E-Trunk",
-      "Comp_B": "REX E-MidW",
-      "Tension_Score": 84,
-      "Signal_Percentile": 98.03
+      "GEOID_A": "LA|LAFAYETTE",
+      "GEOID_B": "LA|ST MARTIN",
+      "Comp_A": "TGT-SL",
+      "Comp_B": "Sonat-Z0 South",
+      "Tension_Score": 99,
+      "Signal_Percentile": 98.31
     },
     {
-      "GEOID_A": "KS|BARBER",
-      "GEOID_B": "KS|COMANCHE",
-      "Comp_A": "Panhandle",
-      "Comp_B": "ANR-SW",
-      "Tension_Score": 83,
-      "Signal_Percentile": 97.61
+      "GEOID_A": "LA|IBERVILLE",
+      "GEOID_B": "LA|ST MARTIN",
+      "Comp_A": "TETCO-ELA",
+      "Comp_B": "Sonat-Z0 South",
+      "Tension_Score": 99,
+      "Signal_Percentile": 98.31
     },
     {
-      "GEOID_A": "KS|COMANCHE",
-      "GEOID_B": "OK|WOODS",
-      "Comp_A": "ANR-SW",
-      "Comp_B": "Panhandle",
-      "Tension_Score": 83,
-      "Signal_Percentile": 97.61
+      "GEOID_A": "LA|ASCENSION",
+      "GEOID_B": "LA|IBERVILLE",
+      "Comp_A": "Sonat-Z0 South",
+      "Comp_B": "TETCO-ELA",
+      "Tension_Score": 99,
+      "Signal_Percentile": 98.31
     }
   ]
 }

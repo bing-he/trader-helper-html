@@ -1,6 +1,6 @@
 Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\src\run.py
-Started UTC: 2026-08-31T15:05:32.892477+00:00
-Finished UTC: 2026-08-31T15:05:37.134055+00:00
+Started UTC: 2026-09-01T15:16:30.339837+00:00
+Finished UTC: 2026-09-01T15:16:36.677388+00:00
 Return code: 0
 
 === STDOUT ===
@@ -15,12 +15,12 @@ Return code: 0
 [COT] asof_date range: 1990-04-12 to 2026-08-25
 [COT] missing/nonpositive Total_OI rows: 1828
 [COT] latest snapshot | MMoney_Net=-71673.0000 MMoney_Net_Pctl5y=27.0270 MMoney_d4w=34153.0000 MMoney_d4w_Pctl5y=81.0811 ShortSqueezeRisk=NA
-[COT] Pipeline complete in 1.58s | research_rows=712 asof_rows=3542 weekly_rows=713
+[COT] Pipeline complete in 1.56s | research_rows=712 asof_rows=3543 weekly_rows=713
 [COT] Signal snapshot | triggered_regimes=0 near_regimes=0 analogs=9 analog_message='No close historical analog.'
 [COT] Narrative step complete in 0.01s | source=cache placeholder=False
-[COT] HTML render complete in 1.48s
+[COT] HTML render complete in 3.49s
 [COT] Report generated: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\OUTPUT\report.html
-[COT] Total runtime: 3.18s
+[COT] Total runtime: 5.17s
 
 
 === STDERR ===
