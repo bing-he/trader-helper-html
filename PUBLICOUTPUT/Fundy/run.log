@@ -1,21 +1,21 @@
-2026-09-01 11:12:09 | INFO | fundy_professional_dashboard | Starting professional Fundy dashboard run.
-2026-09-01 11:12:09 | INFO | fundy_professional_dashboard | Using config file: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\Fundy\config.yaml
-2026-09-01 11:12:09 | INFO | fundy_professional_dashboard | Output directory: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\Fundy\OUTPUT
-2026-09-01 11:12:09 | INFO | fundy_professional_dashboard | OPENAI_API_KEY present: True
-2026-09-01 11:12:09 | INFO | fundy_professional_dashboard | OPENAI_PROJECT present: True
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | Fundy: loaded 6088 dates and 102 series from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\Fundy.csv
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | FundyForecast: loaded 91 dates and 100 series from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\FundyForecast.csv
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | Platts: loaded 12 mapped series from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\PlattsCONUSFundamentalsHIST.csv
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | PRICES: selected Henry column 'Henry'
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | PRICES: Henry series has 9728 observations from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\PRICES.csv
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | Fundy: reindexed to daily frequency (6088 dates). Filled 0 short-gap values.
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | FundyForecast: reindexed to daily frequency (91 dates). Filled 0 short-gap values.
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | Platts: reindexed to daily frequency (3166 dates). Filled 0 short-gap values.
-2026-09-01 11:12:10 | INFO | fundy_professional_dashboard | Selected latest common as-of date 2026-09-01
-2026-09-01 11:13:51 | INFO | fundy_professional_dashboard | Lower48 walk-forward estimates built: rows=869 estimates=400 drivers=10 min_train_rows=52
-2026-09-01 11:13:51 | INFO | fundy_professional_dashboard | Lower48 EIA model loaded 869 weekly rows.
-2026-09-01 11:15:26 | INFO | fundy_professional_dashboard | CritConus walk-forward estimates built: rows=869 estimates=557 drivers=13 min_train_rows=52
-2026-09-01 11:15:26 | INFO | fundy_professional_dashboard | CritConus EIA model loaded 869 weekly rows.
-2026-09-01 11:15:27 | INFO | fundy_professional_dashboard | As-of date selected: 2026-09-01
-2026-09-01 11:15:44 | INFO | fundy_professional_dashboard | LLM trader brief source=openai model=gpt-4.1-mini placeholder=False
-2026-09-01 11:15:44 | INFO | fundy_professional_dashboard | Dashboard generated: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\Fundy\OUTPUT\FundyDashboard.html
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | Starting professional Fundy dashboard run.
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | Using config file: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\Fundy\config.yaml
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | Output directory: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\Fundy\OUTPUT
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | OPENAI_API_KEY present: True
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | OPENAI_PROJECT present: True
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | Fundy: loaded 6089 dates and 102 series from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\Fundy.csv
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | FundyForecast: loaded 90 dates and 100 series from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\FundyForecast.csv
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | Platts: loaded 12 mapped series from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\PlattsCONUSFundamentalsHIST.csv
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | PRICES: selected Henry column 'Henry'
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | PRICES: Henry series has 9729 observations from C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\PRICES.csv
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | Fundy: reindexed to daily frequency (6089 dates). Filled 0 short-gap values.
+2026-09-02 12:30:58 | INFO | fundy_professional_dashboard | FundyForecast: reindexed to daily frequency (90 dates). Filled 0 short-gap values.
+2026-09-02 12:30:59 | INFO | fundy_professional_dashboard | Platts: reindexed to daily frequency (3167 dates). Filled 0 short-gap values.
+2026-09-02 12:30:59 | INFO | fundy_professional_dashboard | Selected latest common as-of date 2026-09-02
+2026-09-02 12:32:19 | INFO | fundy_professional_dashboard | Lower48 walk-forward estimates built: rows=869 estimates=400 drivers=10 min_train_rows=52
+2026-09-02 12:32:19 | INFO | fundy_professional_dashboard | Lower48 EIA model loaded 869 weekly rows.
+2026-09-02 12:33:36 | INFO | fundy_professional_dashboard | CritConus walk-forward estimates built: rows=869 estimates=557 drivers=13 min_train_rows=52
+2026-09-02 12:33:36 | INFO | fundy_professional_dashboard | CritConus EIA model loaded 869 weekly rows.
+2026-09-02 12:33:38 | INFO | fundy_professional_dashboard | As-of date selected: 2026-09-02
+2026-09-02 12:33:55 | INFO | fundy_professional_dashboard | LLM trader brief source=openai model=gpt-4.1-mini placeholder=False
+2026-09-02 12:33:55 | INFO | fundy_professional_dashboard | Dashboard generated: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\Fundy\OUTPUT\FundyDashboard.html

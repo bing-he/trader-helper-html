@@ -1,5 +1,5 @@
 {
-  "target_date": "2026-09-01",
+  "target_date": "2026-09-02",
   "mode": "production",
   "run_status": "UNGATED",
   "quality_gate_enabled": false,
@@ -47,60 +47,60 @@
       "Signal_Percentile": 99.72
     },
     {
-      "GEOID_A": "LA|EAST FELICIANA",
-      "GEOID_B": "LA|ST HELENA",
-      "Comp_A": "TETCO-ELA",
-      "Comp_B": "FGT-Z3",
+      "GEOID_A": "LA|LAFAYETTE",
+      "GEOID_B": "LA|ST MARTIN",
+      "Comp_A": "TGT-SL",
+      "Comp_B": "Sonat-Z0 South",
       "Tension_Score": 99,
-      "Signal_Percentile": 98.31
+      "Signal_Percentile": 99.15
     },
     {
       "GEOID_A": "LA|ST MARTIN",
       "GEOID_B": "LA|ST MARY",
       "Comp_A": "Sonat-Z0 South",
       "Comp_B": "ANR-SE-T",
-      "Tension_Score": 99,
-      "Signal_Percentile": 98.31
-    },
-    {
-      "GEOID_A": "LA|POINTE COUPEE",
-      "GEOID_B": "LA|ST MARTIN",
-      "Comp_A": "TETCO-ELA",
-      "Comp_B": "Sonat-Z0 South",
-      "Tension_Score": 99,
-      "Signal_Percentile": 98.31
-    },
-    {
-      "GEOID_A": "LA|LAFOURCHE",
-      "GEOID_B": "LA|ST JAMES",
-      "Comp_A": "TETCO-ELA",
-      "Comp_B": "Transco-65",
-      "Tension_Score": 99,
-      "Signal_Percentile": 98.31
-    },
-    {
-      "GEOID_A": "LA|LAFAYETTE",
-      "GEOID_B": "LA|ST MARTIN",
-      "Comp_A": "TGT-SL",
-      "Comp_B": "Sonat-Z0 South",
-      "Tension_Score": 99,
-      "Signal_Percentile": 98.31
-    },
-    {
-      "GEOID_A": "LA|IBERVILLE",
-      "GEOID_B": "LA|ST MARTIN",
-      "Comp_A": "TETCO-ELA",
-      "Comp_B": "Sonat-Z0 South",
-      "Tension_Score": 99,
-      "Signal_Percentile": 98.31
+      "Tension_Score": 98,
+      "Signal_Percentile": 98.17
     },
     {
       "GEOID_A": "LA|ASCENSION",
       "GEOID_B": "LA|IBERVILLE",
       "Comp_A": "Sonat-Z0 South",
       "Comp_B": "TETCO-ELA",
-      "Tension_Score": 99,
-      "Signal_Percentile": 98.31
+      "Tension_Score": 98,
+      "Signal_Percentile": 98.17
+    },
+    {
+      "GEOID_A": "LA|LAFOURCHE",
+      "GEOID_B": "LA|ST JAMES",
+      "Comp_A": "TETCO-ELA",
+      "Comp_B": "Transco-65",
+      "Tension_Score": 98,
+      "Signal_Percentile": 98.17
+    },
+    {
+      "GEOID_A": "LA|IBERVILLE",
+      "GEOID_B": "LA|ST MARTIN",
+      "Comp_A": "TETCO-ELA",
+      "Comp_B": "Sonat-Z0 South",
+      "Tension_Score": 98,
+      "Signal_Percentile": 98.17
+    },
+    {
+      "GEOID_A": "LA|EAST FELICIANA",
+      "GEOID_B": "LA|ST HELENA",
+      "Comp_A": "TETCO-ELA",
+      "Comp_B": "FGT-Z3",
+      "Tension_Score": 98,
+      "Signal_Percentile": 98.17
+    },
+    {
+      "GEOID_A": "LA|POINTE COUPEE",
+      "GEOID_B": "LA|ST MARTIN",
+      "Comp_A": "TETCO-ELA",
+      "Comp_B": "Sonat-Z0 South",
+      "Tension_Score": 98,
+      "Signal_Percentile": 98.17
     }
   ]
 }

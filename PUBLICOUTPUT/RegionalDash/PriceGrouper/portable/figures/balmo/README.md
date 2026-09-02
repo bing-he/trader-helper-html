@@ -1,7 +1,7 @@
 # Spring Basis Overlay Outputs (Balmo)
 
 - Season: Autumn
-- History window: 2026-07-02 to 2026-09-02 (latest two months of available prices)
+- History window: 2026-07-03 to 2026-09-03 (latest two months of available prices)
 - Forward point date: 2026-10-01
 - Mark source file: balmo.csv
 - Parent-group figures written: 22
