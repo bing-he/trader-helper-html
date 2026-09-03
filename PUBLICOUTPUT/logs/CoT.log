@@ -1,6 +1,6 @@
 Command: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\.venv\Scripts\python.exe C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\src\run.py
-Started UTC: 2026-09-02T16:34:44.413751+00:00
-Finished UTC: 2026-09-02T16:34:48.834140+00:00
+Started UTC: 2026-09-03T17:09:59.336287+00:00
+Finished UTC: 2026-09-03T17:10:16.949197+00:00
 Return code: 0
 
 === STDOUT ===
@@ -8,19 +8,19 @@ Return code: 0
 [COT] Output directory: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\OUTPUT
 [COT] OPENAI_API_KEY present: True
 [COT] OPENAI_PROJECT present: True
-[COT] COT signal artifacts complete in 0.12s
+[COT] COT signal artifacts complete in 0.11s
 [COT] Clean CSV: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\NG_COT_Disagg_Clean.csv
 [COT] Signals CSV: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\INFO\NG_COT_Disagg_Signals.csv
 [COT] rows written: 0
 [COT] asof_date range: 1990-04-12 to 2026-08-25
 [COT] missing/nonpositive Total_OI rows: 1828
 [COT] latest snapshot | MMoney_Net=-71673.0000 MMoney_Net_Pctl5y=27.0270 MMoney_d4w=34153.0000 MMoney_d4w_Pctl5y=81.0811 ShortSqueezeRisk=NA
-[COT] Pipeline complete in 1.68s | research_rows=712 asof_rows=3544 weekly_rows=713
+[COT] Pipeline complete in 1.70s | research_rows=712 asof_rows=3545 weekly_rows=713
 [COT] Signal snapshot | triggered_regimes=0 near_regimes=0 analogs=9 analog_message='No close historical analog.'
-[COT] Narrative step complete in 0.01s | source=cache placeholder=False
-[COT] HTML render complete in 1.51s
+[COT] Narrative step complete in 12.85s | source=openai placeholder=False
+[COT] HTML render complete in 1.64s
 [COT] Report generated: C:\Users\patri\OneDrive\Desktop\trader-helper-bing\CONUSDash\CoT\OUTPUT\report.html
-[COT] Total runtime: 3.32s
+[COT] Total runtime: 16.30s
 
 
 === STDERR ===
